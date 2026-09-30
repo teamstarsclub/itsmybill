@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#061c14" />
+    </linearGradient>
+    <linearGradient id="brandEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" result="blur" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="950" cy="180" r="280" fill="#10b981" fill-opacity="0.12" filter="url(#glow)" />
+  <circle cx="200" cy="500" r="220" fill="#059669" fill-opacity="0.08" filter="url(#glow)" />
+
+  <!-- Grid Accents -->
+  <g stroke="#334155" stroke-opacity="0.15" stroke-width="1">
+    <line x1="80" y1="0" x2="80" y2="630" />
+    <line x1="1120" y1="0" x2="1120" y2="630" />
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="550" x2="1200" y2="550" />
+  </g>
+
+  <!-- Logo Mark & Brand Header -->
+  <g transform="translate(100, 100)">
+    <rect width="56" height="56" rx="14" fill="#10b981" />
+    <!-- Receipt Icon -->
+    <path d="M18 14h20a3 3 0 0 1 3 3v24l-4-3-4 3-4-3-4 3-4-3-3 2V17a3 3 0 0 1 3-3z" fill="none" stroke="#020617" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="22" y1="22" x2="34" y2="22" stroke="#020617" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="22" y1="28" x2="30" y2="28" stroke="#020617" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Brand Name -->
+    <text x="74" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="-1">
+      itsmy<tspan fill="#34d399">bill</tspan><tspan fill="#64748b" font-weight="600" font-size="24">.com</tspan>
+    </text>
+    <rect x="290" y="16" width="130" height="26" rx="13" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4" />
+    <text x="355" y="33" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="1">100% FREE</text>
+  </g>
+
+  <!-- Hero Value Proposition -->
+  <g transform="translate(100, 220)">
+    <text x="0" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="-1.5">
+      Smart Utility, Fair Split &amp;
+    </text>
+    <text x="0" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="900" fill="url(#brandEmerald)" letter-spacing="-1.5">
+      Consumer Dispute Copilot
+    </text>
+    <text x="0" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8" letter-spacing="-0.2">
+      Split group tabs, divide roommate rent by proportional income, audit telecom
+    </text>
+    <text x="0" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8" letter-spacing="-0.2">
+      fees, generate federal dispute letters, and track real money saved.
+    </text>
+  </g>
+
+  <!-- Feature Highlights / Trust Badges -->
+  <g transform="translate(100, 480)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="220" height="42" rx="10" fill="#0f172a" stroke="#1e293b" />
+    <text x="110" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="middle">
+      ⚖️ Income-Fair Splitter
+    </text>
+
+    <!-- Pill 2 -->
+    <rect x="235" y="0" width="230" height="42" rx="10" fill="#0f172a" stroke="#1e293b" />
+    <text x="350" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="middle">
+      🔍 AI Junk Fee Auditor
+    </text>
+
+    <!-- Pill 3 -->
+    <rect x="480" y="0" width="250" height="42" rx="10" fill="#0f172a" stroke="#1e293b" />
+    <text x="605" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="middle">
+      📜 No Surprises Act Letters
+    </text>
+
+    <!-- Pill 4 -->
+    <rect x="745" y="0" width="230" height="42" rx="10" fill="#0f172a" stroke="#1e293b" />
+    <text x="860" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#34d399" text-anchor="middle">
+      💰 Realized Savings Tracker
+    </text>
+  </g>
+</svg>
