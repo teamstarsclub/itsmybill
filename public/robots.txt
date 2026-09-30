@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Explicit allowance for Search Engines and AI Grounding Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GrokBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://itsmybill.com/sitemap.xml
