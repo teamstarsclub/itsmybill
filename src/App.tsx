@@ -26,24 +26,40 @@ export default function App() {
     reason: '',
   });
 
-  // Sync with URL hash
+  // Sync with clean URL query or clean state without hash
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '').split('?')[0];
+    const handleUrlSync = () => {
+      // Check query param first (?tab=audit)
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
       const validTabs = ['split', 'audit', 'dispute', 'tracker', 'benchmark'];
-      if (validTabs.includes(hash)) {
-        setActiveTab(hash);
+
+      // If legacy hash exists, read it and clean it from URL
+      const legacyHash = window.location.hash.replace('#', '').split('?')[0];
+      if (validTabs.includes(legacyHash)) {
+        setActiveTab(legacyHash);
+        window.history.replaceState(null, '', window.location.pathname + (legacyHash !== 'split' ? `?tab=${legacyHash}` : ''));
+        return;
+      }
+
+      if (tabParam && validTabs.includes(tabParam)) {
+        setActiveTab(tabParam);
+      } else if (window.location.hash) {
+        // Strip any remaining hashes
+        window.history.replaceState(null, '', window.location.pathname + (window.location.search || ''));
       }
     };
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    handleUrlSync();
+    window.addEventListener('popstate', handleUrlSync);
+    return () => window.removeEventListener('popstate', handleUrlSync);
   }, []);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    window.location.hash = tab;
+    // Use clean URLs without any '#' character
+    const newUrl = tab === 'split' ? window.location.pathname : `${window.location.pathname}?tab=${tab}`;
+    window.history.replaceState(null, '', newUrl);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -82,7 +98,9 @@ export default function App() {
             onNavigateToDispute={() => handleTabChange('dispute')}
           />
         )}
-        {activeTab === 'benchmark' && <RateBenchmark />}
+        {activeTab === 'benchmark' && (
+          <RateBenchmark onNavigateToAudit={() => handleTabChange('audit')} />
+        )}
 
         {/* FAQ Section */}
         <FaqSection />

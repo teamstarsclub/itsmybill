@@ -29,7 +29,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleShare = () => {
-    navigator.clipboard.writeText(window.location.href);
+    const cleanUrl = window.location.origin + window.location.pathname;
+    navigator.clipboard.writeText(cleanUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -116,12 +117,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
               )}
             </button>
 
-            <a
-              href="#faq"
-              className="text-xs text-slate-400 hover:text-slate-200 px-2 py-1 transition-colors"
+            <button
+              type="button"
+              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-xs text-slate-400 hover:text-slate-200 px-2 py-1 transition-colors cursor-pointer"
             >
               Help & FAQ
-            </a>
+            </button>
           </div>
 
           {/* Mobile menu button */}

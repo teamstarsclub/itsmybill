@@ -60,18 +60,22 @@ export const SplitCalculator: React.FC = () => {
 
   const [copiedSummary, setCopiedSummary] = useState(false);
 
-  // Read URL params if any
+  // Read URL params if any (clean query params)
   useEffect(() => {
     try {
+      const search = window.location.search;
       const hash = window.location.hash;
-      if (hash.includes('total=')) {
-        const params = new URLSearchParams(hash.replace('#', ''));
+      const params = new URLSearchParams(search || hash.replace('#', ''));
+      if (params.has('total')) {
         const total = parseFloat(params.get('total') || '');
         const tip = parseFloat(params.get('tip') || '');
         const people = parseInt(params.get('people') || '', 10);
         if (!isNaN(total)) setBillAmount(total);
         if (!isNaN(tip)) setTipPercent(tip);
         if (!isNaN(people) && people > 0) setPeopleCount(people);
+        if (hash) {
+          window.history.replaceState(null, '', window.location.pathname + (window.location.search || ''));
+        }
       }
     } catch (e) {
       // ignore
@@ -175,7 +179,7 @@ export const SplitCalculator: React.FC = () => {
       Object.entries(itemizedCalc.personTotals).forEach(([p, val]) => {
         text += `• ${p}: $${val.grandTotal.toFixed(2)} (Food: $${val.foodSubtotal.toFixed(2)})\n`;
       });
-      text += `Calculate yours free at: https://itsmybill.com`;
+      text += `Calculate yours free at: https://www.itsmybill.com`;
     }
 
     navigator.clipboard.writeText(text);
@@ -184,7 +188,7 @@ export const SplitCalculator: React.FC = () => {
   };
 
   const updateUrlShare = () => {
-    const url = `${window.location.origin}${window.location.pathname}#total=${billAmount}&tip=${tipPercent}&people=${peopleCount}`;
+    const url = `${window.location.origin}${window.location.pathname}?total=${billAmount}&tip=${tipPercent}&people=${peopleCount}`;
     navigator.clipboard.writeText(url);
     setCopiedSummary(true);
     setTimeout(() => setCopiedSummary(false), 2000);

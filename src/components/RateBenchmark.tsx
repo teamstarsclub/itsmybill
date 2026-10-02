@@ -14,7 +14,11 @@ import {
 } from 'lucide-react';
 import { US_UTILITY_BENCHMARKS, StateUtilityData } from '../data/mockData';
 
-export const RateBenchmark: React.FC = () => {
+interface RateBenchmarkProps {
+  onNavigateToAudit?: () => void;
+}
+
+export const RateBenchmark: React.FC<RateBenchmarkProps> = ({ onNavigateToAudit }) => {
   const [selectedStateCode, setSelectedStateCode] = useState<string>('CA');
   const [userElectric, setUserElectric] = useState<number>(290);
   const [userInternet, setUserInternet] = useState<number>(85);
@@ -234,13 +238,14 @@ export const RateBenchmark: React.FC = () => {
         </div>
 
         {totalAnnualOverpay > 0 && (
-          <a
-            href="#audit"
-            className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 shrink-0 inline-flex items-center gap-2"
+          <button
+            type="button"
+            onClick={() => onNavigateToAudit?.()}
+            className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 shrink-0 inline-flex items-center gap-2 cursor-pointer"
           >
             <span>Run Free Bill Audit to Cut Rates</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </button>
         )}
       </div>
     </div>

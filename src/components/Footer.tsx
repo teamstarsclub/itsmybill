@@ -75,19 +75,31 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Statutory Frameworks</h4>
             <ul className="space-y-1.5">
               <li>
-                <a href="#faq" className="hover:text-emerald-400 transition-colors">
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   Fair Credit Billing Act (15 U.S.C. 1666)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#faq" className="hover:text-emerald-400 transition-colors">
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   No Surprises Act (42 U.S.C. 300gg-111)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#faq" className="hover:text-emerald-400 transition-colors">
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-emerald-400 transition-colors text-left cursor-pointer"
+                >
                   Privacy Policy & Terms
-                </a>
+                </button>
               </li>
             </ul>
           </div>
