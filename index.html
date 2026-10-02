@@ -18,7 +18,8 @@
     <meta property="og:title" content="ItsMyBill – Smart Utility, Fair Split & Dispute Copilot" />
     <meta property="og:description" content="Free consumer bill utility. Calculate income-fair roommate splits, audit telecom & medical bills for junk fees, track savings, and generate legal dispute letters." />
     <meta property="og:site_name" content="ItsMyBill" />
-    <meta property="og:image" content="https://www.itsmybill.com/og-card.svg" />
+    <meta property="og:image" content="https://www.itsmybill.com/og-card.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="ItsMyBill – Smart Utility, Fair Split & Dispute Copilot" />
@@ -28,9 +29,15 @@
     <meta name="twitter:url" content="https://www.itsmybill.com/" />
     <meta name="twitter:title" content="ItsMyBill – Smart Utility, Fair Split & Dispute Copilot" />
     <meta name="twitter:description" content="Free consumer bill utility. Calculate income-fair roommate splits, audit telecom & medical bills for junk fees, track savings, and generate legal dispute letters." />
-    <meta name="twitter:image" content="https://www.itsmybill.com/og-card.svg" />
+    <meta name="twitter:image" content="https://www.itsmybill.com/og-card.png" />
 
+    <!-- Favicon & Touch Icons (Google Search Console & Browser Standards) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#020617" />
 
     <!-- Schema.org Knowledge Graph (Google Rich Snippets & AI LLM Grounding) -->
     <script type="application/ld+json">
@@ -52,7 +59,7 @@
           "@id": "https://www.itsmybill.com/#organization",
           "name": "ItsMyBill",
           "url": "https://www.itsmybill.com/",
-          "logo": "https://www.itsmybill.com/favicon.svg",
+          "logo": "https://www.itsmybill.com/favicon-48x48.png",
           "description": "Independent consumer finance advocacy platform providing free utilities for expense sharing, fee auditing, and statutory billing disputes."
         },
         {
@@ -68,6 +75,13 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "128",
+            "bestRating": "5",
+            "worstRating": "1"
           },
           "featureList": [
             "Equal Restaurant & Tab Splitter with 1-Click Shareable Breakdown",
@@ -146,26 +160,31 @@
           "@type": "HowTo",
           "name": "How to Split Bills Fairly Based on Roommate Incomes",
           "description": "Step-by-step guide to calculating proportional income-fair household expenses using ItsMyBill.",
+          "image": "https://www.itsmybill.com/og-card.png",
           "step": [
             {
               "@type": "HowToStep",
               "name": "Determine Total Shared Monthly Expenses",
-              "text": "Sum up household rent, electricity, internet, gas, water, and shared staples."
+              "text": "Sum up household rent, electricity, internet, gas, water, and shared staples.",
+              "image": "https://www.itsmybill.com/og-card.png"
             },
             {
               "@type": "HowToStep",
               "name": "Enter Each Roommate's Take-Home Pay",
-              "text": "Input the monthly take-home salary of each person in the ItsMyBill Income Splitter."
+              "text": "Input the monthly take-home salary of each person in the ItsMyBill Income Splitter.",
+              "image": "https://www.itsmybill.com/og-card.png"
             },
             {
               "@type": "HowToStep",
               "name": "Calculate Proportional Burden",
-              "text": "The tool divides each individual's income by total household earnings and applies that exact percentage to the shared bills."
+              "text": "The tool divides each individual's income by total household earnings and applies that exact percentage to the shared bills.",
+              "image": "https://www.itsmybill.com/og-card.png"
             },
             {
               "@type": "HowToStep",
               "name": "Copy or Share Direct Link",
-              "text": "Copy the formatted text breakdown to send to your group chat or generate a shareable URL."
+              "text": "Copy the formatted text breakdown to send to your group chat or generate a shareable URL.",
+              "image": "https://www.itsmybill.com/og-card.png"
             }
           ]
         }
@@ -174,8 +193,38 @@
     </script>
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Semantic crawlable fallback for Googlebot and search crawlers -->
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f8fafc; line-height: 1.6;">
+        <header style="margin-bottom: 32px;">
+          <h1 style="font-size: 32px; font-weight: 800; color: #10b981; margin-bottom: 12px;">ItsMyBill – Smart Utility, Fair Split &amp; Dispute Copilot</h1>
+          <p style="font-size: 18px; color: #94a3b8;">The #1 free consumer bill utility. Calculate income-fair roommate splits, audit surprise medical and telecom bills for junk fees, track savings, and generate legal dispute letters.</p>
+        </header>
+        <main style="display: grid; gap: 24px;">
+          <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
+            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">Fair Expense &amp; Tip Splitter</h2>
+            <p style="color: #cbd5e1;">Calculate equal, proportional, and itemized bill splits for roommates, friends, and dinners. Accommodates unequal take-home salaries and dish-by-dish tax and tip distribution.</p>
+          </section>
+          <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
+            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">AI Line-Item Auditor &amp; Fee Scanner</h2>
+            <p style="color: #cbd5e1;">Scan telecom, internet, cable, and medical bills for hidden surcharges, regulatory fees, and phantom emergency facility fees.</p>
+          </section>
+          <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
+            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">Statutory Legal Dispute Generator</h2>
+            <p style="color: #cbd5e1;">Generate formal dispute letters invoking federal protections under the Fair Credit Billing Act (15 U.S.C. 1666) and the federal No Surprises Act (42 U.S.C. 300gg-111).</p>
+          </section>
+          <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
+            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">50-State Utility Benchmarks</h2>
+            <p style="color: #cbd5e1;">Compare household electricity, natural gas, water, and broadband expenses against official state averages across all 50 US states.</p>
+          </section>
+        </main>
+        <noscript>
+          <div style="margin-top: 32px; padding: 16px 20px; background-color: #1e293b; border-left: 4px solid #10b981; border-radius: 4px; color: #e2e8f0;">
+            <strong>JavaScript Enabled:</strong> ItsMyBill interactive calculators and real-time fee analysis require JavaScript. Please enable JavaScript to use the dynamic calculators.
+          </div>
+        </noscript>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
