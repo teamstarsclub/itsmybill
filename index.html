@@ -3,19 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      // Fallback redirect if production static host (custom domain or github.io) serves repository root instead of /docs
-      (function() {
-        if (typeof window !== 'undefined') {
-          var h = window.location.hostname;
-          var isDev = h === 'localhost' || h === '127.0.0.1' || h.endsWith('.local') || h.includes('run.app');
-          if (!isDev && !window.location.pathname.includes('/docs')) {
-            var p = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
-            window.location.replace(p + '/docs/' + window.location.search + window.location.hash);
-          }
-        }
-      })();
-    </script>
     <title>ItsMyBill – Smart Utility, Fair Split & Dispute Copilot</title>
     <meta name="description" content="Free consumer bill utility. Calculate income-fair roommate splits, audit telecom & medical bills for junk fees, track savings, and generate legal dispute letters." />
     <meta name="keywords" content="bill splitter, roommate bill calculator, fair income split, medical bill dispute letter, no surprises act dispute, lower cable bill script, utility rate calculator, junk fee auditor, dinner split calculator, splitwise alternative" />
