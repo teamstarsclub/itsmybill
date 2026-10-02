@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-      // GitHub Pages auto-redirect fallback if repository root is served directly
+      // Fallback redirect if production static host (custom domain or github.io) serves repository root instead of /docs
       (function() {
-        if (
-          typeof window !== 'undefined' &&
-          window.location.hostname.endsWith('github.io') &&
-          !window.location.pathname.includes('/docs')
-        ) {
-          var p = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
-          window.location.replace(p + '/docs/' + window.location.search + window.location.hash);
+        if (typeof window !== 'undefined') {
+          var h = window.location.hostname;
+          var isDev = h === 'localhost' || h === '127.0.0.1' || h.endsWith('.local') || h.includes('run.app');
+          if (!isDev && !window.location.pathname.includes('/docs')) {
+            var p = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+            window.location.replace(p + '/docs/' + window.location.search + window.location.hash);
+          }
         }
       })();
     </script>
