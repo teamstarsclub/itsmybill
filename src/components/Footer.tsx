@@ -72,13 +72,8 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
 
           {/* Col 3 */}
           <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Legal & Strategy</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Statutory Frameworks</h4>
             <ul className="space-y-1.5">
-              <li>
-                <button onClick={() => setActiveTab('playbook')} className="hover:text-emerald-400 transition-colors">
-                  Market Research & Niche Arbitrage
-                </button>
-              </li>
               <li>
                 <a href="#faq" className="hover:text-emerald-400 transition-colors">
                   Fair Credit Billing Act (15 U.S.C. 1666)

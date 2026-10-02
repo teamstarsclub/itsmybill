@@ -29,4 +29,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://itsmybill.com/sitemap.xml
+Sitemap: https://www.itsmybill.com/sitemap.xml

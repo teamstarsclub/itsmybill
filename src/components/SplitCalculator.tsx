@@ -12,8 +12,7 @@ import {
   Scale, 
   Sparkles,
   Calculator,
-  MessageCircle,
-  ExternalLink
+  MessageCircle
 } from 'lucide-react';
 
 interface ItemEntry {
@@ -801,22 +800,6 @@ export const SplitCalculator: React.FC = () => {
                 <span>Copy 1-Click Shareable Link</span>
               </button>
             </div>
-
-            {/* Venmo Deep Link note */}
-            {splitMode === 'equal' && (
-              <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-                <span>Request on Venmo:</span>
-                <a
-                  href={`https://venmo.com/?txn=charge&amount=${equalCalc.perPerson.toFixed(2)}&note=ItsMyBill%20Split`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1 font-semibold"
-                >
-                  Open Venmo Charge
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
-            )}
           </div>
 
           {/* Micro-benefit Callout */}

@@ -10,7 +10,6 @@ import { BillAuditor } from './components/BillAuditor';
 import { DisputeGenerator } from './components/DisputeGenerator';
 import { RateBenchmark } from './components/RateBenchmark';
 import { SavingsTracker } from './components/SavingsTracker';
-import { MarketResearch } from './components/MarketResearch';
 import { AdLeaderboard } from './components/AdPlacements';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
@@ -31,7 +30,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '').split('?')[0];
-      const validTabs = ['split', 'audit', 'dispute', 'tracker', 'benchmark', 'playbook'];
+      const validTabs = ['split', 'audit', 'dispute', 'tracker', 'benchmark'];
       if (validTabs.includes(hash)) {
         setActiveTab(hash);
       }
@@ -84,7 +83,6 @@ export default function App() {
           />
         )}
         {activeTab === 'benchmark' && <RateBenchmark />}
-        {activeTab === 'playbook' && <MarketResearch />}
 
         {/* FAQ Section */}
         <FaqSection />

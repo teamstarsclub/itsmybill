@@ -3,7 +3,6 @@ import {
   Receipt, 
   FileCheck2, 
   Scale, 
-  TrendingUp, 
   Share2, 
   Menu, 
   X, 
@@ -41,7 +40,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
     { id: 'dispute', label: 'Dispute Letter', icon: Scale },
     { id: 'tracker', label: 'Savings Tracker', icon: PiggyBank, badge: 'New' },
     { id: 'benchmark', label: 'US Benchmarks', icon: Zap },
-    { id: 'playbook', label: 'Market Blueprint', icon: TrendingUp },
   ];
 
   return (
