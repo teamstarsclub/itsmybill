@@ -81,55 +81,55 @@ export const BillAuditor: React.FC<BillAuditorProps> = ({ onTransferToDispute })
       // Offline / Static hosting fallback (e.g. GitHub Pages)
       const isMedical = (billType || '').toLowerCase().includes('medical') || (billType || '').toLowerCase().includes('hospital');
       const fallbackAudit: AuditData = {
-        auditScore: 42,
-        totalEstimatedOvercharge: isMedical ? "$1,450.00 (One-time)" : "$52.40 / month",
+        auditScore: 54,
+        totalEstimatedOvercharge: isMedical ? "$1,450.00 (Potential Out-of-Network Balance)" : "$41.65 / month (Ancillary Fees)",
         flags: isMedical ? [
           {
             chargeName: "Emergency Dept Level 4 Facility Fee (Rev Code 0450)",
             amount: "$1,250.00",
-            verdict: "Bogus Junk Fee",
-            explanation: "Emergency facility charge billed at out-of-network rates despite emergency admission.",
+            verdict: "Out-of-Network Balance (Review Recommended)",
+            explanation: "Facility fee billed at out-of-network rates for an emergency admission. Under the federal No Surprises Act, emergency services cannot be billed beyond in-network cost-sharing amounts.",
             statuteOrRule: "No Surprises Act (42 U.S.C. § 300gg-111)"
           },
           {
             chargeName: "Administrative Surcharge & Record Prep",
             amount: "$120.00",
-            verdict: "Bogus Junk Fee",
-            explanation: "Overhead fees cannot be billed separately from clinical CPT evaluation codes.",
-            statuteOrRule: "CMS Billing Guidelines Chapter 12"
+            verdict: "Ancillary Fee (Verification Needed)",
+            explanation: "Administrative overhead charges warrant itemized justification. CMS guidelines require hospital evaluation codes to encapsulate standard facility administration.",
+            statuteOrRule: "CMS Billing Guidelines (Chapter 12)"
           },
           {
             chargeName: "Unbundled Saline IV 1000ml",
             amount: "$280.00",
-            verdict: "Suspicious Rate",
-            explanation: "Standard saline solutions carry a wholesale acquisition cost under $3.00.",
-            statuteOrRule: "501(r) Fair Pricing Guidelines"
+            verdict: "Routine Supply Charge (Verification Needed)",
+            explanation: "Separate pharmacy line items for routine hydration are frequently bundled into emergency facility fees. Request an itemized coding ledger.",
+            statuteOrRule: "Hospital Financial Assistance & 501(r) Guidelines"
           }
         ] : [
           {
             chargeName: "Broadcast TV Surcharge",
             amount: "$23.20/mo",
-            verdict: "Bogus Junk Fee",
-            explanation: "Disguised company overhead fee designed to artificially advertise lower base rates.",
-            statuteOrRule: "FCC Truth-in-Billing 47 C.F.R. § 64.2401"
+            verdict: "Company Surcharge (Review Recommended)",
+            explanation: "Ancillary provider fee added on top of base programming tier. Review package alternatives or ask loyalty retention for bundled bill credits.",
+            statuteOrRule: "FCC Truth-in-Billing (47 C.F.R. § 64.2401)"
           },
           {
             chargeName: "Modem / Gateway Rental Fee",
             amount: "$15.00/mo",
-            verdict: "Bogus Junk Fee",
-            explanation: "Consumer can purchase DOCSIS 3.1 gateway outright for $90, breaking even in 6 months.",
-            statuteOrRule: "Television Viewer Protection Act (TVPA)"
+            verdict: "Equipment Rental (Avoidable Expense)",
+            explanation: "Ongoing hardware rental fee. Consumers can purchase their own compatible DOCSIS 3.1 gateway to eliminate this recurring monthly charge.",
+            statuteOrRule: "Television Viewer Protection Act (47 U.S.C. § 562)"
           },
           {
             chargeName: "Regulatory Cost Recovery Charge",
             amount: "$3.45/mo",
-            verdict: "Bogus Junk Fee",
-            explanation: "Private corporate surcharge, not a mandatory government tax.",
-            statuteOrRule: "FTC Unfair Deceptive Trade Practices"
+            verdict: "Discretionary Fee (Review Recommended)",
+            explanation: "Internal company cost-recovery fee rather than a mandatory government-imposed tax.",
+            statuteOrRule: "FTC Upfront Pricing & Disclosure Guidance"
           }
         ],
-        negotiationStrategy: `Call ${provider || 'the billing department'} and state: 'I am auditing my monthly statement against competitor rates and federal disclosure guidelines. I am requesting that the ancillary fees be eliminated or that my account be migrated to your loyalty promotional tier.'`,
-        phoneScript: `"Hello, I am reviewing my statement for ${provider || 'this account'}. I noticed undocumented surcharges and fee hikes totaling $XX.XX. I am a long-term customer and competitor providers currently offer equivalent service for substantially less. I would like to remain with you today if we can credit these ancillary fees and lock in your current retention rate. Can you apply this credit on my current billing cycle?"`,
+        negotiationStrategy: `Contact ${provider || 'your provider'} to review your line items against competitor promotions and statutory disclosures. Ask whether unbundled charges can be consolidated or if promotional credits apply to your account.`,
+        phoneScript: `"Hello, I am reviewing invoice details for my ${provider || 'service'} account. I would like to review the ancillary surcharges totaling approximately $XX.XX on my statement. As an active customer, I would like to request that these discretionary fees be credited or that my account be updated to your current standard plan. Can you check what retention adjustments are available today?"`,
         disputeReady: true
       };
       setAuditResult(fallbackAudit);
@@ -360,7 +360,7 @@ export const BillAuditor: React.FC<BillAuditorProps> = ({ onTransferToDispute })
                         <div className="flex items-center justify-between">
                           <span className="text-xs font-bold text-white">{flag.chargeName}</span>
                           <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
-                            flag.verdict.toLowerCase().includes('bogus') || flag.verdict.toLowerCase().includes('junk')
+                            flag.verdict.toLowerCase().includes('balance') || flag.verdict.toLowerCase().includes('avoidable')
                               ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30'
                               : 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
                           }`}>
@@ -372,7 +372,7 @@ export const BillAuditor: React.FC<BillAuditorProps> = ({ onTransferToDispute })
                         </p>
                         {flag.statuteOrRule && (
                           <div className="text-[10px] text-emerald-400 font-mono pt-1">
-                            Regulation: {flag.statuteOrRule}
+                            Relevant Guidance: {flag.statuteOrRule}
                           </div>
                         )}
                       </div>
@@ -387,7 +387,7 @@ export const BillAuditor: React.FC<BillAuditorProps> = ({ onTransferToDispute })
                   <div className="flex items-center justify-between">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
                       <PhoneCall className="w-3.5 h-3.5" />
-                      Retention Call Script (Read to Customer Care)
+                      Discussion Script (For Customer Service)
                     </h4>
                     <button
                       type="button"
@@ -413,13 +413,13 @@ export const BillAuditor: React.FC<BillAuditorProps> = ({ onTransferToDispute })
                       onTransferToDispute(
                         provider,
                         auditResult.totalEstimatedOvercharge.replace(/[^0-9.]/g, '') || monthlyAmount.toString(),
-                        `Disputing unauthorized charges and excessive fees flagged on statement: ${auditResult.flags.map(f => f.chargeName).join(', ')}`
+                        `Disputing flagged ancillary charges and unbundled fees on statement: ${auditResult.flags.map(f => f.chargeName).join(', ')}`
                       );
                     }}
                     className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 font-bold text-xs transition-all cursor-pointer shadow-md"
                   >
                     <Scale className="w-4 h-4 text-emerald-400" />
-                    <span>Generate Formal Legal Dispute Letter with These Findings</span>
+                    <span>Draft Written Dispute Notice With Flagged Items</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -427,6 +427,17 @@ export const BillAuditor: React.FC<BillAuditorProps> = ({ onTransferToDispute })
             </div>
           )}
         </div>
+      </div>
+
+      {/* Educational Disclosure Card */}
+      <div className="bg-slate-900/60 rounded-2xl border border-slate-800/80 p-4 text-xs text-slate-400 space-y-1.5">
+        <div className="flex items-center gap-1.5 font-bold text-slate-300 text-[11px] uppercase tracking-wider">
+          <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+          <span>Educational Analysis &amp; Data Notice</span>
+        </div>
+        <p className="text-[11px] leading-relaxed">
+          The Bill Fee Checker evaluates user-submitted text against common industry fee structures and federal disclosure standards (including FCC Truth-in-Billing and CMS balance billing guidance). Flagged charges warrant verification with your provider and do not constitute formal accusations of wrongdoing or legal advice. Information processed during analysis is not stored or shared.
+        </p>
       </div>
     </div>
   );

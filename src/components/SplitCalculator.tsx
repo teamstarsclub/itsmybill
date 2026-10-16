@@ -107,21 +107,41 @@ export const SplitCalculator: React.FC = () => {
     };
   }, [billAmount, taxPercent, tipPercent, peopleCount, roundUp]);
 
-  // Income Mode Calculations
+  // Income Mode Calculations with exact cent reconciliation
   const incomeCalc = useMemo(() => {
     const totalIncome = roommates.reduce((sum, r) => sum + (Number(r.monthlyIncome) || 0), 0);
     const totalBill = Number(utilityTotal) || 0;
 
-    return roommates.map((r) => {
+    const rawShares = roommates.map((r) => {
       const inc = Number(r.monthlyIncome) || 0;
-      const pct = totalIncome > 0 ? inc / totalIncome : 1 / roommates.length;
-      const owed = totalBill * pct;
+      const pct = totalIncome > 0 ? inc / totalIncome : (roommates.length > 0 ? 1 / roommates.length : 0);
+      const owedCents = Math.round(totalBill * pct * 100);
       return {
         ...r,
         pct: (pct * 100).toFixed(1),
-        owed: owed.toFixed(2),
+        owedCents,
+        owed: (owedCents / 100).toFixed(2),
       };
     });
+
+    // Reconcile any rounding cent difference with the largest contributor
+    const totalAllocatedCents = rawShares.reduce((sum, r) => sum + r.owedCents, 0);
+    const billCents = Math.round(totalBill * 100);
+    const diffCents = billCents - totalAllocatedCents;
+
+    if (diffCents !== 0 && rawShares.length > 0) {
+      // Find person with highest income
+      let maxIdx = 0;
+      for (let i = 1; i < rawShares.length; i++) {
+        if (rawShares[i].monthlyIncome > rawShares[maxIdx].monthlyIncome) {
+          maxIdx = i;
+        }
+      }
+      rawShares[maxIdx].owedCents += diffCents;
+      rawShares[maxIdx].owed = (rawShares[maxIdx].owedCents / 100).toFixed(2);
+    }
+
+    return rawShares;
   }, [utilityTotal, roommates]);
 
   // Itemized Mode Calculations
@@ -166,20 +186,20 @@ export const SplitCalculator: React.FC = () => {
       text += `Total Bill: $${equalCalc.grandTotal.toFixed(2)} (inc. $${equalCalc.tipAmt.toFixed(2)} tip)\n`;
       text += `Split among ${peopleCount} people:\n`;
       text += `👉 Each person pays: $${equalCalc.perPerson.toFixed(2)}\n`;
-      text += `Calculate yours free at: https://itsmybill.com`;
+      text += `Calculate yours free at: https://www.itsmybill.com/`;
     } else if (splitMode === 'income') {
       text += `Total Shared Bill: $${Number(utilityTotal).toFixed(2)}\n`;
       text += `Income-Fair Proportional Split:\n`;
       incomeCalc.forEach((r) => {
         text += `• ${r.name}: $${r.owed} (${r.pct}% based on $${r.monthlyIncome}/mo)\n`;
       });
-      text += `Calculate yours free at: https://itsmybill.com`;
+      text += `Calculate yours free at: https://www.itsmybill.com/`;
     } else {
       text += `Itemized Bill Total: $${itemizedCalc.grandTotal.toFixed(2)}\n`;
       Object.entries(itemizedCalc.personTotals).forEach(([p, val]) => {
         text += `• ${p}: $${val.grandTotal.toFixed(2)} (Food: $${val.foodSubtotal.toFixed(2)})\n`;
       });
-      text += `Calculate yours free at: https://www.itsmybill.com`;
+      text += `Calculate yours free at: https://www.itsmybill.com/`;
     }
 
     navigator.clipboard.writeText(text);

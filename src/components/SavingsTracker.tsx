@@ -205,7 +205,7 @@ export const SavingsTracker: React.FC<SavingsTrackerProps> = ({
 Bills renegotiated:
 ${bills.map(b => `• ${b.provider}: $${b.beforeAmount} ➔ $${b.afterAmount} (${b.frequency === 'monthly' ? '/mo' : 'one-time'}) via ${b.methodUsed}`).join('\n')}
 
-Audited 100% free with no bank login at https://itsmybill.com`;
+Audited free with zero account sign-up at https://www.itsmybill.com/`;
 
     navigator.clipboard.writeText(text);
     setCopiedSummary(true);
@@ -477,10 +477,15 @@ Audited 100% free with no bank login at https://itsmybill.com`;
         {/* Left 2 Cols: Bill Cards List */}
         <div className="lg:col-span-2 space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-base font-bold text-white flex items-center gap-2">
-              <Layers className="w-4 h-4 text-emerald-400" />
-              <span>Tracked Reductions ({bills.length})</span>
-            </h2>
+            <div className="space-y-0.5">
+              <h2 className="text-base font-bold text-white flex items-center gap-2">
+                <Layers className="w-4 h-4 text-emerald-400" />
+                <span>Tracked Reductions ({bills.length})</span>
+              </h2>
+              <span className="text-[11px] text-slate-500 block">
+                Sample scenarios shown below. Log your own bills to customize.
+              </span>
+            </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={handleResetDefaults}
@@ -488,7 +493,7 @@ Audited 100% free with no bank login at https://itsmybill.com`;
                 title="Reset to default examples"
               >
                 <RotateCcw className="w-3 h-3" />
-                <span>Reset Demo Bills</span>
+                <span>Reset Example Bills</span>
               </button>
             </div>
           </div>

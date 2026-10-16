@@ -1,6 +1,6 @@
 {
   "name": "ItsMyBill – Smart Utility, Split & Dispute Copilot",
-  "description": "The #1 free consumer bill utility. Calculate fair splits, audit surprise medical bills, generate dispute letters, and analyze billing videos with AI.",
+  "description": "Free consumer bill utility. Calculate fair splits, review statement fees, draft dispute letters, and compare state utility benchmarks.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

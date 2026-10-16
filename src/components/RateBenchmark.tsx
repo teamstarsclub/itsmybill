@@ -49,13 +49,13 @@ export const RateBenchmark: React.FC<RateBenchmarkProps> = ({ onNavigateToAudit 
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold mb-3">
             <Zap className="w-3.5 h-3.5 text-amber-400" />
-            50-State Utility Benchmarks • Live 2026 Rate Index
+            50-State Utility Benchmarks • Source: U.S. EIA & Federal Survey Data
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Are You <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-emerald-300">Overpaying for Utilities</span>?
+            Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-emerald-300">Household Utility Costs</span> by State
           </h1>
           <p className="mt-2 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Select your state and compare your electric, high-speed broadband, water, and gas bills against state and national benchmarks. Uncover if your utility provider is quietly charging above-market tariffs.
+            Select your state to compare your electric, high-speed broadband, water, and natural gas bills against published state and national benchmarks based on U.S. Energy Information Administration (EIA) reports.
           </p>
         </div>
       </div>
@@ -63,11 +63,14 @@ export const RateBenchmark: React.FC<RateBenchmarkProps> = ({ onNavigateToAudit 
       {/* State Selector Bar */}
       <div className="bg-slate-900 p-4 rounded-2xl border border-slate-800 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Select Your State:</span>
+          <label htmlFor="benchmark-state-select" className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            Select Your State:
+          </label>
           <select
+            id="benchmark-state-select"
             value={selectedStateCode}
             onChange={(e) => setSelectedStateCode(e.target.value)}
-            className="bg-slate-950 border border-slate-700 text-white font-bold text-sm rounded-xl px-4 py-2 focus:outline-none focus:border-amber-400"
+            className="bg-slate-950 border border-slate-700 text-white font-bold text-sm rounded-xl px-4 py-2 focus:outline-none focus:border-amber-400 cursor-pointer"
           >
             {US_UTILITY_BENCHMARKS.map((s) => (
               <option key={s.code} value={s.code}>
@@ -243,10 +246,27 @@ export const RateBenchmark: React.FC<RateBenchmarkProps> = ({ onNavigateToAudit 
             onClick={() => onNavigateToAudit?.()}
             className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 shrink-0 inline-flex items-center gap-2 cursor-pointer"
           >
-            <span>Run Free Bill Audit to Cut Rates</span>
+            <span>Review Bill Details with Fee Checker</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         )}
+      </div>
+
+      {/* Sources & Methodology Card */}
+      <div className="bg-slate-900/60 rounded-2xl border border-slate-800/80 p-5 space-y-3 text-xs text-slate-400">
+        <div className="flex items-center gap-2 font-bold text-slate-200 uppercase tracking-wider text-[11px]">
+          <Info className="w-4 h-4 text-amber-400" />
+          <span>Data Sources, Units &amp; Calculation Methodology</span>
+        </div>
+        <p className="leading-relaxed">
+          <strong>Electricity:</strong> State retail prices are expressed in cents per kilowatt-hour (¢/kWh) and benchmark monthly estimates reflect average U.S. residential household consumption (~890 kWh/month) from the <em>U.S. Energy Information Administration (EIA) Electric Power Monthly (Table 5.6.A)</em>.
+        </p>
+        <p className="leading-relaxed">
+          <strong>Broadband &amp; Ancillary Utilities:</strong> Internet benchmarks represent median standalone 100–300 Mbps broadband tiers documented in the <em>FCC Urban Rate Survey</em>. Water and natural gas figures represent statewide residential median survey estimates from the <em>American Water Works Association (AWWA)</em> and <em>American Gas Association (AGA)</em>.
+        </p>
+        <p className="leading-relaxed text-[11px] text-slate-500">
+          <strong>Limitations:</strong> Actual bills vary based on home square footage, seasonal temperature swings, heating fuel type, municipal franchise fees, and individual provider rate plans. These figures serve as baseline reference points rather than individual utility quotes.
+        </p>
       </div>
     </div>
   );

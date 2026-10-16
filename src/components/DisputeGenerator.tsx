@@ -56,26 +56,32 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
     {
       label: 'Surprise Out-of-Network Emergency (No Surprises Act)',
       category: 'Medical & Hospital',
-      reason: 'Out-of-network balance billing for emergency services at an in-network facility, strictly prohibited under the federal No Surprises Act (42 U.S.C. § 300gg-111).',
+      reason: 'Out-of-network balance billing for emergency services at an in-network facility, prohibited under the federal No Surprises Act (42 U.S.C. § 300gg-111).',
       codes: 'CPT 99284 / Rev Code 0450',
     },
     {
-      label: 'Expired Promotional Rate Hike (No Prior Notice)',
+      label: 'Undisclosed Telecom Surcharge (FCC Truth-in-Billing)',
       category: 'Cable & Internet',
-      reason: 'Unnotified price escalation exceeding contractual promotional agreement without the required 30-day billing notice.',
-      codes: 'Broadcast TV Fee & Modem Rental',
+      reason: 'Unnotified price escalation and undisclosed ancillary surcharges exceeding contractual terms without required notice (FCC 47 C.F.R. § 64.2401).',
+      codes: 'Broadcast TV Surcharge & Modem Rental',
     },
     {
-      label: 'Unbundled Hospital Lab & Pharmacy Charges',
+      label: 'Credit Card Billing Statement Error (FCBA 15 U.S.C. 1666)',
+      category: 'Credit & Banking',
+      reason: 'Billing statement error and unauthorized merchant charge disputed within statutory 60-day billing notice window pursuant to 15 U.S.C. § 1666.',
+      codes: 'Disputed Merchant Charge ID',
+    },
+    {
+      label: 'Debt Collector Validation Demand (FDCPA 15 U.S.C. 1692g)',
+      category: 'Collections',
+      reason: 'Formal request for debt validation and verification of original creditor documentation pursuant to the Fair Debt Collection Practices Act (15 U.S.C. § 1692g).',
+      codes: 'Collection Agency Notice Ref #',
+    },
+    {
+      label: 'Hospital Charity Care / Financial Assistance (ACA § 501(r))',
       category: 'Medical & Hospital',
-      reason: 'Improper unbundling of routine emergency supplies (IV fluids/saline) and diagnostic panels that are already incorporated into the primary treatment code.',
-      codes: 'CPT 80053, CPT 99283',
-    },
-    {
-      label: 'Unauthorized Phone Carrier Insurance/Add-on',
-      category: 'Mobile Phone',
-      reason: 'Unauthorized cramming of third-party device protection and value-added subscriptions without explicit opt-in consent (FCC Cramming Rules).',
-      codes: 'Carrier Device Protection Surcharge',
+      reason: 'Formal application and ledger review under hospital Financial Assistance Policy (FAP) pursuant to Internal Revenue Code § 501(r).',
+      codes: 'Itemized Hospital Ledger Audit',
     },
   ];
 
@@ -146,13 +152,13 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-3">
             <Scale className="w-3.5 h-3.5 text-indigo-400" />
-            Statutory Consumer Protection • Fair Credit Billing Act & No Surprises Act
+            Statutory Consumer Protection • Self-Advocacy Drafting Tool
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            Official <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-300">Bill Dispute Letter</span> Generator
+            Consumer <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-300">Bill Dispute Letter</span> Generator
           </h1>
           <p className="mt-2 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Billing departments routinely dismiss phone complaints, but federal law (FCBA 15 U.S.C. § 1666 and No Surprises Act 42 U.S.C. § 300gg-111) forces them to pause collections and conduct an itemized audit once you submit a written dispute. Generate yours in 10 seconds.
+            Draft formal written dispute notices and itemized audit requests tailored to your specific bill category (such as medical emergency balance billing under the No Surprises Act, telecommunications fee inquiries under FCC rules, or credit card billing errors).
           </p>
         </div>
       </div>
@@ -331,17 +337,17 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
                 <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs space-y-2">
                   <div className="font-bold text-white flex items-center gap-1.5">
                     <Clock className="w-4 h-4 text-emerald-400" />
-                    Statutory Timelines: {letterData.legalDeadlines || '30 Days to acknowledge, 90 days to resolve'}
+                    <span>Statutory Timelines: {letterData.legalDeadlines || '30 days to acknowledge written inquiry'}</span>
                   </div>
-                  <p className="text-slate-400 text-[11px]">
-                    Under 15 U.S.C. § 1666, creditors cannot report you to credit bureaus or take collection action while this dispute is formally pending.
+                  <p className="text-slate-400 text-[11px] leading-relaxed">
+                    Once a formal written dispute is delivered via certified mail, creditors and debt collectors are subject to statutory verification requirements before advancing collection actions or filing unverified credit reporting entries.
                   </p>
                 </div>
 
                 {letterData.certifiedMailInstructions && letterData.certifiedMailInstructions.length > 0 && (
                   <div className="space-y-1.5">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                      Certified Mail Instructions
+                      Recommended Certified Mail Procedure
                     </span>
                     {letterData.certifiedMailInstructions.map((ins, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
@@ -355,6 +361,17 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
             </div>
           )}
         </div>
+      </div>
+
+      {/* Self-Advocacy & Legal Disclaimer */}
+      <div className="bg-slate-900/60 rounded-2xl border border-slate-800/80 p-4 text-xs text-slate-400 space-y-1.5 no-print">
+        <div className="flex items-center gap-1.5 font-bold text-slate-300 text-[11px] uppercase tracking-wider">
+          <Scale className="w-3.5 h-3.5 text-indigo-400" />
+          <span>Self-Advocacy Disclaimer &amp; Legal Notice</span>
+        </div>
+        <p className="text-[11px] leading-relaxed">
+          The Dispute Letter Generator creates automated drafts for personal review based solely on user-provided parameters. ItsMyBill is an informational consumer technology utility, not a law firm or licensed legal referral service, and does not provide individualized legal representation. Outcomes, refunds, or debt reductions cannot be guaranteed. Always verify facts, dates, and amounts against your original invoices and consider consulting an attorney or qualified legal aid provider for complex disputes.
+        </p>
       </div>
     </div>
   );

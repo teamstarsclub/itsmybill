@@ -71,14 +71,20 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
+              const href = item.id === 'split' ? '/' : `/?tab=${item.id}`;
               return (
-                <button
+                <a
                   key={item.id}
-                  onClick={() => setActiveTab(item.id)}
+                  href={href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveTab(item.id);
+                  }}
+                  aria-current={isActive ? 'page' : undefined}
                   className={`relative flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive
                       ? 'bg-slate-800 text-white shadow-sm border border-slate-700'
@@ -92,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                       {item.badge}
                     </span>
                   )}
-                </button>
+                </a>
               );
             })}
           </nav>
@@ -101,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={handleShare}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition-colors cursor-pointer"
               title="Share this utility tool"
             >
               {copied ? (
@@ -117,13 +123,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
               )}
             </button>
 
-            <button
-              type="button"
-              onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-xs text-slate-400 hover:text-slate-200 px-2 py-1 transition-colors cursor-pointer"
+            <a
+              href="#faq"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-xs text-slate-400 hover:text-slate-200 px-2 py-1 transition-colors"
             >
-              Help & FAQ
-            </button>
+              Help &amp; FAQ
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -150,13 +159,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
+            const href = item.id === 'split' ? '/' : `/?tab=${item.id}`;
             return (
-              <button
+              <a
                 key={item.id}
-                onClick={() => {
+                href={href}
+                onClick={(e) => {
+                  e.preventDefault();
                   setActiveTab(item.id);
                   setMobileMenuOpen(false);
                 }}
+                aria-current={isActive ? 'page' : undefined}
                 className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium ${
                   isActive
                     ? 'bg-slate-800 text-white border border-slate-700'
@@ -172,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                     {item.badge}
                   </span>
                 )}
-              </button>
+              </a>
             );
           })}
         </div>

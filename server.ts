@@ -51,8 +51,8 @@ app.post('/api/audit-bill', async (req, res) => {
     }
 
     const prompt = `
-You are the expert consumer auditor at ItsMyBill.com.
-Audit this bill for junk fees, illegal charges, promotional expiration traps, or inflated utility rates.
+You are the consumer billing auditor at ItsMyBill.com.
+Audit this bill statement for ancillary surcharges, unbundled fees, promotional expirations, or charges warranting verification.
 
 Provider: ${provider || 'Unspecified'}
 Bill Category: ${billType || 'General Utility / Telecom / Medical'}
@@ -62,12 +62,24 @@ Raw Bill Text / Line Items:
 ${billText || 'No line items provided, evaluate based on provider and typical industry overcharges.'}
 """
 
+Guidelines:
+1. Do not label charges 'illegal' or 'fraudulent' without verified statutory violations.
+2. Distinguish between:
+   - "Unbundled Line Item (Review Recommended)"
+   - "Ancillary Surcharge (Review Recommended)"
+   - "Promotional Expiration"
+   - "Disputed Balance Billing (No Surprises Act)"
+   - "Mandatory Tax / Regulatory Fee"
+   - "Standard Base Charge"
+3. Identify the exact documentation or evidence needed from the provider to verify each flagged charge.
+4. Provide a practical, courteous negotiation script for customer care.
+
 Provide a structured JSON response with:
-1. "auditScore": Number from 0 to 100 (100 = completely clean, <50 = riddled with bogus charges)
-2. "totalEstimatedOvercharge": Estimated monthly or one-time dollar amount being overpaid (e.g. "$42.50/mo")
-3. "flags": Array of objects { "chargeName": string, "amount": string, "verdict": "Bogus Junk Fee" | "Expired Promo" | "Suspicious Rate" | "Legitimate Base", "explanation": string, "statuteOrRule": string }
-4. "negotiationStrategy": Detailed recommendations for lowering this specific bill
-5. "phoneScript": Ready-to-read verbatim script for calling customer retention / billing department
+1. "auditScore": Number from 0 to 100 (100 = verified base charges only, <50 = multiple ancillary fees or balance billing issues)
+2. "totalEstimatedOvercharge": Estimated monthly or one-time dollar amount warranting review (e.g. "$42.50/mo")
+3. "flags": Array of objects { "chargeName": string, "amount": string, "verdict": string, "explanation": string, "statuteOrRule": string, "verificationNeeded": string }
+4. "negotiationStrategy": Practical recommendations for discussing these line items
+5. "phoneScript": Courteous, ready-to-read script for contacting customer retention / billing
 6. "disputeReady": Boolean indicating if this qualifies for a formal written dispute letter
 
 Return STRICT JSON only.
@@ -177,12 +189,19 @@ Details:
 - Specific CPT / Item codes if any: ${cptCodes || 'N/A'}
 - Bill Type: ${billType || 'Medical / Telecom / Utility'}
 
-Write a professional, assertive dispute letter citing appropriate statutory protections (e.g., No Surprises Act 42 U.S.C. 300gg-111, Fair Credit Billing Act 15 U.S.C. 1666, CFPB regulations, state utility commission rules).
+Write a professional dispute draft citing ONLY the statutory protections that legally apply to this specific bill category:
+- For Medical/Hospital bills: cite the federal No Surprises Act (42 U.S.C. § 300gg-111) and 45 C.F.R. § 149 for emergency/out-of-network facility charges; cite Section 501(r) of the Internal Revenue Code for non-profit hospital financial assistance policies. Do NOT cite the Fair Credit Billing Act unless it involves a revolving credit card account error.
+- For Telecom/Cable/Broadband bills: cite FCC Truth-in-Billing rules (47 C.F.R. § 64.2401) and Television Viewer Protection Act (47 U.S.C. § 562).
+- For Credit Card / Open-End Credit Billing Errors: cite the Fair Credit Billing Act (15 U.S.C. § 1666).
+- For Third-Party Debt Collectors: cite the Fair Debt Collection Practices Act (15 U.S.C. § 1692g).
+
+Letter must clearly distinguish user-provided facts from statutory rights, maintain a professional tone, and state that this letter serves as a formal dispute notice.
+
 Return JSON with:
 1. "subjectLine": string
 2. "letterBody": complete formatted letter with placeholders for signatures and dates
 3. "certifiedMailInstructions": list of recommended mailing and tracking steps
-4. "legalDeadlines": what response timeframe the law grants them (e.g. 30 days under FCBA)
+4. "legalDeadlines": explanation of statutory acknowledgment or resolution timeframes applicable to this bill category
 `;
 
     const response = await withTimeout(
@@ -200,23 +219,32 @@ Return JSON with:
     return res.json({ success: true, data: parsed });
   } catch (error: any) {
     console.error('Letter generation fallback triggered:', error);
-    const { consumerName, accountNumber, providerName, billDate, disputeAmount, disputeReason } = req.body;
+    const { consumerName, accountNumber, providerName, billDate, disputeAmount, disputeReason, billType } = req.body;
     const name = consumerName || 'Jordan Miller';
     const acct = accountNumber || 'ACC-88392';
     const prov = providerName || 'Billing Department';
     const date = billDate || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     const amt = disputeAmount || '1,450.00';
     const reason = disputeReason || 'Unsubstantiated line items and out-of-network balance billing in violation of statutory disclosure rules.';
+    const isMedical = (billType || '').toLowerCase().includes('medical') || (billType || '').toLowerCase().includes('hospital');
+
+    const statutoryCitation = isMedical
+      ? "pursuant to the federal No Surprises Act (42 U.S.C. § 300gg-111) and 45 C.F.R. § 149"
+      : "pursuant to FCC Truth-in-Billing requirements (47 C.F.R. § 64.2401) and applicable consumer protection statutes";
+
+    const legalDeadlines = isMedical
+      ? "Under CMS No Surprises Act rules, providers cannot balance-bill beyond in-network cost sharing for covered emergency services and must furnish itemized billing codes upon request."
+      : "Creditors and service providers typically acknowledge formal written disputes within 30 days of receipt.";
 
     const fallbackLetter = {
-      subjectLine: `FORMAL WRITTEN DISPUTE & NOTICE OF INQUIRY – Account #${acct} – ${name}`,
-      letterBody: `Date: ${date}\n\nTO:\nBilling Disputes & Consumer Compliance\n${prov}\n\nFROM:\n${name}\nAccount/Reference #: ${acct}\n\nRE: Formal Dispute of Billed Charges totaling $${amt}\n\nDear Billing Compliance Officer,\n\nPlease accept this letter as my formal written dispute pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666), the federal No Surprises Act (42 U.S.C. § 300gg-111), and applicable consumer protection statutes.\n\nI am disputing the charges in the amount of $${amt} appearing on the invoice dated ${date} regarding account number ${acct}. Specifically:\n\n${reason}\n\nUnder federal law, upon receipt of this formal written dispute, you are required to:\n1. Provide a comprehensive, line-item itemized statement including all applicable CPT, HCPCS, and revenue codes.\n2. Cease any automated collection efforts, late fee assessments, or adverse reporting to consumer reporting agencies while this inquiry is pending.\n3. Conduct an audit into the contractual justification and regulatory validity of the disputed charges.\n\nPlease provide your written determination within thirty (30) days as prescribed by law. If you have any questions or require additional documentation, please contact me in writing at the address on file.\n\nSincerely,\n\n___________________________________\n${name}\nEnclosures: Copy of Statement`,
+      subjectLine: `FORMAL WRITTEN DISPUTE & AUDIT REQUEST – Account #${acct} – ${name}`,
+      letterBody: `Date: ${date}\n\nTO:\nBilling Disputes & Consumer Compliance\n${prov}\n\nFROM:\n${name}\nAccount/Reference #: ${acct}\n\nRE: Formal Written Dispute of Billed Charges totaling $${amt}\n\nDear Billing Compliance Department,\n\nPlease accept this letter as my formal written dispute ${statutoryCitation}.\n\nI am disputing the charges in the amount of $${amt} appearing on the invoice dated ${date} regarding account number ${acct}. Specifically:\n\n${reason}\n\nBased on the above, I am requesting that you:\n1. Provide a comprehensive, line-item itemized statement including all applicable service, billing, and revenue codes.\n2. Maintain my account in disputed status and pause automated collection activity while this inquiry is pending.\n3. Conduct a review of the contractual and statutory validity of the disputed charges.\n\nPlease provide your written response to the address on file within thirty (30) days. Thank you for your prompt attention to this matter.\n\nSincerely,\n\n___________________________________\n${name}\nEnclosures: Copy of Statement`,
       certifiedMailInstructions: [
-        "Send via USPS Certified Mail with Return Receipt Requested (green card form 3811).",
-        "Keep the certified mail tracking number and signed delivery green card in your dispute binder.",
-        "Maintain a copy of this dated letter along with the original disputed invoice."
+        "Send via USPS Certified Mail with Return Receipt Requested for verifiable proof of delivery.",
+        "Retain the certified mail tracking number and delivery receipt in your personal records.",
+        "Keep a signed copy of this letter attached to the original disputed invoice."
       ],
-      legalDeadlines: "Creditors must acknowledge receipt within 30 days and resolve the dispute within two billing cycles (not to exceed 90 days)."
+      legalDeadlines
     };
 
     return res.json({ success: true, data: fallbackLetter });

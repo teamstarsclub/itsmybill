@@ -28,7 +28,7 @@ export const AdLeaderboard: React.FC<AdLeaderboardProps> = ({ onNavigateToAudit 
             Partner Offer
           </span>
           <div className="text-slate-300">
-            <strong className="text-white">Cut your cable & phone bills automatically:</strong> Professional negotiators save you an average of $380/yr with zero phone calls.
+            <strong className="text-white">Review recurring bills:</strong> Compare negotiation options or use our free DIY line-item fee checker.
           </div>
         </div>
         <button 

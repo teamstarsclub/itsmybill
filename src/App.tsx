@@ -55,6 +55,39 @@ export default function App() {
     return () => window.removeEventListener('popstate', handleUrlSync);
   }, []);
 
+  const TAB_METADATA: Record<string, { title: string; desc: string }> = {
+    split: {
+      title: 'Free Bill Splitter & Bill Fee Checker | ItsMyBill',
+      desc: 'Split shared bills fairly, review potential fees, draft dispute letters, and compare utility costs by state with free tools from ItsMyBill.',
+    },
+    audit: {
+      title: 'Line-Item Fee Checker & Bill Review | ItsMyBill',
+      desc: 'Review telecom, internet, cable, and medical statements for ancillary surcharges, unbundled fees, and expired promotional rates with ItsMyBill.',
+    },
+    dispute: {
+      title: 'Consumer Bill Dispute Letter Drafting Tool | ItsMyBill',
+      desc: 'Draft formal dispute notices tailored to relevant federal consumer protection statutes, including the No Surprises Act and Fair Credit Billing Act.',
+    },
+    tracker: {
+      title: 'Realized Bill Savings Tracker | ItsMyBill',
+      desc: 'Track and calculate your ongoing monthly and one-time realized savings from negotiated bills and disputed fees.',
+    },
+    benchmark: {
+      title: '50-State Utility Benchmarks & Comparison | ItsMyBill',
+      desc: 'Compare household electric, gas, water, and broadband costs against published state averages from the U.S. Energy Information Administration.',
+    },
+  };
+
+  // Sync title and metadata with active tab
+  useEffect(() => {
+    const meta = TAB_METADATA[activeTab] || TAB_METADATA.split;
+    document.title = meta.title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', meta.desc);
+    }
+  }, [activeTab]);
+
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
     // Use clean URLs without any '#' character
