@@ -117,15 +117,42 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
       const amt = disputeAmount || '1,450.00';
       const reason = disputeReason || 'Unsubstantiated line items and out-of-network balance billing in violation of statutory disclosure rules.';
 
+      const isMedical = (billType || '').toLowerCase().includes('medical') || (billType || '').toLowerCase().includes('hospital');
+      const isTelecom = (billType || '').toLowerCase().includes('cable') || (billType || '').toLowerCase().includes('internet') || (billType || '').toLowerCase().includes('phone');
+      const isBanking = (billType || '').toLowerCase().includes('credit') || (billType || '').toLowerCase().includes('bank');
+      const isCollections = (billType || '').toLowerCase().includes('collection');
+
+      let statutoryBasis = "pursuant to applicable consumer billing disclosure standards";
+      let legalDeadlines = "Creditors and service providers typically review and respond to written consumer billing inquiries within 30 days of receipt.";
+      let requestedAction = "1. Furnish a complete line-item itemized statement detailing all billed charges.\n2. Review the contractual and statutory validity of the disputed charges.\n3. Pause automated collection activity while this inquiry is under review.";
+
+      if (isMedical) {
+        statutoryBasis = "pursuant to the federal No Surprises Act (42 U.S.C. § 300gg-111) and 45 C.F.R. § 149";
+        legalDeadlines = "Under federal No Surprises Act regulations, providers cannot balance bill patients beyond in-network cost-sharing for covered emergency services and must provide itemized billing codes upon request.";
+        requestedAction = "1. Furnish an itemized statement detailing all applicable CPT, HCPCS, and revenue codes.\n2. Recalculate patient financial liability in compliance with the federal No Surprises Act (42 U.S.C. § 300gg-111).\n3. Cease automated collection efforts and adverse credit reporting while this dispute is pending.";
+      } else if (isTelecom) {
+        statutoryBasis = "pursuant to Federal Communications Commission (FCC) Truth-in-Billing requirements (47 C.F.R. § 64.2401) and the Television Viewer Protection Act (47 U.S.C. § 562)";
+        legalDeadlines = "FCC regulations require telecommunications providers to provide clear, organized fee descriptions and address customer billing inquiries promptly.";
+        requestedAction = "1. Provide contractual justification and disclosure records for all ancillary surcharges.\n2. Apply appropriate billing credits for disputed line items.\n3. Verify that my account is maintained on the agreed rate tier.";
+      } else if (isBanking) {
+        statutoryBasis = "pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666)";
+        legalDeadlines = "Under 15 U.S.C. § 1666, creditors must acknowledge written billing error notices within 30 days and resolve the dispute within two billing cycles (not to exceed 90 days).";
+        requestedAction = "1. Acknowledge receipt of this billing error notice in writing within 30 days.\n2. Conduct an investigation into the disputed charge.\n3. Refrain from taking collection action or reporting the disputed amount as delinquent pursuant to 15 U.S.C. § 1666(a).";
+      } else if (isCollections) {
+        statutoryBasis = "pursuant to the Fair Debt Collection Practices Act (15 U.S.C. § 1692g) and CFPB Regulation F (12 C.F.R. Part 1006)";
+        legalDeadlines = "Under 15 U.S.C. § 1692g, debt collectors must cease collection activity until written verification of the disputed debt from the original creditor is provided.";
+        requestedAction = "1. Cease all collection efforts until written verification of the debt from the original creditor is provided.\n2. Provide documentation establishing the contractual authority to collect this balance.\n3. Notify credit reporting agencies that this account is actively disputed by the consumer.";
+      }
+
       const fallbackLetter: LetterData = {
-        subjectLine: `FORMAL WRITTEN DISPUTE & NOTICE OF INQUIRY – Account #${acct} – ${name}`,
-        letterBody: `Date: ${date}\n\nTO:\nBilling Disputes & Consumer Compliance\n${prov}\n\nFROM:\n${name}\nAccount/Reference #: ${acct}\n\nRE: Formal Dispute of Billed Charges totaling $${amt}\n\nDear Billing Compliance Officer,\n\nPlease accept this letter as my formal written dispute pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666), the federal No Surprises Act (42 U.S.C. § 300gg-111), and applicable consumer protection statutes.\n\nI am disputing the charges in the amount of $${amt} appearing on the invoice dated ${date} regarding account number ${acct}. Specifically:\n\n${reason}\n\nUnder federal law, upon receipt of this formal written dispute, you are required to:\n1. Provide a comprehensive, line-item itemized statement including all applicable CPT, HCPCS, and revenue codes.\n2. Cease any automated collection efforts, late fee assessments, or adverse reporting to consumer reporting agencies while this inquiry is pending.\n3. Conduct an audit into the contractual justification and regulatory validity of the disputed charges.\n\nPlease provide your written determination within thirty (30) days as prescribed by law. If you have any questions or require additional documentation, please contact me in writing at the address on file.\n\nSincerely,\n\n___________________________________\n${name}\nEnclosures: Copy of Statement`,
+        subjectLine: `FORMAL WRITTEN DISPUTE & AUDIT REQUEST – Account #${acct} – ${name}`,
+        letterBody: `Date: ${date}\n\nTO:\nBilling Disputes & Consumer Compliance\n${prov}\n\nFROM:\n${name}\nAccount/Reference #: ${acct}\n\nRE: Formal Dispute of Billed Charges totaling $${amt}\n\nDear Billing Compliance Department,\n\nPlease accept this letter as my formal written dispute ${statutoryBasis}.\n\nI am disputing the charges in the amount of $${amt} appearing on the invoice dated ${date} regarding account number ${acct}. Specifically:\n\n${reason}\n\nBased on the above, I am formally requesting that you:\n${requestedAction}\n\nPlease provide your written determination within thirty (30) days as prescribed by law. If you have any questions or require additional documentation, please contact me in writing at the address on file.\n\nSincerely,\n\n___________________________________\n${name}\nEnclosures: Copy of Disputed Statement`,
         certifiedMailInstructions: [
           "Send via USPS Certified Mail with Return Receipt Requested (green card form 3811).",
-          "Keep the certified mail tracking number and signed delivery green card in your dispute binder.",
-          "Maintain a copy of this dated letter along with the original disputed invoice."
+          "Keep the certified mail tracking number and signed delivery receipt in your personal records.",
+          "Maintain a signed copy of this dated letter along with the original disputed invoice."
         ],
-        legalDeadlines: "Creditors must acknowledge receipt within 30 days and resolve the dispute within two billing cycles (not to exceed 90 days)."
+        legalDeadlines
       };
       setLetterData(fallbackLetter);
     } finally {

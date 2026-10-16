@@ -49,13 +49,13 @@ export const RateBenchmark: React.FC<RateBenchmarkProps> = ({ onNavigateToAudit 
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold mb-3">
             <Zap className="w-3.5 h-3.5 text-amber-400" />
-            50-State Utility Benchmarks • Source: U.S. EIA & Federal Survey Data
+            50-State Utility Benchmarks • Source: U.S. EIA, FCC &amp; AWWA Surveys
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Compare <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-emerald-300">Household Utility Costs</span> by State
           </h1>
           <p className="mt-2 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Select your state to compare your electric, high-speed broadband, water, and natural gas bills against published state and national benchmarks based on U.S. Energy Information Administration (EIA) reports.
+            Compare your monthly bills against published state benchmarks: electricity and natural gas sourced from the U.S. Energy Information Administration (EIA), broadband benchmarks from the Federal Communications Commission (FCC) Urban Rate Survey, and water estimates from the American Water Works Association (AWWA).
           </p>
         </div>
       </div>
@@ -259,13 +259,19 @@ export const RateBenchmark: React.FC<RateBenchmarkProps> = ({ onNavigateToAudit 
           <span>Data Sources, Units &amp; Calculation Methodology</span>
         </div>
         <p className="leading-relaxed">
-          <strong>Electricity:</strong> State retail prices are expressed in cents per kilowatt-hour (¢/kWh) and benchmark monthly estimates reflect average U.S. residential household consumption (~890 kWh/month) from the <em>U.S. Energy Information Administration (EIA) Electric Power Monthly (Table 5.6.A)</em>.
+          <strong>Electricity (Official EIA Statistic):</strong> State residential electricity prices are expressed in cents per kilowatt-hour (¢/kWh), published in the <em>U.S. Energy Information Administration (EIA) Electric Power Monthly (Table 5.6.A)</em>. The benchmark monthly electric bill is an application calculation derived from the EIA national median residential consumption of 890 kWh/month.
         </p>
         <p className="leading-relaxed">
-          <strong>Broadband &amp; Ancillary Utilities:</strong> Internet benchmarks represent median standalone 100–300 Mbps broadband tiers documented in the <em>FCC Urban Rate Survey</em>. Water and natural gas figures represent statewide residential median survey estimates from the <em>American Water Works Association (AWWA)</em> and <em>American Gas Association (AGA)</em>.
+          <strong>Natural Gas (EIA &amp; AGA):</strong> State natural gas averages reflect residential heating benchmarks published by the <em>U.S. Energy Information Administration (EIA Natural Gas Monthly)</em> and seasonal heating metrics from the <em>American Gas Association (AGA)</em>.
+        </p>
+        <p className="leading-relaxed">
+          <strong>Broadband Internet (FCC Survey Benchmark):</strong> Broadband figures represent standalone 100–300 Mbps fixed terrestrial internet tiers reported in the <em>Federal Communications Commission (FCC) Urban Rate Survey</em>.
+        </p>
+        <p className="leading-relaxed">
+          <strong>Water &amp; Wastewater (AWWA / EPA Survey Median):</strong> Water and sewer benchmarks reflect median residential utility charges from the <em>American Water Works Association (AWWA) / EPA Water and Wastewater Rate Surveys</em> based on standard single-family consumption (~6,000 gallons/month).
         </p>
         <p className="leading-relaxed text-[11px] text-slate-500">
-          <strong>Limitations:</strong> Actual bills vary based on home square footage, seasonal temperature swings, heating fuel type, municipal franchise fees, and individual provider rate plans. These figures serve as baseline reference points rather than individual utility quotes.
+          <strong>Application Calculations &amp; Limitations:</strong> Combined household utility totals and annual cost variances are mathematical estimates computed by ItsMyBill. Actual household costs depend on dwelling size, insulation quality, local municipal taxes, and specific carrier promotional tiers.
         </p>
       </div>
     </div>

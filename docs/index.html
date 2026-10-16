@@ -13,6 +13,19 @@
 
       gtag('config', 'G-S8JK577107');
     </script>
+    <script>
+      // Single Page App redirect decoder for GitHub Pages (restores clean path from 404.html redirect)
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <title>Free Bill Splitter &amp; Bill Fee Checker | ItsMyBill</title>
     <meta name="description" content="Split shared bills fairly, review potential fees, draft dispute letters, and compare utility costs by state with free tools from ItsMyBill." />
     <meta name="keywords" content="bill splitter, roommate bill calculator, fair income split, medical bill dispute letter, no surprises act dispute, lower cable bill script, utility rate calculator, junk fee auditor, dinner split calculator, splitwise alternative" />
@@ -194,8 +207,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-BIbG6vWC.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C1i4xg_G.css">
+    <script type="module" crossorigin src="/assets/index-nPhZ_oJD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-COrReJdT.css">
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
     <div id="root">
@@ -220,15 +233,15 @@
           </section>
           <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
             <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">50-State Utility Benchmarks</h2>
-            <p style="color: #cbd5e1;">Compare household electricity, natural gas, water, and broadband expenses against published state and national benchmarks from the U.S. Energy Information Administration (EIA).</p>
+            <p style="color: #cbd5e1;">Compare household electricity and natural gas expenses against official benchmarks from the U.S. Energy Information Administration (EIA), with broadband benchmarks from the Federal Communications Commission (FCC) and municipal water survey estimates.</p>
           </section>
         </main>
-        <noscript>
-          <div style="margin-top: 32px; padding: 16px 20px; background-color: #1e293b; border-left: 4px solid #10b981; border-radius: 4px; color: #e2e8f0;">
-            <strong>JavaScript Notice:</strong> ItsMyBill interactive calculators and real-time fee analysis require JavaScript. Please enable JavaScript in your browser to interact with the calculators.
-          </div>
-        </noscript>
       </div>
     </div>
+    <noscript>
+      <div style="background-color: #0f172a; padding: 14px 20px; border-top: 1px solid #1e293b; text-align: center; color: #94a3b8; font-size: 13px;">
+        <strong>JavaScript Notice:</strong> Interactive calculations require JavaScript to run in real-time. For visitors without JavaScript, tool descriptions and mathematical formulas are provided above.
+      </div>
+    </noscript>
   </body>
 </html>

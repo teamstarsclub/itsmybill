@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               <ul className="space-y-1.5">
                 <li>
                   <a
-                    href="/"
+                    href="/bill-splitter/"
                     onClick={(e) => {
                       e.preventDefault();
                       setActiveTab('split');
@@ -58,7 +58,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 </li>
                 <li>
                   <a
-                    href="/?tab=audit"
+                    href="/bill-auditor/"
                     onClick={(e) => {
                       e.preventDefault();
                       setActiveTab('audit');
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 </li>
                 <li>
                   <a
-                    href="/?tab=dispute"
+                    href="/dispute-letter-generator/"
                     onClick={(e) => {
                       e.preventDefault();
                       setActiveTab('dispute');
@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 </li>
                 <li>
                   <a
-                    href="/?tab=tracker"
+                    href="/savings-tracker/"
                     onClick={(e) => {
                       e.preventDefault();
                       setActiveTab('tracker');
@@ -95,7 +95,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 </li>
                 <li>
                   <a
-                    href="/?tab=benchmark"
+                    href="/utility-benchmarks/"
                     onClick={(e) => {
                       e.preventDefault();
                       setActiveTab('benchmark');
@@ -294,13 +294,16 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               </p>
               <h5 className="font-bold text-white text-sm">2. Utility Benchmark Primary Sources</h5>
               <p>
-                <strong>Electricity Rates:</strong> Sourced from the <em>U.S. Energy Information Administration (EIA)</em> Form EIA-861M (Electric Power Monthly, Table 5.6.A: Average Price of Electricity to Ultimate Customers by End-Use Sector). Monthly electric bill estimates assume average residential household consumption of 890 kWh/month.
+                <strong>Electricity (Official EIA Data):</strong> Sourced from the <em>U.S. Energy Information Administration (EIA)</em> Form EIA-861M (Electric Power Monthly, Table 5.6.A: Average Price of Electricity to Ultimate Customers by End-Use Sector). Monthly electric bill figures are application calculations assuming average residential consumption of 890 kWh/month.
               </p>
               <p>
-                <strong>Broadband Tiers:</strong> Sourced from published surveys including the <em>Federal Communications Commission (FCC) Urban Rate Survey</em> for standalone 100–300 Mbps broadband tiers.
+                <strong>Natural Gas (EIA &amp; AGA):</strong> Sourced from the <em>U.S. Energy Information Administration (EIA Natural Gas Monthly)</em> residential supply benchmarks and <em>American Gas Association (AGA)</em> residential heating data.
               </p>
               <p>
-                <strong>Water &amp; Gas:</strong> Sourced from the <em>American Water Works Association (AWWA)</em> utility rate surveys and <em>American Gas Association (AGA)</em> residential heating averages.
+                <strong>Broadband Internet (FCC Survey Benchmark):</strong> Sourced from published surveys in the <em>Federal Communications Commission (FCC) Urban Rate Survey</em> for standalone 100–300 Mbps broadband tiers.
+              </p>
+              <p>
+                <strong>Water &amp; Sewer (AWWA / EPA Survey Median):</strong> Sourced from the <em>American Water Works Association (AWWA)</em> and EPA Water and Wastewater Rate Surveys based on typical single-family consumption of 6,000 gallons/month.
               </p>
               <h5 className="font-bold text-white text-sm">3. Statutory Legal References</h5>
               <p>

@@ -48,9 +48,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div 
-            onClick={() => setActiveTab('split')}
+          <a 
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveTab('split');
+            }}
             className="flex items-center gap-3 cursor-pointer group"
+            aria-label="ItsMyBill Home"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
               <Receipt className="w-5 h-5 text-slate-950 font-bold" />
@@ -68,14 +73,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                 Consumer Defense & Utility Copilot
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1" aria-label="Main Navigation">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
-              const href = item.id === 'split' ? '/' : `/?tab=${item.id}`;
+              const href = item.id === 'split' ? '/bill-splitter/' : `/${item.id === 'audit' ? 'bill-auditor' : item.id === 'dispute' ? 'dispute-letter-generator' : item.id === 'benchmark' ? 'utility-benchmarks' : 'savings-tracker'}/`;
               return (
                 <a
                   key={item.id}
@@ -159,7 +164,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
-            const href = item.id === 'split' ? '/' : `/?tab=${item.id}`;
+            const href = item.id === 'split' ? '/bill-splitter/' : `/${item.id === 'audit' ? 'bill-auditor' : item.id === 'dispute' ? 'dispute-letter-generator' : item.id === 'benchmark' ? 'utility-benchmarks' : 'savings-tracker'}/`;
             return (
               <a
                 key={item.id}

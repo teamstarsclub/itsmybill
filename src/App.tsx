@@ -26,27 +26,50 @@ export default function App() {
     reason: '',
   });
 
-  // Sync with clean URL query or clean state without hash
+  const ROUTE_TO_TAB: Record<string, string> = {
+    '/': 'split',
+    '/bill-splitter': 'split',
+    '/bill-splitter/': 'split',
+    '/bill-auditor': 'audit',
+    '/bill-auditor/': 'audit',
+    '/dispute-letter-generator': 'dispute',
+    '/dispute-letter-generator/': 'dispute',
+    '/utility-benchmarks': 'benchmark',
+    '/utility-benchmarks/': 'benchmark',
+    '/savings-tracker': 'tracker',
+    '/savings-tracker/': 'tracker',
+  };
+
+  const TAB_TO_ROUTE: Record<string, string> = {
+    split: '/bill-splitter/',
+    audit: '/bill-auditor/',
+    dispute: '/dispute-letter-generator/',
+    benchmark: '/utility-benchmarks/',
+    tracker: '/savings-tracker/',
+  };
+
+  // Sync with pathname and query params (?tab=audit)
   useEffect(() => {
     const handleUrlSync = () => {
-      // Check query param first (?tab=audit)
+      const pathname = window.location.pathname.toLowerCase();
+      const tabFromPath = ROUTE_TO_TAB[pathname] || ROUTE_TO_TAB[pathname.replace(/\/$/, '')];
+
       const params = new URLSearchParams(window.location.search);
       const tabParam = params.get('tab');
       const validTabs = ['split', 'audit', 'dispute', 'tracker', 'benchmark'];
 
-      // If legacy hash exists, read it and clean it from URL
+      // If legacy hash exists, read it
       const legacyHash = window.location.hash.replace('#', '').split('?')[0];
       if (validTabs.includes(legacyHash)) {
         setActiveTab(legacyHash);
-        window.history.replaceState(null, '', window.location.pathname + (legacyHash !== 'split' ? `?tab=${legacyHash}` : ''));
+        window.history.replaceState(null, '', TAB_TO_ROUTE[legacyHash] || '/');
         return;
       }
 
       if (tabParam && validTabs.includes(tabParam)) {
         setActiveTab(tabParam);
-      } else if (window.location.hash) {
-        // Strip any remaining hashes
-        window.history.replaceState(null, '', window.location.pathname + (window.location.search || ''));
+      } else if (tabFromPath) {
+        setActiveTab(tabFromPath);
       }
     };
 
@@ -74,11 +97,11 @@ export default function App() {
     },
     benchmark: {
       title: '50-State Utility Benchmarks & Comparison | ItsMyBill',
-      desc: 'Compare household electric, gas, water, and broadband costs against published state averages from the U.S. Energy Information Administration.',
+      desc: 'Compare household electric and natural gas expenses against official benchmarks from the U.S. EIA, with FCC broadband benchmarks and municipal water survey data.',
     },
   };
 
-  // Sync title and metadata with active tab
+  // Sync title, description, and canonical tag with active tab
   useEffect(() => {
     const meta = TAB_METADATA[activeTab] || TAB_METADATA.split;
     document.title = meta.title;
@@ -86,13 +109,19 @@ export default function App() {
     if (metaDesc) {
       metaDesc.setAttribute('content', meta.desc);
     }
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      const canonicalHref = activeTab === 'split' && window.location.pathname === '/' 
+        ? 'https://www.itsmybill.com/' 
+        : `https://www.itsmybill.com${TAB_TO_ROUTE[activeTab] || '/'}`;
+      canonicalLink.setAttribute('href', canonicalHref);
+    }
   }, [activeTab]);
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    // Use clean URLs without any '#' character
-    const newUrl = tab === 'split' ? window.location.pathname : `${window.location.pathname}?tab=${tab}`;
-    window.history.replaceState(null, '', newUrl);
+    const targetRoute = tab === 'split' ? '/' : (TAB_TO_ROUTE[tab] || `/?tab=${tab}`);
+    window.history.pushState(null, '', targetRoute);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
