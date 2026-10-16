@@ -60,6 +60,12 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
       codes: 'CPT 99284 / Rev Code 0450',
     },
     {
+      label: 'Public Utility Meter & Tariff Audit (State PUC Standards)',
+      category: 'Electric, Gas & Water Utility',
+      reason: 'Discrepancy between actual meter consumption and estimated billing charges, requesting tariff rate schedule audit under state Public Utility Commission standards.',
+      codes: 'Meter # / Tariff Schedule ID',
+    },
+    {
       label: 'Undisclosed Telecom Surcharge (FCC Truth-in-Billing)',
       category: 'Cable & Internet',
       reason: 'Unnotified price escalation and undisclosed ancillary surcharges exceeding contractual terms without required notice (FCC 47 C.F.R. § 64.2401).',
@@ -115,41 +121,129 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
       const prov = providerName || 'Billing Department';
       const date = billDate || new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
       const amt = disputeAmount || '1,450.00';
-      const reason = disputeReason || 'Unsubstantiated line items and out-of-network balance billing in violation of statutory disclosure rules.';
+      const reason = disputeReason || 'Unsubstantiated line items and billing discrepancies.';
+      const typeLower = (billType || '').toLowerCase();
 
-      const isMedical = (billType || '').toLowerCase().includes('medical') || (billType || '').toLowerCase().includes('hospital');
-      const isTelecom = (billType || '').toLowerCase().includes('cable') || (billType || '').toLowerCase().includes('internet') || (billType || '').toLowerCase().includes('phone');
-      const isBanking = (billType || '').toLowerCase().includes('credit') || (billType || '').toLowerCase().includes('bank');
-      const isCollections = (billType || '').toLowerCase().includes('collection');
+      const isMedical = typeLower.includes('medical') || typeLower.includes('hospital');
+      const isTelecom = typeLower.includes('cable') || typeLower.includes('internet') || typeLower.includes('phone') || typeLower.includes('wireless') || typeLower.includes('telecom');
+      const isUtility = typeLower.includes('utility') || typeLower.includes('electric') || typeLower.includes('gas') || typeLower.includes('water') || typeLower.includes('power');
+      const isBanking = typeLower.includes('credit') || typeLower.includes('bank') || typeLower.includes('card');
+      const isCollections = typeLower.includes('collection') || typeLower.includes('collector');
 
-      let statutoryBasis = "pursuant to applicable consumer billing disclosure standards";
+      let statutoryBasis = "pursuant to applicable consumer billing disclosure standards and contractual service terms";
       let legalDeadlines = "Creditors and service providers typically review and respond to written consumer billing inquiries within 30 days of receipt.";
-      let requestedAction = "1. Furnish a complete line-item itemized statement detailing all billed charges.\n2. Review the contractual and statutory validity of the disputed charges.\n3. Pause automated collection activity while this inquiry is under review.";
+      let requestedActions = [
+        "Furnish a complete line-item itemized statement detailing all billed charges and underlying calculations.",
+        "Review the contractual and factual validity of the disputed charges.",
+        "Pause automated collection activity and late assessments while this inquiry is under review."
+      ];
 
-      if (isMedical) {
-        statutoryBasis = "pursuant to the federal No Surprises Act (42 U.S.C. § 300gg-111) and 45 C.F.R. § 149";
-        legalDeadlines = "Under federal No Surprises Act regulations, providers cannot balance bill patients beyond in-network cost-sharing for covered emergency services and must provide itemized billing codes upon request.";
-        requestedAction = "1. Furnish an itemized statement detailing all applicable CPT, HCPCS, and revenue codes.\n2. Recalculate patient financial liability in compliance with the federal No Surprises Act (42 U.S.C. § 300gg-111).\n3. Cease automated collection efforts and adverse credit reporting while this dispute is pending.";
+      if (isUtility) {
+        statutoryBasis = "pursuant to state Public Utility Commission consumer service regulations and applicable utility tariff rate schedules";
+        legalDeadlines = "State public utility regulations establish customer dispute resolution procedures and restrict disconnection while a formal billing or meter inquiry is actively investigated.";
+        requestedActions = [
+          "Conduct a meter reading verification and review actual versus estimated consumption records for the disputed billing cycle.",
+          "Provide an audit of the applied rate tariff and rider surcharges to confirm compliance with state public utility commission filings.",
+          "Suspend late assessment fees and service interruption notices regarding the disputed balance while this inquiry is being investigated."
+        ];
+      } else if (isMedical) {
+        const mentionsSurprise = reason.toLowerCase().includes('surprise') || reason.toLowerCase().includes('out-of-network') || reason.toLowerCase().includes('emergency') || reason.toLowerCase().includes('facility fee');
+        const mentionsCharity = reason.toLowerCase().includes('charity') || reason.toLowerCase().includes('financial assistance') || reason.toLowerCase().includes('501(r)');
+
+        if (mentionsSurprise) {
+          statutoryBasis = "pursuant to the federal No Surprises Act (42 U.S.C. § 300gg-111; 45 C.F.R. § 149)";
+          legalDeadlines = "Under federal No Surprises Act regulations, providers cannot balance bill patients beyond in-network cost-sharing for covered emergency services and must provide itemized billing codes upon request.";
+          requestedActions = [
+            "Recalculate patient financial liability in compliance with federal No Surprises Act balance billing protections.",
+            "Furnish a complete CMS-compliant itemized statement detailing all CPT, HCPCS, and Revenue Codes.",
+            "Refrain from adverse credit reporting or collection actions while this statutory balance review is underway."
+          ];
+        } else if (mentionsCharity) {
+          statutoryBasis = "pursuant to hospital Financial Assistance Policy guidelines and Internal Revenue Code § 501(r)";
+          legalDeadlines = "Non-profit hospital organizations must evaluate eligible patients under their Financial Assistance Policy before initiating extraordinary collection actions pursuant to 26 U.S.C. § 501(r).";
+          requestedActions = [
+            "Provide the formal Financial Assistance Policy application and sliding-scale income eligibility criteria.",
+            "Pause all collection agency transfers and credit reporting activities pending financial assistance determination.",
+            "Furnish an itemized ledger reflecting uninsured self-pay discounts or charity care adjustments."
+          ];
+        } else {
+          statutoryBasis = "pursuant to standard healthcare billing itemization and disclosure guidelines";
+          legalDeadlines = "Healthcare facilities are standardly expected to provide complete itemized billing breakdowns upon patient request to verify diagnostic and treatment coding accuracy.";
+          requestedActions = [
+            "Furnish a comprehensive itemized bill with all corresponding CPT, HCPCS, and revenue codes.",
+            "Verify that all billed services reflect medically substantiated, administered care without duplicate entries.",
+            "Hold automated billing escalations while the itemized audit is completed."
+          ];
+        }
       } else if (isTelecom) {
         statutoryBasis = "pursuant to Federal Communications Commission (FCC) Truth-in-Billing requirements (47 C.F.R. § 64.2401) and the Television Viewer Protection Act (47 U.S.C. § 562)";
-        legalDeadlines = "FCC regulations require telecommunications providers to provide clear, organized fee descriptions and address customer billing inquiries promptly.";
-        requestedAction = "1. Provide contractual justification and disclosure records for all ancillary surcharges.\n2. Apply appropriate billing credits for disputed line items.\n3. Verify that my account is maintained on the agreed rate tier.";
+        legalDeadlines = "FCC regulations require telecommunications providers to provide clear, organized fee descriptions, provide advance disclosure of price changes, and address customer billing inquiries promptly.";
+        requestedActions = [
+          "Provide contractual justification and disclosure records for all ancillary surcharges.",
+          "Apply appropriate billing credits for unauthorized equipment charges or unnotified fee increases.",
+          "Verify that my account is maintained on the agreed promotional or standard contract rate tier."
+        ];
       } else if (isBanking) {
         statutoryBasis = "pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666)";
         legalDeadlines = "Under 15 U.S.C. § 1666, creditors must acknowledge written billing error notices within 30 days and resolve the dispute within two billing cycles (not to exceed 90 days).";
-        requestedAction = "1. Acknowledge receipt of this billing error notice in writing within 30 days.\n2. Conduct an investigation into the disputed charge.\n3. Refrain from taking collection action or reporting the disputed amount as delinquent pursuant to 15 U.S.C. § 1666(a).";
+        requestedActions = [
+          "Acknowledge receipt of this billing error notice in writing within 30 days pursuant to 15 U.S.C. § 1666(a).",
+          "Conduct an investigation into the disputed charge and make necessary corrections or furnish explanatory documentation.",
+          "Refrain from taking collection action or reporting the disputed amount as delinquent during the investigation."
+        ];
       } else if (isCollections) {
         statutoryBasis = "pursuant to the Fair Debt Collection Practices Act (15 U.S.C. § 1692g) and CFPB Regulation F (12 C.F.R. Part 1006)";
         legalDeadlines = "Under 15 U.S.C. § 1692g, debt collectors must cease collection activity until written verification of the disputed debt from the original creditor is provided.";
-        requestedAction = "1. Cease all collection efforts until written verification of the debt from the original creditor is provided.\n2. Provide documentation establishing the contractual authority to collect this balance.\n3. Notify credit reporting agencies that this account is actively disputed by the consumer.";
+        requestedActions = [
+          "Cease all collection efforts until written verification of the debt from the original creditor is provided.",
+          "Provide documentation establishing the contractual authority to collect this balance.",
+          "Notify credit reporting agencies that this account is actively disputed by the consumer."
+        ];
       }
 
       const fallbackLetter: LetterData = {
         subjectLine: `FORMAL WRITTEN DISPUTE & AUDIT REQUEST – Account #${acct} – ${name}`,
-        letterBody: `Date: ${date}\n\nTO:\nBilling Disputes & Consumer Compliance\n${prov}\n\nFROM:\n${name}\nAccount/Reference #: ${acct}\n\nRE: Formal Dispute of Billed Charges totaling $${amt}\n\nDear Billing Compliance Department,\n\nPlease accept this letter as my formal written dispute ${statutoryBasis}.\n\nI am disputing the charges in the amount of $${amt} appearing on the invoice dated ${date} regarding account number ${acct}. Specifically:\n\n${reason}\n\nBased on the above, I am formally requesting that you:\n${requestedAction}\n\nPlease provide your written determination within thirty (30) days as prescribed by law. If you have any questions or require additional documentation, please contact me in writing at the address on file.\n\nSincerely,\n\n___________________________________\n${name}\nEnclosures: Copy of Disputed Statement`,
+        letterBody: `Date: ${date}
+
+TO:
+Billing Inquiries & Consumer Dispute Department
+${prov}
+
+FROM:
+${name}
+Account/Reference #: ${acct}
+
+RE: Formal Written Dispute of Billed Charges totaling $${amt}
+
+Dear Billing Dispute Department,
+
+Please accept this letter as my formal written dispute ${statutoryBasis}.
+
+I. CONSUMER STATEMENT OF FACTS & DISPUTED PARTICULARS:
+- Account / Reference Number: ${acct}
+- Invoice / Statement Date: ${date}
+- Disputed Amount: $${amt}
+${cptCodes ? `- Relevant Codes / Identifiers: ${cptCodes}\n` : ''}- Basis for Dispute: ${reason}
+
+II. FORMAL REQUEST FOR RESOLUTION & ACTIONS REQUESTED:
+Based on the above stated facts and applicable consumer protection guidelines, I formally request that you:
+${requestedActions.map((act, i) => `${i + 1}. ${act}`).join('\n')}
+
+III. NOTICE OF DISPUTE STATUS:
+This dispute is submitted in good faith based on discrepancies identified on the statement referenced above. Please provide your written determination and response to the consumer mailing address on file within thirty (30) days as prescribed by applicable standards.
+
+Thank you for your prompt attention to this matter.
+
+Sincerely,
+
+___________________________________
+${name}
+Consumer
+
+Enclosures: Copy of Disputed Statement / Invoice`,
         certifiedMailInstructions: [
-          "Send via USPS Certified Mail with Return Receipt Requested (green card form 3811).",
-          "Keep the certified mail tracking number and signed delivery receipt in your personal records.",
+          "Send via USPS Certified Mail with Return Receipt Requested (green card form 3811 or electronic return receipt).",
+          "Keep the certified mail tracking number and postmarked postal receipt in your personal records.",
           "Maintain a signed copy of this dated letter along with the original disputed invoice."
         ],
         legalDeadlines
@@ -220,6 +314,27 @@ export const DisputeGenerator: React.FC<DisputeGeneratorProps> = ({
                 </button>
               ))}
             </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold text-slate-400 mb-1">
+              Dispute Category / Bill Type
+            </label>
+            <select
+              value={billType}
+              onChange={(e) => setBillType(e.target.value)}
+              className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500"
+            >
+              <option value="Medical & Hospital">Medical & Hospital (Emergency, Inpatient, Clinical)</option>
+              <option value="Cable & Internet">Cable, Internet & Phone (FCC Truth-in-Billing)</option>
+              <option value="Electric, Gas & Water Utility">Public Utility (Electric, Gas, Water - State PUC)</option>
+              <option value="Credit & Banking">Credit Card & Banking (Fair Credit Billing Act)</option>
+              <option value="Collections">Debt Collection Agency (FDCPA Validation)</option>
+              <option value="General Consumer Bill">General Consumer Invoice / Contractual Dispute</option>
+            </select>
+            <p className="text-[10px] text-slate-500 mt-1">
+              Statutory references (such as No Surprises Act or FCC rules) will automatically apply only to their legally relevant bill category.
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3">

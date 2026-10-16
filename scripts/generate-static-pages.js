@@ -97,28 +97,33 @@ const routes = [
     folder: 'dispute-letter-generator',
     canonical: 'https://www.itsmybill.com/dispute-letter-generator/',
     title: 'Consumer Bill Dispute Letter Drafting Tool | ItsMyBill',
-    description: 'Draft formal written dispute notices tailored to relevant federal consumer protection statutes, including the No Surprises Act and Fair Credit Billing Act.',
+    description: 'Draft formal written dispute notices tailored to applicable federal and state consumer standards, including the No Surprises Act, FCBA, FDCPA, and state PUC rules.',
     h1: 'Consumer Bill Dispute Letter Drafting Tool',
-    h2: 'Draft Statutory Dispute Notices Under Federal Consumer Protection Laws',
+    h2: 'Draft Category-Specific Dispute Notices Under Applicable Consumer Protection Laws',
     content: `
       <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b; margin-bottom: 20px;">
-        <h2 style="font-size: 20px; font-weight: 700; color: #34d399; margin-bottom: 12px;">Governing Federal Consumer Protection Statutes</h2>
+        <h2 style="font-size: 20px; font-weight: 700; color: #34d399; margin-bottom: 12px;">Category-Specific Consumer Protection Standards</h2>
+        <p style="color: #94a3b8; font-size: 13px; margin-bottom: 16px;">Legal protections depend strictly on your bill category and dispute circumstances. Our generator drafts tailored notices citing only relevant authorities:</p>
         <ul style="list-style: none; padding: 0; display: grid; gap: 16px; color: #cbd5e1;">
           <li>
-            <strong style="color: #f8fafc;">Federal No Surprises Act (42 U.S.C. § 300gg-111):</strong>
-            Protects insured patients from surprise balance billing for emergency room services, air ambulance transport, and out-of-network care at in-network facilities.
+            <strong style="color: #f8fafc;">Medical & Hospital Bills (Federal No Surprises Act, 42 U.S.C. § 300gg-111 & IRC § 501(r)):</strong>
+            Protects insured patients against out-of-network balance billing for emergency services and facility care at in-network hospitals. Governs charity care and financial assistance reviews at non-profit hospitals under IRC § 501(r).
           </li>
           <li>
-            <strong style="color: #f8fafc;">Fair Credit Billing Act (15 U.S.C. § 1666):</strong>
-            Grants consumers the legal right to dispute billing errors on credit cards and revolving accounts in writing within 60 days of statement issuance.
+            <strong style="color: #f8fafc;">Electric, Gas & Water Utilities (State Public Utility Commission Standards):</strong>
+            Regulated by state PSCs/PUCs rather than federal telecom laws. Governs meter accuracy verification, billing adjustment requests, and tariff rate compliance.
           </li>
           <li>
-            <strong style="color: #f8fafc;">Fair Debt Collection Practices Act (15 U.S.C. § 1692g):</strong>
-            Mandates that third-party collection agencies provide complete debt validation within 30 days and cease automated collections while disputed.
+            <strong style="color: #f8fafc;">Credit Card & Revolving Credit (Fair Credit Billing Act, 15 U.S.C. § 1666):</strong>
+            Applies to unauthorized transactions, calculation errors, or uncredited payments on open-end credit cards disputed in writing within 60 days of the periodic statement.
           </li>
           <li>
-            <strong style="color: #f8fafc;">FCC Truth-in-Billing Rules (47 C.F.R. § 64.2401):</strong>
-            Requires telephone and broadband carriers to provide clear, organized, and non-misleading fee descriptions on all billing statements.
+            <strong style="color: #f8fafc;">Third-Party Debt Collectors (Fair Debt Collection Practices Act, 15 U.S.C. § 1692g):</strong>
+            Mandates that collection agencies cease collection activities upon receiving a timely written dispute until original creditor debt verification is provided.
+          </li>
+          <li>
+            <strong style="color: #f8fafc;">Cable, Internet & Phone (FCC Truth-in-Billing, 47 C.F.R. § 64.2401 & TVPA):</strong>
+            Requires transparent line-item fee disclosure and prohibits unnotified fee increases on telecommunications statements.
           </li>
         </ul>
       </section>
