@@ -1,0 +1,407 @@
+{
+  "hubs": [
+    {
+      "clusterSlug": "medical-billing-defense",
+      "title": "Medical Billing Defense Hub",
+      "seoTitle": "Medical Billing Defense & Hospital Dispute Hub | ItsMyBill",
+      "metaDescription": "Complete consumer playbook for auditing hospital bills, disputing Revenue Code 0450 facility fees, invoking the No Surprises Act, and applying for 501(r) charity care.",
+      "directAnswer": "U.S. hospital billing errors affect a high share of inpatient and emergency statements through upcoded ER acuity levels, unbundled supplies, and prohibited out-of-network balance bills. Follow our three-step defense playbook: demand an itemized UB-04/CPT bill, verify No Surprises Act protections (42 U.S.C. § 300gg-111), and apply for nonprofit IRC § 501(r) Financial Assistance before paying a single dollar.",
+      "companionToolPath": "/dispute-letter/no-surprises-act-er-bill/",
+      "companionToolLabel": "Open No Surprises Act Dispute Letter",
+      "lastVerified": "2026-11-20",
+      "spokes": [
+        {
+          "slug": "how-to-read-hospital-ub04-cpt-codes",
+          "title": "How to Read a Hospital UB-04 Bill & Spot Upcoded CPT Codes",
+          "seoTitle": "How to Read a Hospital UB-04 Bill & Spot CPT Errors | ItsMyBill",
+          "metaDescription": "Decode hospital UB-04 Revenue Codes (0450, 0250, 0300) and 5-digit CPT codes (99281–99285) to spot duplicate charges and ER upcoding fast.",
+          "readTimeMinutes": 7,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Every hospital facility bill uses 4-digit UB-04 Revenue Codes (such as 0450 for Emergency Room, 0250 for Pharmacy, and 0300 for Lab) paired with 5-digit CPT/HCPCS procedure codes. Comparing ER visit codes (99281–99285) against your actual discharge summary and checking for unbundled supplies lets you spot overcharges in under 15 minutes.",
+          "keyPoints": [
+            "Never pay a summary statement—always request the itemized UB-04 and CMS-1500 statements showing 5-digit CPT/HCPCS codes.",
+            "Emergency visits are graded on a 5-tier scale from CPT 99281 (minor) to 99285 (life-threatening complexity); Level 4 and Level 5 upcoding is the #1 source of ER overcharges.",
+            "Cross-check every drug and supply code (Revenue Codes 0250 and 0270) against your clinical chart to flag medications you refused or never received.",
+            "Match each billed code against your insurer's Explanation of Benefits (EOB) to confirm in-network contractual write-offs were applied."
+          ],
+          "table": {
+            "caption": "High-Frequency Hospital UB-04 & CPT Codes Every Patient Should Audit",
+            "headers": ["Billing Code", "Category", "What It Means", "Audit Red Flag"],
+            "rows": [
+              ["Rev Code 0450", "ER Facility Fee", "Hospital overhead for emergency room access", "Billed alongside high-acuity CPT 99284/99285 for minor visits"],
+              ["CPT 99284 / 99285", "ER Acuity Level", "Moderate-to-high complexity emergency evaluation", "Verify discharge notes justify high complexity criteria"],
+              ["HCPCS G0463", "Clinic Facility Fee", "Hospital-owned outpatient clinic overhead surcharge", "Added to routine doctor office visits after hospital acquisitions"],
+              ["Rev Code 0250 / 0270", "Pharmacy & Supplies", "Administered drugs, IV saline, gauze, and kits", "Routine supplies unbundled separately from facility fee"]
+            ]
+          },
+          "relatedToolPath": "/bill-auditor/hospital-facility-fee-code-0450/",
+          "relatedToolLabel": "Audit Revenue Code 0450 Facility Fees",
+          "faqs": [
+            {
+              "question": "Is a hospital legally required to send me an itemized bill?",
+              "answer": "Yes. Under HIPAA's Right of Access rule (45 C.F.R. § 164.524) and state patient billing transparency laws, healthcare providers must supply your billing records and itemized code breakdowns within 30 days of request."
+            },
+            {
+              "question": "What is the difference between a UB-04 and a CMS-1500 medical bill?",
+              "answer": "A UB-04 form is billed by the hospital or facility (using 4-digit Revenue Codes like 0450), while a CMS-1500 form is billed separately by individual physicians, radiologists, or anesthesiologists (using 5-digit CPT codes)."
+            },
+            {
+              "question": "What should I do if I find a duplicate CPT code on my itemized bill?",
+              "answer": "Circle the duplicate entries, attach your clinical visit summary, and send a certified written dispute requesting a formal Coding Audit Review and a 30-day collections hold."
+            }
+          ]
+        },
+        {
+          "slug": "irc-501r-nonprofit-hospital-charity-care-guide",
+          "title": "IRC § 501(r) Nonprofit Hospital Charity Care: Eligibility & 240-Day Shield",
+          "seoTitle": "IRC 501(r) Hospital Charity Care & 240-Day Rule | ItsMyBill",
+          "metaDescription": "Learn how Internal Revenue Code § 501(r) forces nonprofit hospitals to offer sliding-scale charity care and wait 120–240 days before collections.",
+          "readTimeMinutes": 8,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Under Internal Revenue Code § 501(r) (26 U.S.C. § 501(r)), every 501(c)(3) nonprofit hospital must maintain a written Financial Assistance Policy (FAP), cap bills for eligible patients at Amounts Generally Billed (AGB), wait at least 120 days before taking Extraordinary Collection Actions, and accept charity care applications for a full 240 days after the first billing statement.",
+          "keyPoints": [
+            "Check IRS Tax Exempt Organization Search (or the hospital website footer) to confirm 501(c)(3) status—nearly 60% of U.S. community hospitals qualify.",
+            "Many nonprofit systems provide 100% bill forgiveness up to 200%–300% of the Federal Poverty Level (FPL) and sliding-scale discounts up to 400% FPL—even if you have health insurance.",
+            "Submitting an incomplete FAP application still halts collections while the hospital gives you a reasonable period to furnish missing documents.",
+            "If the hospital already reported the debt to credit bureaus or sued before the 120-day notification period expired, it must reverse those Extraordinary Collection Actions."
+          ],
+          "table": {
+            "caption": "IRC § 501(r) Statutory Consumer Protection Timelines",
+            "headers": ["Protection Milestone", "Statutory Window", "What the Nonprofit Hospital Must Do"],
+            "rows": [
+              ["Notification Period", "Minimum 120 days from first post-discharge bill", "Cannot initiate lawsuits, wage garnishment, liens, or credit reporting"],
+              ["Advance ECA Notice", "At least 30 days prior to any collection action", "Must mail written notice listing specific ECAs and plain-language FAP summary"],
+              ["Application Window", "Minimum 240 days from first post-discharge bill", "Must accept and process Financial Assistance applications and refund prior overpayments"],
+              ["AGB Billing Cap", "Immediate upon eligibility approval", "Cannot charge FAP-eligible patients more than Amounts Generally Billed to insured patients"]
+            ]
+          },
+          "relatedToolPath": "/dispute-letter/itemized-hospital-bill-request/",
+          "relatedToolLabel": "Draft Your IRC § 501(r) Request Letter",
+          "faqs": [
+            {
+              "question": "Can I apply for hospital charity care if my bill is already in collections?",
+              "answer": "Yes. If you are within 240 days of the hospital's first post-discharge billing statement, submitting a Financial Assistance Policy application requires the nonprofit hospital to pull the account back from collections and evaluate eligibility."
+            },
+            {
+              "question": "What income qualifies for nonprofit hospital charity care?",
+              "answer": "Each hospital sets its own thresholds in its public FAP PDF—commonly 100% forgiveness for households under 200%–250% of the Federal Poverty Level and 50%–85% discounts up to 400% FPL."
+            },
+            {
+              "question": "What does 'Amounts Generally Billed' (AGB) mean under § 501(r)?",
+              "answer": "AGB prevents nonprofit hospitals from billing financially eligible uninsured patients inflated chargemaster sticker prices; instead, charges are capped at average Medicare or commercial insurer negotiated rates."
+            }
+          ]
+        },
+        {
+          "slug": "medical-debt-credit-reporting-rules-2026",
+          "title": "Medical Debt & Credit Reports: 2026 Protection Rules & Dispute Steps",
+          "seoTitle": "Medical Debt Credit Reporting Rules & Disputes | ItsMyBill",
+          "metaDescription": "Understand how unpaid medical bills appear on credit reports, the $500 and 1-year bureau grace rules, and how to stop unlawful collection reporting.",
+          "readTimeMinutes": 6,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Equifax, Experian, and TransUnion voluntarily exclude all paid medical collections, all medical collections with initial balances under $500, and all unpaid medical collections less than 365 days old. Several states (including New York, California, Colorado, Connecticut, and Minnesota) also prohibit medical debt credit reporting entirely under state law.",
+          "keyPoints": [
+            "Never transfer a disputed hospital bill onto a general-purpose credit card or medical credit card—doing so converts protected medical debt into unprotected revolving consumer debt.",
+            "Take advantage of the 1-year credit reporting waiting period to request an itemized bill, appeal insurer denials, and apply for § 501(r) Financial Assistance.",
+            "If a collector reports a paid medical collection or a balance under $500, dispute it immediately with both the collector (FDCPA) and the three credit bureaus (FCRA).",
+            "Check your state Attorney General portal for state-level bans on medical debt credit reporting that provide stronger protection than federal baselines."
+          ],
+          "table": {
+            "caption": "Medical Collection Credit Reporting Protections Overview",
+            "headers": ["Medical Collection Type", "National Bureau Policy", "Consumer Action"],
+            "rows": [
+              ["Paid Medical Collections", "Excluded from credit reports", "Dispute under FCRA if still showing after settlement"],
+              ["Unpaid Medical Debt < $500", "Excluded from credit reports", "Verify original principal vs. added collection fees"],
+              ["Unpaid Medical Debt < 1 Year Old", "365-day grace period before reporting", "Complete itemized audit & insurer appeal within Year 1"],
+              ["Medical Debt Put on Credit Card", "Reported immediately as standard card debt", "Avoid CareCredit or personal cards for disputed bills"]
+            ]
+          },
+          "relatedToolPath": "/dispute-letter/fdcpa-debt-validation/",
+          "relatedToolLabel": "Draft FDCPA Medical Collection Validation Letter",
+          "faqs": [
+            {
+              "question": "Should I put a hospital bill on a credit card to avoid collections?",
+              "answer": "No. Paying a hospital bill with a credit card strips away medical-debt credit protections, IRC § 501(r) charity care eligibility, and 0% hospital payment plan options while adding 20%+ APR interest."
+            },
+            {
+              "question": "How do I remove a paid medical collection still showing on my credit report?",
+              "answer": "Submit an online and written Fair Credit Reporting Act (FCRA) dispute to Equifax, Experian, and TransUnion attaching your paid-in-full settlement letter."
+            },
+            {
+              "question": "Can a hospital sue me even if medical debt is excluded from credit reports?",
+              "answer": "Yes. Credit reporting exclusions do not erase underlying legal liability—which is why disputing errors in writing and applying for § 501(r) financial assistance or a written payment plan remains essential."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clusterSlug": "cable-internet-wireless-cuts",
+      "title": "Cable, Internet & Wireless Cuts Hub",
+      "seoTitle": "Lower Cable, Internet & Wireless Bills Hub | ItsMyBill",
+      "metaDescription": "Eliminate hidden telecom junk fees, modem rentals, Broadcast TV surcharges, and post-promo rate cliffs using FCC Broadband Labels and retention scripts.",
+      "directAnswer": "The average U.S. household overpays $360 to $720 per year on broadband, cable TV, and wireless plans due to expired introductory promotions, $10–$15/month rented gateways, Broadcast TV surcharges, and unrequested device insurance. Comparing FCC Broadband Consumer Labels and calling Loyalty Retention with competing ZIP-code offers consistently cuts bills 20% to 40%.",
+      "companionToolPath": "/bill-auditor/xfinity-hidden-fees/",
+      "companionToolLabel": "Launch Provider Hidden-Fee Auditor",
+      "lastVerified": "2026-11-20",
+      "spokes": [
+        {
+          "slug": "own-your-modem-router-roi-guide",
+          "title": "Buy Your Own Modem & Router: Break-Even ROI Across Xfinity, Spectrum & Cox",
+          "seoTitle": "Buy Your Own Modem ROI (Xfinity, Spectrum, Cox) | ItsMyBill",
+          "metaDescription": "Stop paying $10–$15/month in ISP gateway rentals. Calculate exact break-even months under federal law (47 U.S.C. § 562) across major US cable ISPs.",
+          "readTimeMinutes": 6,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Under the Television Viewer Protection Act (47 U.S.C. § 562), cable and internet providers cannot charge you rental fees when you supply your own compatible equipment. Replacing a $15/month Xfinity xFi Gateway or $14/month Cox Panoramic unit with a $110–$150 DOCSIS 3.1 modem pays for itself in 7 to 10 months and saves $500+ over four years.",
+          "keyPoints": [
+            "Always verify your ISP's official Approved Hardware Compatibility List—especially if you subscribe to mid-split high-upload tiers (e.g., Xfinity Next Gen upload speeds).",
+            "Spectrum provides a standalone cable modem at $0/mo and only charges $7–$10/mo for its Wi-Fi router—so Spectrum customers only need to buy a Wi-Fi 6 router.",
+            "Return rented ISP gear in person at a retail store (or via tracked UPS drop-off) and photograph the serial-number return receipt to prevent $150 unreturned-equipment bills.",
+            "Standalone modems + separate Wi-Fi 6/6E routers outperform ISP combo gateways in range, stability, and firmware longevity."
+          ],
+          "table": {
+            "caption": "ISP Equipment Rental Fee vs. Customer-Owned Break-Even Timeline",
+            "headers": ["ISP Provider", "Monthly Rental Fee", "Annual Cost", "Hardware Needed", "Break-Even Period"],
+            "rows": [
+              ["Xfinity (xFi Gateway)", "$15.00 / mo", "$180 / yr", "DOCSIS 3.1 Modem + Router (~$160)", "~10.6 months"],
+              ["Cox (Panoramic Wifi)", "$14.00 / mo", "$168 / yr", "DOCSIS 3.1 Modem + Router (~$160)", "~11.4 months"],
+              ["Spectrum (WiFi Router)", "$7.00 – $10.00 / mo", "$84 – $120 / yr", "Wi-Fi 6 Router Only (~$75)", "~7.5 – 10.7 months"],
+              ["CenturyLink (Modem Lease)", "$15.00 / mo", "$180 / yr", "VLAN-201 Router / VDSL2 (~$120)", "~8.0 months"]
+            ]
+          },
+          "relatedToolPath": "/bill-auditor/spectrum-bill-increase/",
+          "relatedToolLabel": "Audit Your ISP Statement Now",
+          "faqs": [
+            {
+              "question": "Will Xfinity throttle my internet speed if I use my own modem?",
+              "answer": "No, provided you choose a model on Xfinity's certified compatibility list rated for your subscribed speed tier (and mid-split upload tier if applicable)."
+            },
+            {
+              "question": "Does using my own modem remove Xfinity's 1.2 TB data cap?",
+              "answer": "Note that in markets where Xfinity enforces a 1.2 TB data cap, xFi Complete ($25/mo) bundles both the gateway rental and Unlimited Data, whereas standalone Unlimited Data with your own modem costs $30/mo. Always check your monthly GB usage first before buying hardware."
+            },
+            {
+              "question": "How long should I keep my ISP equipment return receipt?",
+              "answer": "Keep a photo of the stamped serial-number return receipt permanently in cloud storage—ISP billing systems occasionally re-bill unreturned equipment fees 6 to 18 months later."
+            }
+          ]
+        },
+        {
+          "slug": "fcc-broadband-consumer-labels-negotiation",
+          "title": "How to Use FCC Broadband Consumer Labels to Negotiate a Lower Rate",
+          "seoTitle": "Use FCC Broadband Consumer Labels to Cut Internet Bills | ItsMyBill",
+          "metaDescription": "Use mandatory FCC Broadband Nutrition Labels to uncover intro rate cliffs, hidden carrier fees, and competing ZIP-code prices during retention calls.",
+          "readTimeMinutes": 6,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Mandatory FCC Broadband Consumer Labels force every U.S. internet provider to publish an all-in monthly price, introductory promo expiration date, standard rack rate, monthly data allowance, and itemized provider fees on a standardized nutrition-style card. Pulling competing labels for your ZIP code before calling Retention gives you exact dollar benchmarks that scripts alone cannot match.",
+          "keyPoints": [
+            "Look up your address on the FCC National Broadband Map (broadbandmap.fcc.gov) to identify every wired fiber, cable, and 5G fixed wireless competitor serving your home.",
+            "Screenshot the competitor's FCC Broadband Label showing all-in monthly cost, speed, and zero equipment fees.",
+            "Check line 2 of your current provider's label ('Monthly Price After Intro Period') to know the exact date your promo expires and set a calendar reminder 14 days earlier.",
+            "Cite the competing provider's exact FCC Label total price—not just its teaser rate—when negotiating with Customer Retention."
+          ],
+          "table": {
+            "caption": "5 Fields to Inspect on Every FCC Broadband Consumer Label",
+            "headers": ["Label Line Item", "What to Check", "Negotiation Leverage"],
+            "rows": [
+              ["Introductory Rate & Term", "Promo length (12 or 24 months) and post-promo price", "Schedule Retention callback 14 days before expiry"],
+              ["Provider Monthly Fees", "Infrastructure, Network Enhancement, or Modem Fees", "Request loyalty bill credits equal to monthly fees"],
+              ["Data Included", "1.2 TB / 1.25 TB cap vs. Unlimited", "Use uncapped 5G Home / Fiber labels as leverage"],
+              ["Typical Download/Upload", "Real median speeds vs. 'up to' marketing claims", "Downgrade from 1 Gig to 300 Mbps if household uses <5 streams"]
+            ]
+          },
+          "relatedToolPath": "/dispute-letter/fcc-truth-in-billing-telecom/",
+          "relatedToolLabel": "Draft FCC Truth-in-Billing Notice",
+          "faqs": [
+            {
+              "question": "Do all U.S. internet providers have to display FCC Broadband Labels?",
+              "answer": "Yes. Federal FCC rules require all U.S. fixed and mobile broadband providers to display standardized Broadband Consumer Labels at every point of sale (online and in-store)."
+            },
+            {
+              "question": "Do most households actually need 1 Gigabit (1,000 Mbps) internet?",
+              "answer": "No. A single 4K video stream uses roughly 15–25 Mbps and a Zoom call uses 3–5 Mbps. Most 2-to-4-person households run smoothly on 200–300 Mbps fiber or cable, saving $20–$40/month over gigabit plans."
+            },
+            {
+              "question": "What if my ISP has a local monopoly with no competing fiber?",
+              "answer": "Check 5G Fixed Wireless availability from T-Mobile Home Internet ($50–$60/mo) and Verizon 5G Home—even as a credible comparison quote during Retention calls."
+            }
+          ]
+        },
+        {
+          "slug": "mvno-vs-big-three-wireless-savings-math",
+          "title": "Postpaid Big-3 Carriers vs. MVNOs: Real 12-Month Wireless Cost Math",
+          "seoTitle": "Postpaid Wireless vs MVNO Cost Breakdown | ItsMyBill",
+          "metaDescription": "Compare Verizon, AT&T, and T-Mobile postpaid bills (plus $3.50/line admin fees) against prepaid MVNOs running on the exact same cell towers.",
+          "readTimeMinutes": 7,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Single-line and two-line postpaid wireless customers on Verizon, AT&T, or T-Mobile commonly pay $75 to $95 per line after $3.49–$3.50/line carrier recovery fees, taxes, and insurance add-ons. Switching to an MVNO operating on the exact same towers (such as Visible, US Mobile, Cricket, or Mint Mobile) typically drops monthly costs to $25–$35/line—saving $500 to $1,100 per year.",
+          "keyPoints": [
+            "MVNOs lease wholesale access directly from Verizon, AT&T, and T-Mobile cell towers—several are even owned outright by the Big Three (Visible by Verizon, Cricket by AT&T, Metro/Mint by T-Mobile).",
+            "Always verify your phone is carrier-unlocked and fully paid off before porting your number so you do not trigger a lump-sum device payoff.",
+            "Check QCI (QoS Class Identifier) data priority tiers: higher-tier MVNO plans (like Visible+ or US Mobile Warp 5G on 5G devices) include prioritized data identical to postpaid plans.",
+            "Never cancel your old wireless account manually—porting your phone number via Transfer PIN automatically closes the old line without losing your number."
+          ],
+          "table": {
+            "caption": "2-Line Unlimited Wireless Annual Cost Comparison (Taxes & Carrier Fees Included)",
+            "headers": ["Plan Tier", "Avg Monthly Total (2 Lines)", "Carrier Recovery Fees", "Annual Cost", "Annual Savings vs. Postpaid"],
+            "rows": [
+              ["Big-3 Postpaid Unlimited (w/ Fees)", "$168 / mo", "~$7.00 / mo + taxes", "$2,016 / yr", "Baseline"],
+              ["Big-3 Postpaid w/ ACH AutoPay + Audit", "$136 / mo", "~$7.00 / mo", "$1,632 / yr", "$384 / yr"],
+              ["Priority MVNO (Same Towers, All-In)", "$65 / mo", "$0 (Tax-Inclusive)", "$780 / yr", "$1,236 / yr"]
+            ]
+          },
+          "relatedToolPath": "/bill-auditor/verizon-surcharges/",
+          "relatedToolLabel": "Audit Wireless Surcharges Now",
+          "faqs": [
+            {
+              "question": "Will I lose my phone number if I switch to an MVNO?",
+              "answer": "No. Federal FCC Local Number Portability rules guarantee your right to keep your phone number. Obtain your Account Number and Number Transfer PIN from your old carrier and give them to your new provider."
+            },
+            {
+              "question": "What happens to my 'free' promotional phone credits if I leave a postpaid carrier?",
+              "answer": "Carrier 'free phone' deals apply bill credits over 24 to 36 months. Leaving early forfeits remaining credits and makes the remaining retail balance due—always compare remaining payoff vs. 12-month MVNO savings."
+            },
+            {
+              "question": "Do MVNOs have worse cell coverage than Verizon, AT&T, or T-Mobile?",
+              "answer": "Native tower footprint is identical to the underlying host carrier. The main differences are domestic roaming partnerships in remote areas and data deprioritization on entry-level non-priority tiers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "clusterSlug": "shared-household-finances",
+      "title": "Shared Household Finances Hub",
+      "seoTitle": "Shared Household Finances & Fair Bill Splitting Hub | ItsMyBill",
+      "metaDescription": "Fair bill splitting formulas for couples and roommates with unequal incomes, utility cost sharing, and tenant security deposit recovery rights.",
+      "directAnswer": "Equal 50/50 bill splits work when household incomes are similar, but create financial strain when one partner or roommate earns significantly more than the other. Using the proportional income-share formula—Individual Share = Total Shared Bills × (Individual Net Income ÷ Combined Household Net Income)—keeps each member's housing burden at the exact same percentage of take-home pay.",
+      "companionToolPath": "/income-based-bill-splitter/",
+      "companionToolLabel": "Open Income-Fair Bill Splitter",
+      "lastVerified": "2026-11-20",
+      "spokes": [
+        {
+          "slug": "proportional-income-split-couples-math",
+          "title": "Income-Based Bill Splitting for Couples: Exact Math & Worked Examples",
+          "seoTitle": "Income-Based Bill Splitting for Couples (Worked Math) | ItsMyBill",
+          "metaDescription": "Calculate fair rent and utility splits when partners earn unequal salaries using net take-home pay ratios, worked examples, and cent-exact rounding.",
+          "readTimeMinutes": 6,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "To split household bills proportionally by income, divide each partner's monthly net take-home pay by the combined household net income, then multiply that ratio by total shared expenses. For example, if Partner A nets $6,000/mo (60%) and Partner B nets $4,000/mo (40%) on $3,000 in shared bills, Partner A pays $1,800 and Partner B pays $1,200—exactly 30% of each person's take-home pay.",
+          "keyPoints": [
+            "Always base ratios on net (after-tax) take-home pay rather than gross salary—unless one partner heavily front-loads 401(k)/HSA contributions, in which case normalize pre-tax retirement savings.",
+            "Agree in writing on what counts as 'Shared Household Essentials' (rent, electricity, gas, water, internet, shared groceries) vs. individual discretionary spending.",
+            "Re-run the ratio once a year or whenever either partner gets a raise, job change, or lease renewal.",
+            "Automate transfers into a dedicated joint household bills checking account on the 1st of every month so no one has to chase Venmo requests."
+          ],
+          "table": {
+            "caption": "Worked Example: 50/50 Equal Split vs. Income-Proportional Split ($3,200 Shared Bills)",
+            "headers": ["Household Member", "Monthly Net Pay", "50/50 Equal Burden", "Proportional Share (%)", "Proportional Payment", "Burden % of Pay"],
+            "rows": [
+              ["Partner A", "$6,600", "$1,600 (24.2% of pay)", "62.9%", "$2,011.43", "30.5% of pay"],
+              ["Partner B", "$3,900", "$1,600 (41.0% of pay)", "37.1%", "$1,188.57", "30.5% of pay"],
+              ["Household Total", "$10,500", "$3,200", "100.0%", "$3,200.00", "30.5% equalized"]
+            ]
+          },
+          "relatedToolPath": "/income-based-bill-splitter/",
+          "relatedToolLabel": "Run Your Exact Couple Split Calculation",
+          "faqs": [
+            {
+              "question": "Should couples use gross income or net take-home pay to split bills?",
+              "answer": "Net take-home pay (after taxes and health insurance) reflects actual spendable cash flow. If one partner maxes out a 401(k) while the other does not, add voluntary retirement deductions back in so both paychecks are compared fairly."
+            },
+            {
+              "question": "What if one partner has significantly higher student loan debt?",
+              "answer": "Some couples subtract mandatory minimum student loan payments before calculating discretionary income ratios, while others keep pre-relationship debt separate and split shared housing strictly by net pay."
+            },
+            {
+              "question": "How do you avoid penny rounding discrepancies in proportional splits?",
+              "answer": "ItsMyBill computes shares in integer cents and reconciles any 1-cent rounding remainder automatically so individual contributions always sum to the exact invoice total."
+            }
+          ]
+        },
+        {
+          "slug": "roommate-utility-agreement-checklist",
+          "title": "Roommate Utility & Shared Bill Agreement Checklist (Avoid Disputes)",
+          "seoTitle": "Roommate Utility & Shared Bill Agreement Checklist | ItsMyBill",
+          "metaDescription": "Set up fair roommate rent, electricity, internet, and deposit agreements before moving in. Prevent late-fee cascades and move-out disputes.",
+          "readTimeMinutes": 6,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Most roommate money fights stem from one person carrying all utility accounts in their sole name and absorbing late payments or move-out shortfalls. Assigning different utility accounts across roommates, requiring a 48-hour payment window upon PDF invoice sharing, and documenting room-size rent adjustments in writing eliminates 90% of shared-housing friction.",
+          "keyPoints": [
+            "Divide utility account ownership across roommates (e.g., Roommate A holds electricity, Roommate B holds internet/gas) so no single person carries 100% credit risk.",
+            "Always post the original provider PDF statement—never just a text number—so everyone sees actual kWh consumption, billing dates, and due dates.",
+            "Set a clear policy for space heaters, portable A/C units, and EV/crypto equipment that can spike electric bills by $80–$200/month.",
+            "Document each roommate's exact security deposit share and photograph every common area on move-in day."
+          ],
+          "table": {
+            "caption": "Recommended Roommate Bill Allocation Framework",
+            "headers": ["Expense Category", "Recommended Split Rule", "Fairness Safeguard"],
+            "rows": [
+              ["Base Rent (Unequal Rooms)", "Square footage + en-suite bathroom premium", "Adjust 10%–15% for master bath or dedicated parking"],
+              ["Electricity, Gas & Water", "Equal split (unless high-draw appliance surcharge)", "Share provider PDF statement 7 days before due date"],
+              ["Broadband Internet", "Equal split across all residents", "Audit post-promo hikes annually using FCC Broadband Label"],
+              ["Shared Household Supplies", "Equal monthly kitty or itemized receipt log", "Exclude personal toiletries and specialty groceries"]
+            ]
+          },
+          "relatedToolPath": "/bill-splitter/",
+          "relatedToolLabel": "Split Shared Group Bills Free",
+          "faqs": [
+            {
+              "question": "What if a roommate refuses to pay their share of an electric bill in my name?",
+              "answer": "Because the utility contract is in the named account holder's name, pay the utility on time to protect your credit and service, then document every shared PDF bill and text agreement for recovery via written demand or Small Claims Court."
+            },
+            {
+              "question": "Should a roommate who travels for two weeks still pay utilities?",
+              "answer": "Fixed monthly charges (internet, base utility customer charges, trash, and rent) are typically split continuously regardless of short travel, while extended sublets or month-long absences should be agreed upon beforehand."
+            },
+            {
+              "question": "How do you split rent fairly when one bedroom has a private bathroom?",
+              "answer": "Measure private bedroom square footage, divide shared common-area square footage equally, and add an agreed amenity premium (typically 8%–15%) for an en-suite bathroom or walk-in closet."
+            }
+          ]
+        },
+        {
+          "slug": "itemized-group-dinner-tax-tip-math",
+          "title": "How to Split an Itemized Group Receipt (Proportional Tax & Tip Math)",
+          "seoTitle": "Itemized Receipt Split: Proportional Tax & Tip Math | ItsMyBill",
+          "metaDescription": "Stop subsidizing someone else's steak and cocktails. Learn the exact proportional tax and tip multiplier formula for itemized group dining receipts.",
+          "readTimeMinutes": 5,
+          "lastVerified": "2026-11-20",
+          "directAnswer": "Dividing a group dinner bill evenly punishes diners who ordered modest entrees and water while others ordered cocktails and steaks. The mathematically fair method assigns each dish (and shared appetizers divided by participants) to each diner, then multiplies every diner's food subtotal by the receipt's exact Tax + Tip Multiplier: (Subtotal + Tax + Tip) ÷ Subtotal.",
+          "keyPoints": [
+            "Calculate tip on the pre-tax food subtotal (standard U.S. etiquette) unless an automatic 18%–20% large-party service charge is already printed on the receipt—always check so you do not double-tip.",
+            "Split shared table items (appetizers, pitchers, bottles of wine) strictly among the people who shared them rather than across non-drinkers.",
+            "Verify every diner's multiplied grand total sums to the exact restaurant credit-card slip total before settling via Venmo, Zelle, or Apple Cash.",
+            "Never split tax and tip equally by headcount—a person whose meal was 15% of the tab should pay 15% of the tax and tip, not 25%."
+          ],
+          "table": {
+            "caption": "Worked Itemized Receipt Example (8.875% Tax + 20% Pre-Tax Tip = 1.28875× Multiplier)",
+            "headers": ["Diner", "Assigned Dishes + Shared Apps", "Food Subtotal", "Proportional Tax + Tip", "Final Amount Owed"],
+            "rows": [
+              ["Maya", "Salad ($18) + 1/3 Shared App ($8)", "$26.00", "$7.51", "$33.51"],
+              ["Sarah", "Pasta ($28) + 1/3 App ($8) + 1/2 Wine ($27.50)", "$63.50", "$18.34", "$81.84"],
+              ["David", "Ribeye ($46) + 1/3 App ($8) + 1/2 Wine ($27.50)", "$81.50", "$23.53", "$105.03"],
+              ["Table Total", "All Items Assigned", "$171.00", "$49.38", "$220.38"]
+            ]
+          },
+          "relatedToolPath": "/itemized-receipt-splitter/",
+          "relatedToolLabel": "Use the Itemized Receipt Splitter",
+          "faqs": [
+            {
+              "question": "Should you tip on the pre-tax subtotal or the post-tax restaurant total?",
+              "answer": "Standard U.S. dining convention calculates gratuity (18%–20%) on the pre-tax food and beverage subtotal, not on state and municipal sales tax."
+            },
+            {
+              "question": "How should you check for automatic gratuity on large group bills?",
+              "answer": "Inspect the receipt lines just above the total for 'Auto-Gratuity,' 'Service Charge,' or 'Large Party Fee' (typically 18%–20% for parties of 6+). If present, do not add a second full 20% tip on top."
+            },
+            {
+              "question": "What is the fastest way to split shared appetizers and bottles of wine?",
+              "answer": "Divide each shared item only by the specific diners who partook, add that fraction to their personal subtotal, and apply the table's tax-and-tip multiplier once at the end."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

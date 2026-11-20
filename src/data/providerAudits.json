@@ -1,0 +1,806 @@
+[
+  {
+    "slug": "xfinity-hidden-fees",
+    "providerName": "Xfinity / Comcast",
+    "category": "Cable & Internet",
+    "seoTitle": "Xfinity Hidden Fees Auditor & Retention Script | ItsMyBill",
+    "metaDescription": "Audit Xfinity bills for Broadcast TV ($23+), Regional Sports, and xFi Gateway fees. Copy our client-side retention script and FCC dispute steps.",
+    "h1": "Xfinity Hidden Fees Auditor & Bill Reduction Playbook",
+    "directAnswer": "Xfinity cable and internet statements commonly add $35 to $58 per month in non-government company surcharges—including Broadcast TV Fees ($23.20–$28.00/mo), Regional Sports Network Fees ($12–$18/mo), and xFi Gateway rentals ($15/mo)—on top of base promotional rates. Buying a compatible DOCSIS 3.1 modem and requesting loyalty retention credits typically trims $360 to $650 annually.",
+    "sampleAmount": 184.50,
+    "sampleBillText": "Xfinity Monthly Statement\nAccount: #8495-201-92384\n- Fast Internet (500 Mbps): $85.00\n- Popular TV Tier: $60.00\n- Broadcast TV Fee: $23.20\n- Regional Sports Fee: $15.85\n- xFi Gateway Modem Rental: $15.00\n- Regulatory Recovery Fee: $3.45\n- Franchise & Local Taxes: $7.50\nTotal Due: $184.50 (Post-promo rate increase)",
+    "fees": [
+      {
+        "feeName": "Broadcast TV Fee",
+        "typicalCost": "$23.20 – $28.00 / mo",
+        "negotiable": "Partial (Drop TV tier or request loyalty credit)",
+        "statuteOrRule": "FCC Truth-in-Billing (47 C.F.R. § 64.2401)",
+        "howToChallenge": "Not a government tax. Switching to internet-only or requesting a 12-month promotional loyalty credit eliminates or offsets it."
+      },
+      {
+        "feeName": "Regional Sports Network (RSN) Fee",
+        "typicalCost": "$12.00 – $18.25 / mo",
+        "negotiable": "Partial (Downgrade TV package)",
+        "statuteOrRule": "Television Viewer Protection Act (47 U.S.C. § 562)",
+        "howToChallenge": "Applied automatically to Popular/Ultimate TV tiers even if you never watch sports. Ask to move to Choice TV or internet-only."
+      },
+      {
+        "feeName": "xFi Gateway Modem/Router Rental",
+        "typicalCost": "$15.00 / mo ($180 / yr)",
+        "negotiable": "100% Eliminable",
+        "statuteOrRule": "47 U.S.C. § 562 (Customer-Owned Equipment Right)",
+        "howToChallenge": "Return the xFi Gateway to an Xfinity Store with a receipt and activate an owned DOCSIS 3.1 modem (e.g., Arris S33 or Netgear CM2000)."
+      },
+      {
+        "feeName": "Regulatory Cost Recovery Fee",
+        "typicalCost": "$2.50 – $4.50 / mo",
+        "negotiable": "Offset via Account Credit",
+        "statuteOrRule": "FCC Broadband Consumer Label Rules",
+        "howToChallenge": "Discretionary internal compliance fee rather than a statutory tax; cite the FCC Broadband Label total price when negotiating."
+      }
+    ],
+    "retentionScript": "Hello, I am reviewing my Xfinity statement and noticed my rate jumped after my promotion expired, plus I am paying $39+ in Broadcast TV, Regional Sports, and xFi Gateway fees. Competitor fiber and 5G home internet plans in my ZIP code are advertising $50–$65 all-in. Please connect me with the Loyalty & Retention Department to match a current new-customer promotional rate or convert my account to internet-only using my own modem.",
+    "escalationChecklist": [
+      "Check competing fiber/5G offers in your ZIP code (AT&T Fiber, Verizon 5G Home, T-Mobile Home Internet) before calling 1-800-934-6489.",
+      "Say 'Cancel Service' at the automated prompt to route directly to Xfinity Customer Retention specialists who hold promotional credit authority.",
+      "Return rented xFi equipment in person and keep the printed serial-number return receipt to stop recurring $15/mo charges.",
+      "If unauthorized add-ons or unnotified hikes remain unresolved after 14 days, file an informal FCC Consumer Billing Complaint and send a written notice."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Is the Xfinity Broadcast TV Fee a mandatory government tax?",
+        "answer": "No. The Xfinity Broadcast TV Fee is a company-imposed surcharge used to offset local station retransmission costs. It is not collected by or remitted to any federal, state, or local tax authority."
+      },
+      {
+        "question": "How do I remove the $15 Xfinity xFi Gateway rental fee?",
+        "answer": "Purchase an Xfinity-certified DOCSIS 3.1 modem, activate it in the Xfinity app, and return the rented gateway to an Xfinity retail store or UPS Store. Always keep the stamped serial-number return receipt."
+      },
+      {
+        "question": "What happens if Xfinity raises my bill when a 12-month promo ends?",
+        "answer": "You are not locked into the higher post-promo rate unless bound by an active ETF term. Calling Retention and requesting a current 12-month or 24-month promotional rate—or switching to Xfinity NOW prepaid internet—typically lowers the monthly rate by $25 to $50."
+      },
+      {
+        "question": "Can I file an FCC complaint over undisclosed Xfinity surcharges?",
+        "answer": "Yes. Under FCC Truth-in-Billing rules (47 C.F.R. § 64.2401), carriers must clearly distinguish company fees from government taxes and disclose rate increases. Filing an informal FCC complaint triggers a mandatory 30-day executive response from Comcast."
+      }
+    ]
+  },
+  {
+    "slug": "verizon-surcharges",
+    "providerName": "Verizon Wireless & Fios",
+    "category": "Mobile Phone",
+    "seoTitle": "Verizon Surcharges & Hidden Fees Auditor | ItsMyBill",
+    "metaDescription": "Audit Verizon Wireless and Fios bills for Administrative & Telco Recovery fees, Mobile Protect insurance, and perk bundles. Free client-side auditor.",
+    "h1": "Verizon Wireless Surcharges & Hidden Fees Auditor",
+    "directAnswer": "Verizon Wireless bills routinely add $3.50 per voice line in Administrative & Telco Recovery Charges, $17–$19/month for Verizon Mobile Protect device insurance, and $10/month auto-enrolled perk bundles. Auditing legacy plans against myPlan tiers, removing redundant device insurance, and enabling ACH autopay ($10/line discount) typically saves $25 to $60 per month.",
+    "sampleAmount": 142.15,
+    "sampleBillText": "Verizon Wireless Statement\nAccount #VZW-774-883-12\n- Unlimited Plus Plan (1 line): $80.00\n- Verizon Mobile Protect Insurance: $17.00\n- Administrative & Telco Recovery Charge: $3.50\n- Federal Universal Service Charge: $5.40\n- State 911 Equalization Surcharge: $2.45\n- Late Payment Fee: $10.00\n- Apple One & Cloud Perk Bundle: $14.00\n- Sales & Municipal Taxes: $9.80\nTotal Due: $142.15",
+    "fees": [
+      {
+        "feeName": "Administrative & Telco Recovery Charge",
+        "typicalCost": "$3.50 / line / mo",
+        "negotiable": "Offset via Loyalty Transfer-PIN Credit",
+        "statuteOrRule": "FCC Truth-in-Billing (47 C.F.R. § 64.2401)",
+        "howToChallenge": "Verizon's own fine print acknowledges this is a Verizon charge, not a tax. Request a $10/line/mo 12-month loyalty discount to more than offset it."
+      },
+      {
+        "feeName": "Verizon Mobile Protect Insurance",
+        "typicalCost": "$17.00 – $19.00 / line / mo",
+        "negotiable": "100% Cancelable Anytime",
+        "statuteOrRule": "FTC Negative Option & Unsolicited Add-On Guidance",
+        "howToChallenge": "Often silently added during retail phone upgrades. Compare against credit-card cell phone protection (free on many cards) or Wireless Phone Protection ($7.95)."
+      },
+      {
+        "feeName": "Legacy Plan Rate Adjustment Fee",
+        "typicalCost": "$4.00 – $9.00 / line / mo",
+        "negotiable": "Eliminable by Plan Audit",
+        "statuteOrRule": "FCC Truth-in-Billing Notice Standards",
+        "howToChallenge": "Verizon applies periodic plan-rate increases to retired Get More / Play More / Start plans. Run the math against current Unlimited Welcome/Plus tiers."
+      },
+      {
+        "feeName": "Auto-Enrolled Perk & Cloud Add-Ons",
+        "typicalCost": "$10.00 – $15.00 / mo",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "FTC Restore Online Shoppers' Confidence Act (ROSCA)",
+        "howToChallenge": "Review My Verizon -> Account -> Perks & Add-ons to cancel unused streaming trials or Verizon Cloud storage."
+      }
+    ],
+    "retentionScript": "Hi, I am auditing my Verizon Wireless account and saw the Administrative & Telco Recovery fee along with recent legacy plan hikes. I have been a reliable customer, and competing MVNOs on the Verizon network offer unlimited service for half my current monthly bill. Before I generate a Number Transfer PIN to port out, can you check if my account qualifies for a $10/line 12-month loyalty discount and verify that Verizon Mobile Protect and unused perks are removed?",
+    "escalationChecklist": [
+      "Audit 'Plan & Perks' inside the My Verizon app to remove Verizon Mobile Protect ($17–$19/mo) and unused streaming/cloud add-ons.",
+      "Switch Autopay from a standard credit card to a bank checking account or Verizon Visa to reclaim the $10/line/month discount.",
+      "Generate a Number Transfer PIN in the My Verizon app—this frequently triggers an automated $10/line/month 12-month loyalty retention offer.",
+      "For unauthorized cramming or uncredited trade-in promos, escalate to Verizon Executive Relations or file an informal FCC complaint."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Is Verizon's Administrative & Telco Recovery Charge a government tax?",
+        "answer": "No. Verizon classifies it under 'Verizon Surcharges' rather than 'Taxes, Governmental Surcharges & Fees.' It is a discretionary carrier fee used to offset cell-site leases and compliance costs."
+      },
+      {
+        "question": "How can I trigger a Verizon Wireless loyalty discount?",
+        "answer": "Many postpaid customers receive a $10/line/month 12-month loyalty offer in the My Verizon app ('My Offers') shortly after generating a Number Transfer PIN or contacting Executive Retention."
+      },
+      {
+        "question": "Can I remove Verizon Mobile Protect after buying a new phone?",
+        "answer": "Yes. Device protection is optional month-to-month coverage that can be canceled immediately in the My Verizon app without affecting your device financing or trade-in credits."
+      },
+      {
+        "question": "What if Verizon fails to apply my promised phone trade-in credit?",
+        "answer": "Save your trade-in tracking number and submission ID, then submit a formal written billing notice referencing FCC Truth-in-Billing rules or escalate via the FCC Consumer Complaint Center."
+      }
+    ]
+  },
+  {
+    "slug": "spectrum-bill-increase",
+    "providerName": "Spectrum (Charter)",
+    "category": "Cable & Internet",
+    "seoTitle": "Spectrum Bill Increase & Hidden Fees Auditor | ItsMyBill",
+    "metaDescription": "Why did your Spectrum bill jump? Audit Broadcast TV ($25.75+), Wi-Fi Router ($7-$10), and post-promo rate hikes. Copy our retention script.",
+    "h1": "Spectrum Bill Increase & Hidden Fees Auditor",
+    "directAnswer": "Spectrum bills typically surge $20 to $45 per month after 12- or 24-month promotional discounts step down, compounded by Spectrum's Broadcast TV Surcharge ($25.75+/mo on video plans) and $7–$10/mo Wi-Fi router rental fee. Returning the rented Wi-Fi router (Spectrum provides the cable modem free) and negotiating with Spectrum Retention regularly cuts $240 to $500 per year.",
+    "sampleAmount": 168.74,
+    "sampleBillText": "Spectrum Monthly Billing Statement\n- Spectrum Internet Ultra (500 Mbps): $99.99\n- Advanced WiFi Router Rental: $10.00\n- Spectrum TV Select Signature: $94.99\n- Broadcast TV Surcharge: $25.75\n- Promotional Discount Expired: -$40.00 (Removed)\n- Local Franchise & Regulatory Fees: $8.00\nTotal Amount Due: $168.74",
+    "fees": [
+      {
+        "feeName": "Broadcast TV Surcharge",
+        "typicalCost": "$25.75 – $28.00 / mo",
+        "negotiable": "Eliminable by Dropping Video",
+        "statuteOrRule": "FCC Truth-in-Billing (47 C.F.R. § 64.2401)",
+        "howToChallenge": "Billed on all standard Spectrum TV bundles. Drop cable TV for an antenna or live streaming service to cut this surcharge immediately."
+      },
+      {
+        "feeName": "Advanced WiFi Router Fee",
+        "typicalCost": "$7.00 – $10.00 / mo",
+        "negotiable": "100% Eliminable",
+        "statuteOrRule": "Television Viewer Protection Act (47 U.S.C. § 562)",
+        "howToChallenge": "Spectrum's standalone DOCSIS modem is included at $0/mo, while the Wi-Fi router costs $7–$10/mo. Buy your own Wi-Fi 6 router ($60–$90) and return Spectrum's router."
+      },
+      {
+        "feeName": "Promotional Step-Up Rate Cliff",
+        "typicalCost": "+$15.00 – $35.00 / mo",
+        "negotiable": "Highly Negotiable with Retention",
+        "statuteOrRule": "FCC Broadband Nutrition Label Comparison",
+        "howToChallenge": "Call Retention (request 'Cancel Service') and ask to be placed on Spectrum's current Life Unlimited / promotional 500 Mbps or 100 Mbps Advantage tier."
+      },
+      {
+        "feeName": "Unprorated Partial-Month Billing",
+        "typicalCost": "Up to 1 full month upon cancellation",
+        "negotiable": "Avoidable via Timing",
+        "statuteOrRule": "State Consumer Protection & Terms Notice",
+        "howToChallenge": "Spectrum does not prorate mid-cycle cancellations in most states. Always cancel 3–5 days before the end of your current billing cycle."
+      }
+    ],
+    "retentionScript": "Hello, I saw my Spectrum statement increased to $XX.XX after my promotional discount stepped down. I see competing 5G home internet and fiber providers available at my address for $50 per month with no equipment fees. I would like to stay with Spectrum if Retention can match a $50–$60 promotional internet rate for 12 months and confirm my account is not being charged for a rented Wi-Fi router.",
+    "escalationChecklist": [
+      "Keep Spectrum's free standalone cable modem, buy your own Wi-Fi 6 router, and return Spectrum's rented router at a Spectrum Store for a receipt.",
+      "Call 1-833-267-6094 and state 'Cancel Service' to bypass frontline billing agents who cannot apply new-customer promotional codes.",
+      "Check if your household qualifies for Spectrum Internet Assist or Spectrum's 100 Mbps Advantage tier if you do not need gigabit speeds.",
+      "Confirm your billing cycle end date before cancelling any video add-on so you do not pay an unprorated extra month."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Does Spectrum charge for both a modem and a Wi-Fi router?",
+        "answer": "No. Spectrum includes the standalone cable modem at $0/month, but charges $7 to $10 per month for its Wi-Fi router. Using your own Wi-Fi router eliminates that monthly fee completely."
+      },
+      {
+        "question": "Why does my Spectrum bill go up every 12 months?",
+        "answer": "Spectrum structures most offers with 12-month or 24-month promotional discounts that step down in stages until reaching standard rack rates ($85–$100+ for internet alone). Calling Retention before or right after the step-down can reset your promo."
+      },
+      {
+        "question": "Will Spectrum prorate my final bill if I cancel mid-month?",
+        "answer": "In most states (with specific exceptions such as New York and Maine), Spectrum bills full monthly subscription cycles without proration. Cancel 3 to 5 days prior to your cycle close date to avoid an extra month."
+      },
+      {
+        "question": "Can I remove Spectrum's Broadcast TV Surcharge while keeping cable?",
+        "answer": "No—Spectrum applies the Broadcast TV Surcharge to all traditional TV packages carrying local broadcast channels. Dropping video to internet-only removes it entirely."
+      }
+    ]
+  },
+  {
+    "slug": "att-wireless-fees",
+    "providerName": "AT&T Wireless & Fiber",
+    "category": "Mobile Phone",
+    "seoTitle": "AT&T Wireless Fees & Surcharges Auditor | ItsMyBill",
+    "metaDescription": "Audit AT&T bills for Administrative & Regulatory Cost Recovery fees ($3.49/line), Next Up Anytime, and Protect Advantage insurance. Free client-side tool.",
+    "h1": "AT&T Wireless & Internet Hidden Fees Auditor",
+    "directAnswer": "AT&T Wireless bills routinely include a $3.49/line Administrative & Regulatory Cost Recovery Fee, $6–$10/line AT&T Next Up early-upgrade add-ons, and $17/line Protect Advantage insurance often added during checkout. Auditing these optional line items and enrolling in ACH Autopay ($10/line off) plus employer/AARP Signature discounts typically saves $20 to $55 per month.",
+    "sampleAmount": 156.40,
+    "sampleBillText": "AT&T Wireless Monthly Statement\n- AT&T Unlimited Extra EL (1 line): $85.99\n- AT&T Next Up Anytime Add-On: $10.00\n- Protect Advantage for 1 (Insurance): $17.00\n- Administrative & Regulatory Cost Recovery Fee: $3.49\n- Federal Universal Service Charge: $4.92\n- Credit Card Autopay Reduction Penalty: $5.00\n- State & Local Communications Taxes: $10.00\n- International Day Pass (Unintended Roaming): $20.00\nTotal Due: $156.40",
+    "fees": [
+      {
+        "feeName": "Administrative & Regulatory Cost Recovery Fee",
+        "typicalCost": "$3.49 / line / mo",
+        "negotiable": "Offset via AARP/Employer Signature Credit",
+        "statuteOrRule": "FCC Truth-in-Billing (47 C.F.R. § 64.2401)",
+        "howToChallenge": "Company-imposed cost recovery charge, not a government tax. Enroll in an eligible employer or AARP Signature discount to waive upgrade fees and cut $10/line on Premium plans."
+      },
+      {
+        "feeName": "AT&T Next Up / Next Up Anytime",
+        "typicalCost": "$6.00 – $10.00 / line / mo",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "FTC Unbundled Optional Feature Disclosure",
+        "howToChallenge": "Only useful if you trade in phones every 12 months. Remove it in the myAT&T app under Manage Add-Ons if you keep phones for 2–3 years."
+      },
+      {
+        "feeName": "Protect Advantage Insurance",
+        "typicalCost": "$17.00 / line ($45–$50 for 4 lines)",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "FTC Negative Option & Add-On Guidance",
+        "howToChallenge": "Frequently added by retail reps without clear opt-in. Cancel in myAT&T if covered by AppleCare+ or credit card phone protection."
+      },
+      {
+        "feeName": "Autopay Credit Card Penalty",
+        "typicalCost": "$5.00 – $10.00 / line / mo",
+        "negotiable": "Eliminable via Bank Account/Debit",
+        "statuteOrRule": "AT&T Autopay Terms Disclosure",
+        "howToChallenge": "AT&T dropped the credit-card Autopay discount from $10 to $0 (and debit to $5). Linking a checking account restores the full $10/line monthly credit."
+      }
+    ],
+    "retentionScript": "Hello, I am reviewing my AT&T Wireless statement and noticed optional add-ons like Next Up and Protect Advantage that I did not request, plus the $3.49 Administrative & Regulatory Cost Recovery fee. Please remove Next Up and Protect Advantage effective today, issue a courtesy credit for this cycle's unwanted add-ons, and verify that my Signature discount and $10/line bank Autopay credits are active.",
+    "escalationChecklist": [
+      "Log into myAT&T -> Manage Plan & Add-Ons and immediately remove AT&T Next Up ($6–$10/mo) and Protect Advantage ($17/mo) if unwanted.",
+      "Switch Autopay to a bank routing/checking number to secure the full $10/line monthly Autopay & Paperless credit.",
+      "Attach an employer, union, military, teacher, or AARP Signature discount to waive $35 activation/upgrade fees and discount Unlimited Premium.",
+      "Dispute unauthorized retail 'cramming' add-ons via the FCC Consumer Complaint portal if frontline support declines retroactive credits."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Can I cancel AT&T Next Up without paying off my phone?",
+        "answer": "Yes. Canceling AT&T Next Up or Next Up Anytime simply removes the optional $6–$10 monthly early-upgrade fee; your standard 36-month phone installment agreement and promotional bill credits remain intact."
+      },
+      {
+        "question": "Why did my AT&T Autopay discount decrease?",
+        "answer": "AT&T reduced its Autopay discount to $0/line for credit cards and $5/line for debit cards, reserving the full $10/line/month discount for bank checking accounts."
+      },
+      {
+        "question": "Is AT&T's $3.49 Administrative & Regulatory Cost Recovery Fee a tax?",
+        "answer": "No. AT&T discloses on its bill that this is a carrier fee to help recover interconnection, cell-site, and regulatory compliance costs—not a government-mandated tax."
+      },
+      {
+        "question": "How do I dispute an AT&T billing error if phone support refuses to credit it?",
+        "answer": "Submit a written billing dispute referencing FCC Truth-in-Billing (47 C.F.R. § 64.2401) and file an informal complaint with the FCC, which routes directly to AT&T's Office of the President."
+      }
+    ]
+  },
+  {
+    "slug": "hospital-facility-fee-code-0450",
+    "providerName": "Hospital Outpatient & ER (Rev Code 0450 / G0463)",
+    "category": "Medical & Hospital",
+    "seoTitle": "Hospital Facility Fee (Code 0450) Auditor | ItsMyBill",
+    "metaDescription": "Audit hospital bills for Revenue Code 0450 ER facility fees, G0463 clinic fees, and unbundled supplies. Request an itemized UB-04 ledger free.",
+    "h1": "Hospital Facility Fee (Revenue Code 0450) Auditor & Dispute Guide",
+    "directAnswer": "Revenue Code 0450 (Emergency Room Facility Fee) and HCPCS G0463 (Hospital Outpatient Clinic Facility Fee) add $300 to $3,500+ in hospital overhead on top of your doctor's separate professional bill. Requesting an itemized UB-04/CPT statement, challenging upcoded ER acuity levels (CPT 99284/99285), and applying under IRC § 501(r) financial assistance regularly slashes balances by 40% to 100%.",
+    "sampleAmount": 3420.00,
+    "sampleBillText": "Itemized Hospital Statement - Patient Account #MG-99214-B\n- Revenue Code 0450: Emergency Room Facility Fee Level 4: $1,850.00\n- CPT 99284: Emergency Dept Physician Evaluation: $950.00\n- CPT 80053: Comprehensive Metabolic Panel: $320.00\n- Revenue Code 0250: Pharmacy IV Saline 1000ml: $180.00\n- Administrative Record Prep Surcharge: $120.00\nTotal Billed to Patient: $3,420.00",
+    "fees": [
+      {
+        "feeName": "Revenue Code 0450 (ER Facility Fee)",
+        "typicalCost": "$850 – $3,500+",
+        "negotiable": "Auditable for Level Upcoding & Out-of-Network Caps",
+        "statuteOrRule": "No Surprises Act (42 U.S.C. § 300gg-111) & CMS ER Coding Guidelines",
+        "howToChallenge": "Request the hospital's internal ER acuity scoring matrix to verify whether a Level 4/5 (99284/99285) facility fee met medical complexity criteria."
+      },
+      {
+        "feeName": "HCPCS G0463 / Rev Code 0510 (Outpatient Clinic Facility Fee)",
+        "typicalCost": "$150 – $650 per office visit",
+        "negotiable": "Reviewable for Site-Neutral / Notice Rules",
+        "statuteOrRule": "State Facility Fee Disclosure Laws & CMS Site-Neutral Rules",
+        "howToChallenge": "Hospitals acquiring doctor offices tack on outpatient facility fees; multiple states require advance written notice before billing facility fees at off-campus clinics."
+      },
+      {
+        "feeName": "Unbundled Routine Supplies (Rev Code 0250/0270)",
+        "typicalCost": "$75 – $400+",
+        "negotiable": "Often Removable as Duplicate/Bundled",
+        "statuteOrRule": "CMS NCCI Edits (National Correct Coding Initiative)",
+        "howToChallenge": "Routine supplies (gauze, basic saline, gloves) are generally encapsulated inside the facility fee. Demand an itemized audit against NCCI bundling edits."
+      },
+      {
+        "feeName": "Uninsured / Chargemaster Rack Rate",
+        "typicalCost": "300% – 800% of Medicare Rate",
+        "negotiable": "Subject to IRC § 501(r) AGB Cap",
+        "statuteOrRule": "Internal Revenue Code § 501(r) (26 U.S.C. § 501(r))",
+        "howToChallenge": "Nonprofit hospitals cannot charge Financial Assistance-eligible patients more than Amounts Generally Billed (AGB) to insured patients."
+      }
+    ],
+    "retentionScript": "Hello, I am calling regarding Patient Account #[Account #]. Before I make any payment, I am requesting a complete itemized billing statement with all CPT, HCPCS, and Revenue Codes—specifically the documentation supporting the Level 4/5 Revenue Code 0450 facility fee. Please also place a 30-day billing audit hold on this account and send me a copy of your hospital's IRC § 501(r) Financial Assistance Policy application.",
+    "escalationChecklist": [
+      "Never pay a summary statement. Demand a full itemized bill listing every 5-digit CPT/HCPCS code and 4-digit Revenue Code.",
+      "Compare the hospital's billed CPT codes against your insurer's Explanation of Benefits (EOB) and FAIR Health / Medicare benchmark prices.",
+      "If the hospital is a 501(c)(3) nonprofit (roughly 60% of U.S. hospitals), apply for Financial Assistance / Charity Care under IRC § 501(r).",
+      "Send a certified written itemized bill and coding audit request to pause collection escalation while the coding review is pending."
+    ],
+    "disputeSlug": "itemized-hospital-bill-request",
+    "faqs": [
+      {
+        "question": "What is Revenue Code 0450 on a hospital bill?",
+        "answer": "Revenue Code 0450 is the standard UB-04 billing code for Emergency Room facility overhead—covering nursing staff, building overhead, and equipment—billed separately from the ER physician's professional fee."
+      },
+      {
+        "question": "Why did I receive two bills for one emergency room visit?",
+        "answer": "U.S. hospitals split billing into a 'facility claim' (UB-04 form from the hospital using Revenue Code 0450) and a 'professional claim' (CMS-1500 form from the ER physician, radiologist, or anesthesiologist)."
+      },
+      {
+        "question": "Can I dispute an ER facility fee if I only received minor care?",
+        "answer": "Yes. Ask the hospital billing department for a Coding Level Review to verify whether your visit met the clinical criteria for the billed CPT acuity level (e.g., 99284/99285 vs. lower-cost 99282/99283)."
+      },
+      {
+        "question": "Does IRC § 501(r) apply to hospital facility fees?",
+        "answer": "Yes. If the hospital is a tax-exempt nonprofit, its Financial Assistance Policy under 26 U.S.C. § 501(r) must cover emergency and medically necessary care—including hospital facility fees—and restrict extraordinary collection actions for at least 120 days."
+      }
+    ]
+  },
+  {
+    "slug": "er-surprise-medical-bill",
+    "providerName": "Emergency Room & Out-of-Network Balance Bills",
+    "category": "Medical & Hospital",
+    "seoTitle": "ER Surprise Medical Bill Auditor (No Surprises Act) | ItsMyBill",
+    "metaDescription": "Audit surprise out-of-network ER, anesthesia, radiology, or air ambulance bills under the federal No Surprises Act (42 U.S.C. § 300gg-111).",
+    "h1": "ER Surprise Medical Bill Auditor (Federal No Surprises Act)",
+    "directAnswer": "Under the federal No Surprises Act (42 U.S.C. § 300gg-111; 45 C.F.R. § 149), out-of-network emergency rooms, ER physicians, anesthesiologists, radiologists at in-network hospitals, and air ambulances cannot balance bill insured patients above their standard in-network copay, coinsurance, or deductible. Self-pay patients also have the right to a Good Faith Estimate and dispute bills exceeding it by $400 or more.",
+    "sampleAmount": 4850.00,
+    "sampleBillText": "Out-of-Network Emergency Provider Statement\n- CPT 99285: Emergency Dept Visit High Complexity (Out-of-Network): $2,100.00\n- CPT 00840: Out-of-Network Anesthesiology Services (In-Network Hospital): $1,650.00\n- CPT 74177: Out-of-Network Radiology CT Read: $1,100.00\nInsurance Allowed: $1,200.00 | Balance Billed to Patient: $3,650.00",
+    "fees": [
+      {
+        "feeName": "Out-of-Network ER Physician Balance Bill",
+        "typicalCost": "$900 – $3,200+",
+        "negotiable": "Prohibited Under Federal Law",
+        "statuteOrRule": "No Surprises Act (42 U.S.C. § 300gg-111(b))",
+        "howToChallenge": "Emergency services must be processed at in-network cost-sharing without prior authorization; providers must resolve payment disputes with insurers via Independent Dispute Resolution (IDR)."
+      },
+      {
+        "feeName": "Out-of-Network Ancillary Clinician (Anesthesia / Radiology / Pathology)",
+        "typicalCost": "$600 – $4,500+",
+        "negotiable": "Prohibited Without Valid Notice & Consent (Cannot Be Waived for Ancillary)",
+        "statuteOrRule": "45 C.F.R. § 149.420 (Ancillary Services Ban)",
+        "howToChallenge": "Anesthesiologists, radiologists, pathologists, and assistant surgeons at in-network facilities are prohibited from even asking you to sign a surprise-billing consent waiver."
+      },
+      {
+        "feeName": "Self-Pay Bill Exceeding Good Faith Estimate by $400+",
+        "typicalCost": "$400 – $10,000+ variance",
+        "negotiable": "Eligible for Federal PPDR Dispute",
+        "statuteOrRule": "45 C.F.R. § 149.620 (Patient-Provider Dispute Resolution)",
+        "howToChallenge": "Uninsured or self-pay patients billed $400+ above their written Good Faith Estimate can initiate federal PPDR within 120 calendar days of receiving the bill."
+      },
+      {
+        "feeName": "Out-of-Network Air Ambulance Balance Bill",
+        "typicalCost": "$15,000 – $55,000+",
+        "negotiable": "Protected Under No Surprises Act",
+        "statuteOrRule": "42 U.S.C. § 300gg-112",
+        "howToChallenge": "Air ambulance balance billing is federally prohibited for insured patients (note: ground ambulances remain governed by state law rather than federal NSA)."
+      }
+    ],
+    "retentionScript": "Hello, I received an out-of-network balance bill for emergency care / ancillary services provided at an in-network hospital on [Date]. Under the federal No Surprises Act (42 U.S.C. § 300gg-111), my financial responsibility is strictly capped at my in-network cost-sharing amount. Please reprocess this claim with my health plan through the federal IDR pathway, remove the balance bill from my account, and pause all collections immediately.",
+    "escalationChecklist": [
+      "Verify whether the care was emergency treatment OR an out-of-network clinician at an in-network hospital/ambulatory surgical center.",
+      "Call your health insurer first and confirm the claim was processed under the Qualifying Payment Amount (QPA) in-network cost-sharing rules.",
+      "Send our certified No Surprises Act Dispute Letter to the provider's billing department with your EOB attached.",
+      "If the provider refuses to withdraw the balance bill, file an official complaint with the CMS No Surprises Help Desk at 1-800-985-3059 or cms.gov/nosurprises."
+    ],
+    "disputeSlug": "no-surprises-act-er-bill",
+    "faqs": [
+      {
+        "question": "Does the No Surprises Act cover out-of-network ER doctors?",
+        "answer": "Yes. Even if the hospital itself is in-network (or out-of-network), emergency services—including ER physicians and post-stabilization care—cannot be balance billed above your in-network cost-sharing."
+      },
+      {
+        "question": "Does the No Surprises Act cover ground ambulances?",
+        "answer": "No. The federal No Surprises Act covers air ambulances but currently excludes ground ambulances. However, more than a dozen states have enacted state-level ground ambulance balance-billing protections."
+      },
+      {
+        "question": "Can an anesthesiologist ask me to waive my No Surprises Act rights?",
+        "answer": "No. Federal regulations (45 C.F.R. § 149.420) prohibit providers of ancillary services—including anesthesiology, radiology, pathology, neonatology, and hospitalists—from asking patients to sign notice-and-consent waivers."
+      },
+      {
+        "question": "Where do I report a hospital that violates the No Surprises Act?",
+        "answer": "You can file a formal federal complaint directly with the Centers for Medicare & Medicaid Services (CMS) at cms.gov/nosurprises or by calling the No Surprises Help Desk at 1-800-985-3059."
+      }
+    ]
+  },
+  {
+    "slug": "t-mobile-hidden-fees",
+    "providerName": "T-Mobile",
+    "category": "Mobile Phone",
+    "seoTitle": "T-Mobile Fees & Price Hike Auditor | ItsMyBill",
+    "metaDescription": "Audit T-Mobile bills for legacy plan increases, Protection<360> insurance, Regulatory Programs & Telco Recovery fees, and AutoPay debit rules.",
+    "h1": "T-Mobile Hidden Fees & Legacy Rate Hike Auditor",
+    "directAnswer": "While T-Mobile Go5G plans include taxes and fees, older Essentials and non-tax-inclusive plans add $3.49/line in Regulatory Programs & Telco Recovery fees, plus $18/month for Protection<360> insurance and $5/line penalties if AutoPay uses a credit card. Auditing add-ons and migrating from legacy rate-hiked plans typically saves $18 to $45 per month.",
+    "sampleAmount": 134.80,
+    "sampleBillText": "T-Mobile Monthly Statement\n- Essentials 4-Line Base Plan: $105.00\n- Regulatory Programs & Telco Recovery Fee: $13.96\n- Protection<360> Tier 5 Insurance: $18.00\n- Credit Card AutoPay Discount Removed: +$20.00\nTotal Due: $134.80",
+    "fees": [
+      {
+        "feeName": "Regulatory Programs & Telco Recovery Fee",
+        "typicalCost": "$3.49 / voice line / mo",
+        "negotiable": "Eliminable on Tax-Inclusive Plans",
+        "statuteOrRule": "FCC Truth-in-Billing (47 C.F.R. § 64.2401)",
+        "howToChallenge": "Applied to Essentials and non-tax-inclusive plans. Compare total cost against tax-inclusive tiers or prepaid MVNO plans (Mint, US Mobile)."
+      },
+      {
+        "feeName": "Protection<360> Device Insurance",
+        "typicalCost": "$18.00 / line / mo",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "FTC Unbundled Optional Feature Guidance",
+        "howToChallenge": "Frequently bundled at store activation. Cancel in the T-Life app under Manage Add-Ons if you already carry AppleCare+ or card coverage."
+      },
+      {
+        "feeName": "Device Connection Charge (DCC)",
+        "typicalCost": "$35.00 per line/upgrade",
+        "negotiable": "Waivable via Costco/Sam's Kiosk or T-Force",
+        "statuteOrRule": "Carrier Promotional Policy",
+        "howToChallenge": "Ask T-Force (T-Mobile's social support team) for a one-time bill credit or complete upgrades through warehouse club kiosks that waive DCC."
+      },
+      {
+        "feeName": "Credit Card AutoPay Removal",
+        "typicalCost": "$5.00 / line / mo (up to $40)",
+        "negotiable": "Restorable via Debit/Checking AutoPay",
+        "statuteOrRule": "T-Mobile AutoPay Terms",
+        "howToChallenge": "Link a checking account or debit card for AutoPay to reclaim $5/line/month across up to 8 voice lines."
+      }
+    ],
+    "retentionScript": "Hi T-Force, I am auditing my T-Mobile statement and noticed Protection<360> and recent legacy plan rate increases pushed my bill up. Please cancel Protection<360>, verify my AutoPay bank discount is applied to every line, and check if an Insider or loyalty credit is available to keep my total monthly rate competitive.",
+    "escalationChecklist": [
+      "Open the T-Life app -> Manage Add-Ons to remove Protection<360> ($18/mo) and paid Scam Shield Premium if unused.",
+      "Switch AutoPay to a checking account or debit card to recover $5/line/month (up to $40/mo on family plans).",
+      "Compare Essentials + $3.49/line fees + state taxes against tax-inclusive plans or prepaid alternatives.",
+      "Contact T-Force support or file an informal FCC complaint if a promised Price Lock guarantee was violated."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Does T-Mobile charge a Regulatory Programs & Telco Recovery Fee on all plans?",
+        "answer": "No. Tax-inclusive plans (such as Go5G and Magenta) include taxes and fees in the advertised rate, whereas Essentials and certain business/legacy plans add $3.49 per voice line plus state/local taxes."
+      },
+      {
+        "question": "How do I restore my T-Mobile $5/line AutoPay discount?",
+        "answer": "Update your AutoPay payment method from a credit card to a bank checking account or debit card inside the T-Life app."
+      },
+      {
+        "question": "Can I cancel T-Mobile Protection<360> without affecting my phone promo credits?",
+        "answer": "Yes. Protection<360> is an optional insurance add-on; canceling it does not forfeit monthly promotional equipment credits."
+      },
+      {
+        "question": "What if T-Mobile raised the price of a plan I believed had a Price Lock?",
+        "answer": "Document your original plan enrollment date and Price Lock terms, request a review with T-Mobile Executive Response, and file an FCC informal complaint if terms conflict with your billing notice."
+      }
+    ]
+  },
+  {
+    "slug": "cox-internet-surcharges",
+    "providerName": "Cox Communications",
+    "category": "Cable & Internet",
+    "seoTitle": "Cox Internet Hidden Fees & Data Cap Auditor | ItsMyBill",
+    "metaDescription": "Audit Cox internet and cable bills for $50 unlimited data add-ons, Panoramic Wifi ($14/mo), and Broadcast TV fees. Copy our Cox retention script.",
+    "h1": "Cox Internet Surcharges & Data Cap Auditor",
+    "directAnswer": "Cox Communications frequently inflates residential bills through $14/month Panoramic Wifi gateway rentals, $10 per 50 GB data-cap overage fees above 1.25 TB (or $50/month for Unlimited Data), and $21+/month Broadcast TV surcharges. Returning the Panoramic gateway and invoking the 40%-off Cox Retention callback tactic routinely cuts $30 to $65 per month.",
+    "sampleAmount": 164.00,
+    "sampleBillText": "Cox Monthly Statement\n- Go Faster Internet (500 Mbps): $90.00\n- Unlimited Data Add-On (1.25 TB Cap Waiver): $50.00\n- Panoramic Wifi Gateway Rental: $14.00\n- Complete Care Support Plan: $10.00\nTotal Due: $164.00",
+    "fees": [
+      {
+        "feeName": "1.25 TB Data Cap Overage / Unlimited Data Add-On",
+        "typicalCost": "$10 / 50 GB or $50 / mo Unlimited",
+        "negotiable": "Often Discounted to $0–$25 in Retention",
+        "statuteOrRule": "FCC Broadband Consumer Label Disclosure",
+        "howToChallenge": "Request a promotional Unlimited Data waiver when competing fiber (Google Fiber, AT&T, Quantum) or 5G home internet serves your ZIP code."
+      },
+      {
+        "feeName": "Panoramic Wifi Gateway Rental",
+        "typicalCost": "$14.00 / mo ($168 / yr)",
+        "negotiable": "100% Eliminable",
+        "statuteOrRule": "47 U.S.C. § 562 (Customer-Owned Modem Right)",
+        "howToChallenge": "Purchase a Cox-certified DOCSIS 3.1 modem and Wi-Fi router; return the Panoramic unit at a Cox Solution Store and keep the serial receipt."
+      },
+      {
+        "feeName": "Cox Complete Care Protection",
+        "typicalCost": "$10.00 / mo",
+        "negotiable": "100% Cancelable After Initial Term",
+        "statuteOrRule": "FTC Negative Option Guidance",
+        "howToChallenge": "Interior wiring insurance rarely pays for itself; cancel once any 90-day promo requirement ends."
+      },
+      {
+        "feeName": "Broadcast TV & Regional Sports Surcharges",
+        "typicalCost": "$21.00 – $34.00 / mo",
+        "negotiable": "Eliminable by Moving to Internet-Only",
+        "statuteOrRule": "FCC Truth-in-Billing (47 C.F.R. § 64.2401)",
+        "howToChallenge": "Company-imposed video surcharges; drop Contour TV to eliminate both line items immediately."
+      }
+    ],
+    "retentionScript": "Hello, my Cox internet bill just jumped to $XX.XX with the Panoramic Wifi fee and data add-on. T-Mobile 5G Home Internet and local fiber providers in my neighborhood are offering unlimited data for $50–$65 per month with no equipment fees. I would like to schedule a cancellation date two weeks out unless Loyalty Retention can apply a 40% promotional internet discount and waive the Unlimited Data fee.",
+    "escalationChecklist": [
+      "Audit your monthly usage in the Cox app—if you consistently stay below 1.25 TB, drop the $50 Unlimited Data add-on immediately.",
+      "Replace the $14/mo Panoramic Wifi modem with your own DOCSIS 3.1 hardware and keep the store return receipt.",
+      "Cancel Cox Complete Care ($10/mo) unless actively troubleshooting inside-wiring faults.",
+      "If frontline retention offers weak discounts, schedule a future cancellation date 10–14 days out—Cox's Winback team routinely sends stronger 40%-off offers."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "How do I avoid Cox's $50/month Unlimited Data charge?",
+        "answer": "Check your past 6 months of usage in the Cox app. If you use less than 1,280 GB (1.25 TB), remove Unlimited Data. If you exceed 1.25 TB, ask Retention to bundle Unlimited Data at a promotional credit or compare uncapped fiber/5G options."
+      },
+      {
+        "question": "Can I use my own modem with Cox Internet?",
+        "answer": "Yes. Under federal law (47 U.S.C. § 562), you can activate a Cox-certified DOCSIS 3.1 modem and return the $14/month Panoramic Wifi gateway to eliminate the equipment rental fee."
+      },
+      {
+        "question": "What is the Cox 40% retention discount tactic?",
+        "answer": "Customers who schedule a future disconnection date (10–14 days ahead) often receive an email or phone number for Cox's Retention/Winback desk, which has authorization to apply 25%–40% promotional discounts."
+      },
+      {
+        "question": "Does Cox charge a fee to cancel early?",
+        "answer": "Most current Cox internet plans do not carry annual term contracts, though older promotional agreements may list a prorated early termination fee. Verify your contract end date on page 2 of your PDF statement."
+      }
+    ]
+  },
+  {
+    "slug": "frontier-fiber-fees",
+    "providerName": "Frontier Communications",
+    "category": "Cable & Internet",
+    "seoTitle": "Frontier Fiber & Internet Hidden Fees Auditor | ItsMyBill",
+    "metaDescription": "Audit Frontier internet bills for Internet Infrastructure Surcharges, Wi-Fi Security add-ons, and unreturned equipment fees. Free client-side auditor.",
+    "h1": "Frontier Fiber & Internet Hidden Fees Auditor",
+    "directAnswer": "Frontier internet statements often include $10/month Wi-Fi Security or Multi-Device Security add-ons, legacy copper 'Internet Infrastructure Surcharges' ($9.99–$13.99/mo), $10/month router fees on older plans, and $50 restocking fees upon cancellation. Migrating from copper DSL to Frontier Fiber and auditing add-on services regularly reduces bills by $20 to $45 per month.",
+    "sampleAmount": 98.98,
+    "sampleBillText": "Frontier Monthly Statement\n- Fiber 500 Internet (Post-Promo Rate): $69.99\n- Multi-Device Security & Wi-Fi Security Add-On: $10.00\n- Premium Tech Pro Support: $10.00\n- Paper Statement & AutoPay Non-ACH Fee: $8.99\nTotal Due: $98.98",
+    "fees": [
+      {
+        "feeName": "Internet Infrastructure Surcharge (Legacy Plans)",
+        "typicalCost": "$9.99 – $13.99 / mo",
+        "negotiable": "Eliminable by Moving to Current Fiber Pricing",
+        "statuteOrRule": "FCC Broadband Nutrition Label Standards",
+        "howToChallenge": "Legacy Frontier DSL and older fiber plans carry hidden infrastructure surcharges that newer transparent Fiber pricing omits. Request plan migration."
+      },
+      {
+        "feeName": "Multi-Device Security / Premium Tech Pro",
+        "typicalCost": "$5.99 – $10.00 / mo each",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "FTC Unbundled Add-On Disclosure",
+        "howToChallenge": "Optional antivirus and tech support add-ons; cancel via Frontier chat or retention immediately."
+      },
+      {
+        "feeName": "Non-ACH AutoPay & Paper Bill Surcharge",
+        "typicalCost": "$5.00 – $10.00 / mo",
+        "negotiable": "Eliminable via Bank AutoPay + Paperless",
+        "statuteOrRule": "Frontier Promotional AutoPay Terms",
+        "howToChallenge": "Frontier requires bank-account (ACH) AutoPay for its full $10/mo discount on new Fiber tiers."
+      },
+      {
+        "feeName": "Equipment Restocking / Unreturned Eero Fee",
+        "typicalCost": "$50 restocking / $150+ unreturned",
+        "negotiable": "Preventable via Verified Return Shipping",
+        "statuteOrRule": "FCC Truth-in-Billing & State Consumer Law",
+        "howToChallenge": "Keep UPS/FedEx drop-off tracking numbers and screenshots confirming Frontier received returned Eero routers."
+      }
+    ],
+    "retentionScript": "Hello, I am reviewing my Frontier statement and noticed add-on charges for Tech Pro / Security plus a post-promo rate increase. New Frontier Fiber customers in my area are paying $44.99–$49.99 for 500 Mbps. Please cancel all optional security/tech add-ons and apply a 12-month loyalty rate match to keep my account active.",
+    "escalationChecklist": [
+      "Audit page 2 of your Frontier PDF statement for Multi-Device Security, Wi-Fi Security, or Premium Tech Pro add-ons.",
+      "Switch AutoPay from credit card to ACH bank draft + paperless billing to reclaim up to $10/month.",
+      "Ask Frontier Retention to match current new-customer Fiber 500 / Fiber 1 Gig pricing.",
+      "Always save return tracking receipts for any Frontier-supplied Eero or ONT equipment."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Why does Frontier charge an Internet Infrastructure Surcharge?",
+        "answer": "Frontier applied the Internet Infrastructure Surcharge to legacy copper DSL and older fiber plans as a company cost-recovery fee. Migrating to a current Frontier Fiber tier removes this separate line item."
+      },
+      {
+        "question": "Can I use my own Wi-Fi router with Frontier Fiber?",
+        "answer": "Yes. Frontier Fiber terminates at an Optical Network Terminal (ONT) with an Ethernet handoff, allowing you to plug in your own router directly without paying optional mesh add-on fees."
+      },
+      {
+        "question": "How do I dispute an unreturned equipment fee from Frontier?",
+        "answer": "Send Frontier a written dispute with your courier return receipt and serial number attached, and file an informal FCC billing complaint if the charge is not credited within 14 days."
+      },
+      {
+        "question": "Does Frontier require a bank account for its AutoPay discount?",
+        "answer": "Yes. Current Frontier Fiber promotions provide the full $10/month AutoPay discount only for checking/ACH payments ($5 for debit cards, $0 for credit cards)."
+      }
+    ]
+  },
+  {
+    "slug": "centurylink-quantum-fees",
+    "providerName": "CenturyLink & Quantum Fiber",
+    "category": "Cable & Internet",
+    "seoTitle": "CenturyLink & Quantum Fiber Fees Auditor | ItsMyBill",
+    "metaDescription": "Audit CenturyLink and Quantum Fiber bills for Price for Life rate hikes, $15 modem lease fees, and Cost Recovery fees. Free client-side auditor.",
+    "h1": "CenturyLink & Quantum Fiber Hidden Fees Auditor",
+    "directAnswer": "CenturyLink copper and legacy fiber customers often pay $15/month modem lease fees, $4–$6 Cost Recovery surcharges, and unexpected $10/month rate hikes—even on accounts previously marketed under 'Price for Life.' Purchasing a compatible modem/router and escalating documented Price for Life increases through the FCC frequently restores original promotional rates.",
+    "sampleAmount": 95.00,
+    "sampleBillText": "CenturyLink / Quantum Fiber Statement\n- Fiber Gigabit Internet (Post-Hike Rate): $75.00\n- Modem Lease Fee (C4000XG): $15.00\n- Internet Cost Recovery Fee: $5.00\nTotal Due: $95.00",
+    "fees": [
+      {
+        "feeName": "Modem / WiFi Lease Fee",
+        "typicalCost": "$15.00 / mo ($180 / yr)",
+        "negotiable": "100% Eliminable",
+        "statuteOrRule": "47 U.S.C. § 562 (Customer-Owned Equipment)",
+        "howToChallenge": "Buy a compatible VLAN-201-capable router (for Fiber) or VDSL2 modem (for DSL) and return the leased CenturyLink unit."
+      },
+      {
+        "feeName": "Price for Life Rate Increase",
+        "typicalCost": "+$10.00 / mo",
+        "negotiable": "Disputable With Enrollment Proof",
+        "statuteOrRule": "FTC Deceptive Pricing & State AG Consumer Protection",
+        "howToChallenge": "Locate your original Price for Life welcome email and submit an FCC/State AG complaint if Lumen raised your base rate without a plan change."
+      },
+      {
+        "feeName": "Internet Cost Recovery Fee",
+        "typicalCost": "$3.99 – $5.99 / mo",
+        "negotiable": "Removed on Quantum Fiber All-In Tiers",
+        "statuteOrRule": "FCC Broadband Nutrition Label Rules",
+        "howToChallenge": "Company surcharge added to legacy CenturyLink accounts; compare against Quantum Fiber all-in pricing in your area."
+      },
+      {
+        "feeName": "360 WiFi Pod Add-On",
+        "typicalCost": "$15.00 / mo (after promo)",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "FTC Negative Option Disclosure",
+        "howToChallenge": "Switch the SmartNID to transparent bridge mode and connect your own mesh Wi-Fi system instead of paying ongoing pod rentals."
+      }
+    ],
+    "retentionScript": "Hello, I am auditing my CenturyLink / Quantum Fiber statement. I am being billed $15/month for modem leasing and a recent $10 base rate hike despite enrolling under Price for Life. Please remove the modem lease once my return is logged and review my account for a Price for Life rate restoration credit.",
+    "escalationChecklist": [
+      "Search your email archive for 'Price for Life' enrollment confirmations before calling Lumen/CenturyLink billing.",
+      "Return leased CenturyLink modems via tracked shipping and use a personal router supporting VLAN tagging (ID 201).",
+      "Check if migrating from legacy CenturyLink DSL to Quantum Fiber or competing 5G Home Internet reduces your total all-in rate.",
+      "File an informal FCC complaint or State Attorney General consumer complaint if a documented Price for Life commitment was raised."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Can I dispute a CenturyLink Price for Life rate increase?",
+        "answer": "Yes. If you kept the same plan, address, and payment standing without modifying your account, gather your original enrollment confirmation email and submit an FCC informal complaint and State AG notice."
+      },
+      {
+        "question": "How do I stop paying CenturyLink's $15/month modem lease fee?",
+        "answer": "Replace the leased modem with your own compatible router (on fiber, ensure it supports IEEE 802.1Q VLAN 201 tagging) and return the leased hardware with tracking confirmation."
+      },
+      {
+        "question": "Does Quantum Fiber charge taxes and cost recovery fees?",
+        "answer": "Quantum Fiber's standard residential plans generally advertise flat monthly rates without separate Internet Cost Recovery fees, unlike legacy CenturyLink copper accounts."
+      },
+      {
+        "question": "Can I use my own Wi-Fi router with Quantum Fiber?",
+        "answer": "Yes. Place the Quantum Fiber SmartNID into Transparent Bridge Mode and connect your own Wi-Fi router directly via Ethernet."
+      }
+    ]
+  },
+  {
+    "slug": "duke-energy-rate-riders",
+    "providerName": "Duke Energy (NC, SC, FL, IN, OH, KY)",
+    "category": "Electric & Gas",
+    "seoTitle": "Duke Energy Bill Riders & Meter Audit Guide | ItsMyBill",
+    "metaDescription": "Audit high Duke Energy electric bills for fuel adjustment riders, storm recovery charges, estimated meter reads, and Time-of-Use tariff mismatches.",
+    "h1": "Duke Energy Rate Riders & High Electric Bill Auditor",
+    "directAnswer": "Duke Energy electric bills combine base customer charges ($14–$18/mo) with per-kWh energy rates plus multiple riders—including Fuel Cost Recovery, Storm Securitization, and Environmental/Coal-Ash Compliance riders—which often represent 25% to 35% of your total bill. Checking for estimated meter reads, smart-meter spikes, and Time-of-Use tariff eligibility helps catch billing errors fast.",
+    "sampleAmount": 218.40,
+    "sampleBillText": "Duke Energy Residential Electric Statement\nBilling Cycle: 33 Days (Estimated Read Flag)\n- Basic Customer Charge: $15.65\n- Energy Charge (1,340 kWh): $142.10\n- Fuel Cost Recovery Rider: $31.80\n- Storm Recovery & Grid Improvement Rider: $12.45\n- Energy Efficiency / DSM Rider: $6.90\n- State Sales & Utility Taxes: $9.50\nTotal Due: $218.40",
+    "fees": [
+      {
+        "feeName": "Estimated Meter Read Spike",
+        "typicalCost": "$35 – $150+ variance",
+        "negotiable": "100% Correctable Under State PUC Rules",
+        "statuteOrRule": "State PUC Meter Accuracy & True-Up Regulations",
+        "howToChallenge": "Check your statement for an 'E' (Estimated) tag next to kWh readings. Photograph your physical meter and request an immediate re-bill."
+      },
+      {
+        "feeName": "Fuel Cost & Storm Securitization Riders",
+        "typicalCost": "2¢ – 4¢ / kWh ($20 – $45 / mo)",
+        "negotiable": "PUC-Regulated (Verify Applied Tariff Schedule)",
+        "statuteOrRule": "State Public Utility Commission Approved Tariff",
+        "howToChallenge": "While riders are approved by state PUCs, confirm your billing days (28 vs. 35 days) and verify you are on the optimal residential tariff (Standard vs. Time-of-Use)."
+      },
+      {
+        "feeName": "Incorrect Time-of-Use (TOU) Peak Demand Tier",
+        "typicalCost": "$20 – $60 / mo excess",
+        "negotiable": "Switchable Back to Flat Residential Tariff",
+        "statuteOrRule": "Duke Energy Residential Rate Schedule RS / TOU",
+        "howToChallenge": "If HVAC or EV charging runs during on-peak hours (e.g., 6 PM–9 PM summer / 6 AM–9 AM winter), TOU rates can raise bills sharply; request a 12-month rate comparison."
+      },
+      {
+        "feeName": "Home Wire Protection / Surge Guard Add-On",
+        "typicalCost": "$8.95 – $14.95 / mo",
+        "negotiable": "100% Cancelable",
+        "statuteOrRule": "Non-Regulated Third-Party Warranty Add-On",
+        "howToChallenge": "Optional surge or interior wiring warranties billed through Duke Energy can be canceled anytime without impacting utility service."
+      }
+    ],
+    "retentionScript": "Hello, I am calling regarding my Duke Energy account #[Account #]. My most recent bill spiked significantly compared to the prior cycle. Please confirm whether this cycle used an actual or estimated meter read, verify the exact number of billing days, remove any third-party protection add-ons like Surge Guard, and run a tariff comparison between my current schedule and standard flat residential service.",
+    "escalationChecklist": [
+      "Verify the billing period length (a 34-day cycle vs. 28-day cycle automatically inflates a monthly bill by 21%) and check for 'Estimated' read flags.",
+      "Log into the Duke Energy portal to inspect hourly/15-minute smart meter graphs and isolate malfunctioning HVAC heat strips or water heaters.",
+      "Cancel optional non-utility add-ons such as Surge Guard or Interior Wire Protection.",
+      "If Duke Energy refuses a meter-accuracy test or tariff audit, file a formal consumer complaint with your state's Public Utility Commission (NCUC, PSCSC, FPSC, IURC, PUCO, or KYPSC)."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Why did my Duke Energy bill jump even though my thermostat stayed the same?",
+        "answer": "Three common triggers are: (1) a longer 33–35 day billing cycle, (2) semi-annual PUC-approved Fuel Cost Recovery or Storm Securitization rider updates, or (3) auxiliary electric heat strips running during cold snaps."
+      },
+      {
+        "question": "Can I request a free meter accuracy test from Duke Energy?",
+        "answer": "Yes. State Public Utility Commission rules generally entitle residential customers to one free meter accuracy test every 12 to 24 months if you suspect a faulty meter."
+      },
+      {
+        "question": "Does the FCC regulate Duke Energy electric bills?",
+        "answer": "No. Regulated electric utilities like Duke Energy are overseen by your state's Public Utility Commission (such as NCUC, FPSC, IURC, or PUCO), not the FCC."
+      },
+      {
+        "question": "Are optional surge protection plans on Duke Energy bills required?",
+        "answer": "No. Line items like Home Surge Protection or Underground Wire Protection are optional third-party warranties that can be removed on request."
+      }
+    ]
+  },
+  {
+    "slug": "pge-california-bill-charges",
+    "providerName": "PG&E (Pacific Gas & Electric)",
+    "category": "Electric & Gas",
+    "seoTitle": "PG&E California Bill Charges & TOU Auditor | ItsMyBill",
+    "metaDescription": "Audit PG&E California electric and gas bills for E-TOU-C peak charges (4-9 PM), CCA double-billing confusion, CARE/FERA discounts, and baseline tiers.",
+    "h1": "PG&E California Bill Charges & Time-of-Use Auditor",
+    "directAnswer": "PG&E residential electricity rates average over 38¢–52¢/kWh during 4 PM–9 PM peak hours on E-TOU-C plans, making California utility bills among the highest in the continental U.S. Auditing your PG&E rate plan (E-TOU-C vs. E-TOU-D vs. EV2-A), checking Medical Baseline or CARE/FERA discounts (18%–35% off), and verifying CCA generation credits can save $300 to $1,200+ annually.",
+    "sampleAmount": 318.60,
+    "sampleBillText": "PG&E Energy Statement (California)\nRate Schedule: E-TOU-C (4 PM - 9 PM Peak)\n- Electric Delivery Charges (580 kWh): $148.20\n- Community Choice Aggregator (CCA) Electric Generation: $82.40\n- Power Charge Indifference Adjustment (PCIA): $14.80\n- Wildfire Fund Charge & Public Purpose Programs: $16.20\n- Gas Procurement & Delivery (38 Therms): $57.00\nTotal Due: $318.60",
+    "fees": [
+      {
+        "feeName": "E-TOU-C 4 PM–9 PM Peak Rate Surcharge",
+        "typicalCost": "45¢ – 58¢ / kWh on-peak",
+        "negotiable": "Optimizable via Rate Plan Switch",
+        "statuteOrRule": "CPUC Residential Time-of-Use Tariff",
+        "howToChallenge": "Run PG&E's annual Rate Plan Comparison tool—households with higher usage often pay less on E-TOU-D (5–8 PM weekdays only) or EV2-A (if owning an EV/heat pump)."
+      },
+      {
+        "feeName": "Missed CARE (30–35% off) or FERA (18% off) Discount",
+        "typicalCost": "$40 – $120 / mo missed savings",
+        "negotiable": "Immediate Enrollment If Income-Eligible",
+        "statuteOrRule": "CPUC Public Utilities Code § 739.1",
+        "howToChallenge": "A 4-person California household earning up to $79,750/yr may qualify for FERA (18% electric discount) or CARE (30–35% electric + 20% gas discount)."
+      },
+      {
+        "feeName": "Missed Medical Baseline Allowance",
+        "typicalCost": "$25 – $65 / mo savings",
+        "negotiable": "Available With Clinician Certification",
+        "statuteOrRule": "CPUC Medical Baseline Program",
+        "howToChallenge": "Households using CPAP machines, nebulizers, motorized wheelchairs, or qualifying medical heating/cooling needs receive extra kWh/therms at the lowest Tier 1 rate."
+      },
+      {
+        "feeName": "CCA Generation vs. PG&E Delivery Confusion / PCIA",
+        "typicalCost": "$10 – $25 / mo PCIA exit fee",
+        "negotiable": "Verify Generation Credit Matches CCA",
+        "statuteOrRule": "CPUC Community Choice Aggregation Rules",
+        "howToChallenge": "Confirm PG&E applied a full 'Generation Credit' offsetting your local CCA charge so you are not paying both entities for power supply."
+      }
+    ],
+    "retentionScript": "Hello, I am auditing my PG&E energy statement for Account #[Account #]. Please run a 12-month Rate Plan Comparison across E-TOU-C, E-TOU-D, and Tiered E-1 based on my actual smart-meter interval data, verify my Baseline Territory climate zone allocation is accurate, and confirm whether my household qualifies for FERA, CARE, or Medical Baseline adjustments.",
+    "escalationChecklist": [
+      "Log into pge.com -> Rate Plan Comparison to test E-TOU-C vs. E-TOU-D vs. Tiered E-1 against your past 12 months of actual hourly usage.",
+      "Check income thresholds for CARE (30–35% off) and FERA (18% off for 3+ person households) and Medical Baseline eligibility.",
+      "Confirm your PG&E 'Generation Credit' properly offsets any Community Choice Aggregator (e.g., MCE, CleanPowerSF, EBCE, SJCE) line item.",
+      "For unresolved meter-accuracy disputes or billing errors, file an informal or formal complaint with the California Public Utilities Commission (CPUC) Consumer Affairs Branch."
+    ],
+    "disputeSlug": "fcc-truth-in-billing-telecom",
+    "faqs": [
+      {
+        "question": "Why does my PG&E bill show both PG&E Delivery and a Community Choice Aggregator (CCA) charge?",
+        "answer": "You are not being double-billed for electricity—PG&E owns the wires (Delivery) while your local CCA buys the power (Generation), and PG&E deducts a 'Generation Credit' from its portion. Always verify the Generation Credit appears on page 3 of your statement."
+      },
+      {
+        "question": "How do I know if E-TOU-C or E-TOU-D is cheaper on PG&E?",
+        "answer": "E-TOU-C gives a baseline credit but charges peak rates 4 PM–9 PM seven days a week. E-TOU-D has no baseline credit, but peak hours apply only 5 PM–8 PM on weekdays (weekends are 100% off-peak). Higher-usage homes often save on E-TOU-D."
+      },
+      {
+        "question": "What is the PG&E Medical Baseline Allowance?",
+        "answer": "If anyone in your home relies on qualifying medical devices (such as a CPAP, oxygen concentrator, or temperature-sensitive medical condition), PG&E expands your lowest-cost Tier 1 allotment by 500 kWh/month or 25 therms/month."
+      },
+      {
+        "question": "Where do I file an official billing complaint against PG&E?",
+        "answer": "After contacting PG&E billing, unresolved meter, tariff, or disconnection disputes can be escalated directly to the California Public Utilities Commission (CPUC) Consumer Affairs Branch at cpuc.ca.gov."
+      }
+    ]
+  }
+]

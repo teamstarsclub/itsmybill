@@ -1,0 +1,284 @@
+[
+  {
+    "slug": "no-surprises-act-er-bill",
+    "seoTitle": "No Surprises Act ER Dispute Letter Template | ItsMyBill",
+    "metaDescription": "Draft a free No Surprises Act (42 U.S.C. § 300gg-111) dispute letter for surprise out-of-network ER, anesthesia, radiology, or air ambulance bills.",
+    "h1": "No Surprises Act Emergency Bill Dispute Letter Template",
+    "statuteCode": "42 U.S.C. § 300gg-111; 45 C.F.R. Part 149",
+    "billType": "Medical & Hospital",
+    "defaultProvider": "Metro Regional Hospital Billing Dept.",
+    "defaultAmount": "2,450.00",
+    "defaultCodes": "CPT 99284 / Rev Code 0450 / Out-of-Network Balance",
+    "defaultReason": "Out-of-network balance billing for emergency room services prohibited under the federal No Surprises Act (42 U.S.C. § 300gg-111).",
+    "deadlineHighlight": "120-Day Window (Self-Pay GFE Dispute) · Immediate Balance-Billing Ban (Insured ER & In-Network Hospital Ancillary Care)",
+    "directAnswer": "Under the federal No Surprises Act (42 U.S.C. § 300gg-111), healthcare providers and facilities cannot balance bill insured patients above standard in-network copays, coinsurance, or deductibles for emergency room treatment, out-of-network clinicians at in-network hospitals (anesthesia, radiology, pathology), or air ambulance transport. Send a written notice via Certified Mail and escalate non-compliance to CMS.",
+    "plainEnglishRights": [
+      "Emergency services must be covered at in-network cost-sharing rates without prior authorization, regardless of whether the ER or physician is in your health plan's network.",
+      "Ancillary out-of-network providers (anesthesiologists, radiologists, pathologists, hospitalists) at in-network facilities are legally barred from asking you to waive No Surprises Act protections.",
+      "Uninsured or self-pay patients who receive a bill $400 or more above their written Good Faith Estimate can trigger federal Patient-Provider Dispute Resolution (PPDR) within 120 calendar days.",
+      "Payment disagreements between the provider and your insurer must be resolved via federal Independent Dispute Resolution (IDR)—never billed to the patient."
+    ],
+    "sampleLetter": "Date: [Date]\n\nTO:\nPatient Financial Services / Billing Dispute Department\n[Hospital or Provider Name]\n[Provider Billing Address]\n\nFROM:\n[Your Full Name]\nPatient Account #: [Account Number]\nDate of Service: [Date of Service]\n\nRE: Formal Dispute of Prohibited Out-of-Network Balance Bill ($[Amount]) Pursuant to the Federal No Surprises Act (42 U.S.C. § 300gg-111)\n\nDear Billing Dispute Department,\n\nI am writing to formally dispute the balance-billed amount of $[Amount] listed on statement #[Account Number] for services rendered on [Date of Service].\n\nI. STATUTORY BASIS FOR DISPUTE\nThese charges arise from [emergency medical care / out-of-network ancillary services provided at an in-network facility]. Under the federal No Surprises Act (42 U.S.C. § 300gg-111; 45 C.F.R. § 149.410–.420), my financial obligation is strictly limited to my health plan's in-network cost-sharing amount calculated against the Qualifying Payment Amount (QPA). Any dispute regarding provider reimbursement must be resolved directly with my health insurer through federal Independent Dispute Resolution (IDR).\n\nII. REQUESTED REMEDIES\n1. Reprocess this claim under No Surprises Act in-network cost-sharing rules and remove the prohibited out-of-network balance bill.\n2. Provide a complete CMS-compliant itemized bill listing all CPT, HCPCS, and Revenue Codes.\n3. Place an immediate billing and collections hold on this account pending written resolution.\n\nIf this balance bill is not corrected within thirty (30) calendar days, I intend to submit a formal complaint with the CMS No Surprises Help Desk (cms.gov/nosurprises).\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]\nEnclosures: Copy of Statement and Insurer EOB",
+    "certifiedMailChecklist": [
+      "Attach a copy (never originals) of both the provider's bill and your health insurer's Explanation of Benefits (EOB).",
+      "Send via USPS Certified Mail with Return Receipt Requested (PS Form 3811) to the provider's Billing Disputes or Patient Financial Services address.",
+      "Keep a dated copy of the signed letter and tracking receipt; note the 30-day response mark on your calendar.",
+      "If the provider ignores the notice or transfers the account to collections, file a complaint at https://www.cms.gov/nosurprises or call 1-800-985-3059."
+    ],
+    "govSourceName": "CMS No Surprises Act Official Portal",
+    "govSourceUrl": "https://www.cms.gov/nosurprises",
+    "faqs": [
+      {
+        "question": "Does the No Surprises Act apply to ground ambulances?",
+        "answer": "No. The federal No Surprises Act applies to air ambulances and emergency hospital care, but excludes ground ambulances. Check your state's insurance department for state-level ground ambulance protections."
+      },
+      {
+        "question": "What if I already paid part of a surprise out-of-network ER bill?",
+        "answer": "If you paid more than your applicable in-network cost-sharing amount for protected emergency or ancillary services, federal rules require the provider to refund the overpayment within 30 business days of determination."
+      },
+      {
+        "question": "Can a hospital send a disputed No Surprises Act bill to collections?",
+        "answer": "Providers cannot lawfully collect prohibited balance bills. Documenting your written dispute via Certified Mail and opening a CMS complaint creates an evidentiary record to challenge any improper collection or credit reporting."
+      },
+      {
+        "question": "What if I am uninsured and received a surprise hospital bill?",
+        "answer": "Uninsured and self-pay patients are entitled to a written Good Faith Estimate before scheduled care. If the final bill exceeds the estimate by $400 or more, you can initiate federal Patient-Provider Dispute Resolution within 120 calendar days."
+      }
+    ]
+  },
+  {
+    "slug": "fdcpa-debt-validation",
+    "seoTitle": "FDCPA Debt Validation Letter Template (15 U.S.C. 1692g) | ItsMyBill",
+    "metaDescription": "Draft a free FDCPA debt validation demand letter (15 U.S.C. § 1692g & Reg F) within 30 days to pause debt collection until written proof is provided.",
+    "h1": "FDCPA Debt Validation Demand Letter Template (15 U.S.C. § 1692g)",
+    "statuteCode": "15 U.S.C. § 1692g; 12 C.F.R. § 1006.34 (CFPB Reg F)",
+    "billType": "Collections",
+    "defaultProvider": "Third-Party Collection Agency LLC",
+    "defaultAmount": "890.00",
+    "defaultCodes": "Collection Notice Ref # / Original Creditor Account",
+    "defaultReason": "Formal demand for written debt validation and verification of original creditor ownership under the Fair Debt Collection Practices Act (15 U.S.C. § 1692g).",
+    "deadlineHighlight": "30-Day Statutory Validation Window — Send within 30 days of receiving the collector's initial written validation notice to trigger mandatory collection pause.",
+    "directAnswer": "Under the Fair Debt Collection Practices Act (15 U.S.C. § 1692g) and CFPB Regulation F (12 C.F.R. § 1006.34), if you dispute a debt in writing within 30 days of receiving a third-party collector's initial validation notice, the collector must legally cease all collection activity until it mails written verification of the debt and the original creditor's name and address.",
+    "plainEnglishRights": [
+      "Never admit owing the debt or promise partial payment on the phone before receiving written validation—a partial payment can restart your state's statute of limitations.",
+      "Disputing in writing within 30 days of the initial validation notice freezes collection calls, letters, and lawsuits until the agency verifies the debt.",
+      "Under 15 U.S.C. § 1692e(8), once a collector knows a debt is disputed, it cannot report the account to credit bureaus without explicitly noting 'disputed by consumer.'",
+      "FDCPA applies to third-party debt collectors and debt buyers—not generally to original creditors collecting in their own name (though several states extend similar rules to original creditors)."
+    ],
+    "sampleLetter": "Date: [Date]\n\nTO:\n[Debt Collection Agency Name]\n[Collection Agency Mailing Address]\n\nFROM:\n[Your Full Name]\n[Your Mailing Address]\n\nRE: Formal Debt Validation Demand & Notice of Dispute — Reference #[Collection Account #] ($[Amount]) Pursuant to 15 U.S.C. § 1692g\n\nDear Compliance Department,\n\nI received your notice dated [Notice Date] regarding alleged account #[Collection Account #] in the amount of $[Amount]. Please be advised that I dispute the validity of this alleged debt in its entirety pursuant to the Fair Debt Collection Practices Act (15 U.S.C. § 1692g) and CFPB Regulation F (12 C.F.R. Part 1006).\n\nThis letter is NOT a refusal to pay a valid obligation, nor is it an acknowledgment of liability. It is a formal statutory request for verification.\n\nI. REQUIRED WRITTEN VERIFICATION\n1. Complete name and address of the original creditor and the original account number.\n2. An itemized accounting of the principal balance, interest, and all added collection fees since the date of default.\n3. Documentation establishing your legal authority and chain of assignment to collect this alleged balance in my state.\n4. Proof that this alleged debt falls within the applicable state statute of limitations.\n\nII. MANDATORY CEASE OF COLLECTION PENDING VERIFICATION\nPursuant to 15 U.S.C. § 1692g(b), you must cease all collection efforts until written verification is mailed to me. Please communicate exclusively in writing at the address above and ensure any credit bureau reporting accurately reflects that this account is disputed.\n\nSincerely,\n\n[Your Printed Name (Do not include bank/SSN info)]",
+    "certifiedMailChecklist": [
+      "Send within 30 calendar days of the date you received the collector's initial written validation notice.",
+      "Do NOT include your Social Security number, bank routing details, or an admission that you owe the balance.",
+      "Mail via USPS Certified Mail with Return Receipt Requested so you have legally admissible proof of timely delivery.",
+      "If the collector continues calling or fails to mark the tradeline disputed, file a complaint with the CFPB (consumerfinance.gov/complaint)."
+    ],
+    "govSourceName": "CFPB Debt Collection Consumer Rights",
+    "govSourceUrl": "https://www.consumerfinance.gov/consumer-tools/debt-collection/",
+    "faqs": [
+      {
+        "question": "What happens if I send an FDCPA debt validation letter after 30 days?",
+        "answer": "You still have the right to dispute an inaccurate debt after 30 days, and collectors still cannot misrepresent the amount owed—however, the automatic statutory pause on collection activity under 15 U.S.C. § 1692g(b) is strictly triggered by written disputes sent within the initial 30-day window."
+      },
+      {
+        "question": "Does an FDCPA letter work against an original creditor like a hospital or credit card bank?",
+        "answer": "Federal FDCPA protections apply to third-party debt collectors and debt buyers. Original creditors are generally governed by the Fair Credit Billing Act (credit cards), IRC § 501(r) (nonprofit hospitals), or state consumer protection statutes."
+      },
+      {
+        "question": "Should I sign an FDCPA debt validation letter?",
+        "answer": "You can print your full name or sign cleanly, and never enclose checks, bank account numbers, or Social Security numbers. Keeping communication strictly in writing creates a clear compliance audit trail."
+      },
+      {
+        "question": "Can a debt collector report an unvalidated medical bill to credit bureaus?",
+        "answer": "Major U.S. credit bureaus voluntarily exclude paid medical collections, medical collections under $500, and unpaid medical collections less than one year old—and collectors must always report disputed accounts as disputed under federal law."
+      }
+    ]
+  },
+  {
+    "slug": "fcba-credit-card-error",
+    "seoTitle": "FCBA Credit Card Dispute Letter (15 U.S.C. 1666) | ItsMyBill",
+    "metaDescription": "Draft a formal Fair Credit Billing Act (15 U.S.C. § 1666) written billing error notice within 60 days to protect credit card chargeback rights.",
+    "h1": "Fair Credit Billing Act (FCBA) Credit Card Error Dispute Letter",
+    "statuteCode": "15 U.S.C. § 1666; 12 C.F.R. § 1026.13 (Regulation Z)",
+    "billType": "Credit & Banking",
+    "defaultProvider": "Card Issuer Billing Inquiries Dept.",
+    "defaultAmount": "425.00",
+    "defaultCodes": "Disputed Merchant Charge / Transaction Date",
+    "defaultReason": "Billing statement error / unauthorized or undelivered merchant charge disputed in writing within 60 days pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666).",
+    "deadlineHighlight": "60-Day Strict Mailing Deadline — Issuer must RECEIVE your written notice at its Billing Inquiries address within 60 days of the first statement showing the error.",
+    "directAnswer": "Under the Fair Credit Billing Act (15 U.S.C. § 1666), mailing a written billing error notice to your credit card issuer's dedicated Billing Inquiries address within 60 days of the statement date legally requires the bank to acknowledge your dispute within 30 days, investigate within 90 days (two billing cycles), and refrain from charging interest or reporting late payments on the disputed sum during review.",
+    "plainEnglishRights": [
+      "Calling your bank or clicking an app button is convenient, but federal FCBA legal enforcement rights are strictly preserved ONLY when you mail a written notice to the issuer's 'Billing Inquiries' address (not the payment remittance address).",
+      "Covered billing errors include unauthorized charges, wrong dates or amounts, goods/services never delivered or not as agreed, math errors, and uncredited returns or payments.",
+      "While the investigation is pending, you do not have to pay the disputed amount or related finance charges (though you must continue paying undisputed charges on the statement).",
+      "The FCBA applies to open-end credit cards and revolving lines of credit—not debit cards (which are covered separately under the Electronic Fund Transfer Act, 15 U.S.C. § 1693)."
+    ],
+    "sampleLetter": "Date: [Date]\n\nTO:\nBilling Inquiries Department (NOT Payment Address)\n[Credit Card Issuer Name]\n[Billing Inquiries Address from Statement Back]\n\nFROM:\n[Your Full Name]\n[Your Mailing Address]\nAccount #: XXXX-XXXX-XXXX-[Last 4 Digits]\n\nRE: Formal Billing Error Notice Pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666) — Disputed Charge of $[Amount]\n\nDear Billing Inquiries Department,\n\nI am writing to formally notify you of a billing error on my credit card statement dated [Statement Date], pursuant to the Fair Credit Billing Act (15 U.S.C. § 1666) and Regulation Z (12 C.F.R. § 1026.13).\n\nI. DISPUTED TRANSACTION DETAILS\n- Merchant Name: [Merchant Name]\n- Transaction Date: [Date]\n- Disputed Amount: $[Amount]\n- Reason for Error: [Unauthorized charge / Goods never delivered / Billing calculation error / Uncredited refund]\n\nII. STATUTORY REQUEST\n1. Acknowledge receipt of this written billing error notice within thirty (30) days pursuant to 15 U.S.C. § 1666(a)(A).\n2. Conduct a reasonable investigation and credit the disputed charge and any associated finance charges within two billing cycles (not to exceed 90 days).\n3. Refrain from reporting the disputed amount as delinquent or initiating collection activity while this investigation is pending.\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]\nEnclosures: Copy of Statement Page, Order Receipts, and Merchant Cancellation Proof",
+    "certifiedMailChecklist": [
+      "Check the back of your monthly credit card statement for the separate 'Billing Inquiries' mailing address (never send FCBA notices to the payment lockbox).",
+      "Ensure the letter arrives within 60 calendar days of the date the first statement containing the error was transmitted.",
+      "Include copies of merchant emails, tracking proof of returned items, or cancellation screenshots.",
+      "Send via USPS Certified Mail with Return Receipt Requested and continue paying all undisputed portions of your bill on time."
+    ],
+    "govSourceName": "FTC Fair Credit Billing Act Guide",
+    "govSourceUrl": "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges",
+    "faqs": [
+      {
+        "question": "Does clicking 'Dispute Charge' in my credit card app protect my FCBA rights?",
+        "answer": "Online portal disputes often resolve simple errors, but the statutory enforcement mechanism of 15 U.S.C. § 1666 specifically requires written notice mailed to the issuer's designated Billing Inquiries address within 60 days. For high-dollar disputes, always mail a Certified letter too."
+      },
+      {
+        "question": "Does the Fair Credit Billing Act apply to debit cards?",
+        "answer": "No. Debit card errors and unauthorized ATM/ACH withdrawals are governed by the Electronic Fund Transfer Act (EFTA / Regulation E, 15 U.S.C. § 1693), which has stricter timelines for unauthorized transfers."
+      },
+      {
+        "question": "Can my bank report me late to credit bureaus while an FCBA dispute is open?",
+        "answer": "No. Under 15 U.S.C. § 1666a, a creditor cannot report the disputed amount as delinquent or threaten adverse credit reporting during the pendency of a timely FCBA investigation."
+      },
+      {
+        "question": "How long does the credit card issuer have to resolve my FCBA dispute?",
+        "answer": "The issuer must acknowledge your written notice within 30 days and complete its investigation and either credit your account or send a written explanation within two billing cycles (maximum 90 days)."
+      }
+    ]
+  },
+  {
+    "slug": "fcc-truth-in-billing-telecom",
+    "seoTitle": "FCC Truth-in-Billing Telecom Dispute Letter | ItsMyBill",
+    "metaDescription": "Draft a formal cable, internet, or wireless billing dispute letter citing FCC Truth-in-Billing (47 C.F.R. § 64.2401) and TVPA (47 U.S.C. § 562).",
+    "h1": "FCC Truth-in-Billing Telecom & ISP Dispute Letter Template",
+    "statuteCode": "47 C.F.R. § 64.2401 (FCC Truth-in-Billing) & 47 U.S.C. § 562 (TVPA)",
+    "billType": "Cable & Internet",
+    "defaultProvider": "Telecom / Broadband Provider Billing Dept.",
+    "defaultAmount": "148.50",
+    "defaultCodes": "Broadcast TV Fee / Unreturned Modem Fee / Cramming Add-On",
+    "defaultReason": "Undisclosed ancillary surcharges, unnotified rate hikes, or unauthorized add-on cramming in violation of FCC Truth-in-Billing standards (47 C.F.R. § 64.2401).",
+    "deadlineHighlight": "30-Day Mandatory Executive Response Window — Informal FCC complaints require carriers to respond to both you and the FCC in writing within 30 days.",
+    "directAnswer": "Under FCC Truth-in-Billing rules (47 C.F.R. § 64.2401) and the Television Viewer Protection Act (47 U.S.C. § 562), wireless, cable, and broadband providers must clearly describe all charges, separate discretionary carrier surcharges from government taxes, honor customer-owned modem rights, and refrain from unauthorized third-party 'cramming.' Pairing a written notice with an informal FCC complaint escalates straight to executive relations.",
+    "plainEnglishRights": [
+      "Carriers must use plain, non-misleading descriptions for every fee and cannot disguise private corporate recovery fees as mandatory government taxes.",
+      "Under the Television Viewer Protection Act (47 U.S.C. § 562), cable/broadband providers cannot charge equipment rental fees for customer-owned compatible modems/routers and must provide transparent all-in cost estimates.",
+      "Broadband providers must display standardized FCC Broadband Consumer Labels listing monthly rates, introductory end dates, data caps, and ancillary fees.",
+      "Filing an informal complaint at consumercomplaints.fcc.gov is free and legally obligates the carrier's executive compliance team to issue a written response within 30 days."
+    ],
+    "sampleLetter": "Date: [Date]\n\nTO:\nExecutive Billing Disputes & Regulatory Compliance\n[Telecom / ISP / Wireless Provider Name]\n[Provider Corporate Address]\n\nFROM:\n[Your Full Name]\nAccount #: [Account Number]\nService Address: [Service Address]\n\nRE: Formal Billing Dispute — Undisclosed Surcharges / Unauthorized Charges ($[Amount]) Pursuant to FCC Truth-in-Billing (47 C.F.R. § 64.2401)\n\nDear Billing Compliance Department,\n\nI am submitting this formal written dispute regarding charges totaling $[Amount] billed on my [Month/Year] statement for Account #[Account Number].\n\nI. DISPUTED CHARGES & FACTUAL RECORD\n- Specific Disputed Items: [e.g., Continued modem rental fee after store return / Unauthorized insurance add-on / Unnotified post-promotional price hike]\n- Supporting Documentation: [Order confirmation / Equipment return serial receipt / Broadband Consumer Label]\n\nII. REGULATORY BASIS & REQUESTED REMEDY\nPursuant to FCC Truth-in-Billing requirements (47 C.F.R. § 64.2401) and the Television Viewer Protection Act (47 U.S.C. § 562), consumers are entitled to clear, accurate billing free from unauthorized add-ons and improper equipment fees. I formally request:\n1. Immediate billing credit of $[Amount] to my account.\n2. Permanent removal of all unauthorized add-on services or returned-equipment fees.\n3. Written confirmation of the corrected monthly rate within fourteen (14) days.\n\nIf unresolved, I will submit this documentation to the FCC Consumer Complaint Center (consumercomplaints.fcc.gov) and my State Attorney General.\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]",
+    "certifiedMailChecklist": [
+      "Attach copies of your promotional order confirmation, chat transcripts, or equipment return tracking/store receipts.",
+      "Send a copy via Certified Mail to the carrier's Billing Disputes address (listed on page 2 of your PDF statement).",
+      "Simultaneously file a free informal complaint at https://consumercomplaints.fcc.gov/ if the carrier's frontline phone support refused to resolve the error.",
+      "Keep paying any undisputed base service charges to prevent automated disconnection while the disputed credit is processed."
+    ],
+    "govSourceName": "FCC Consumer Complaint Center & Truth-in-Billing",
+    "govSourceUrl": "https://www.fcc.gov/general/truth-billing-0",
+    "faqs": [
+      {
+        "question": "Does an informal FCC complaint actually work against Xfinity, Verizon, AT&T, or Spectrum?",
+        "answer": "Yes. Once filed at consumercomplaints.fcc.gov, the FCC serves the complaint directly on the carrier's corporate Office of the President / Executive Relations team, which must send a written resolution to both you and the FCC within 30 days."
+      },
+      {
+        "question": "Can an ISP charge me a modem rental fee if I use my own modem?",
+        "answer": "No. Under the federal Television Viewer Protection Act (47 U.S.C. § 562), providers cannot charge equipment rental fees for a modem or router you own and supply yourself."
+      },
+      {
+        "question": "What is 'cramming' on a wireless or landline phone bill?",
+        "answer": "Cramming is the illegal practice of placing unauthorized third-party or optional add-on charges (such as unrequested insurance, cloud bundles, or premium text services) onto a consumer's telecom statement without affirmative consent."
+      },
+      {
+        "question": "Can I cite FCC Truth-in-Billing for an electric or water bill?",
+        "answer": "No. The FCC regulates telecommunications (wireless, internet, cable, phone). Electric, gas, and municipal water disputes are governed by your state Public Utility Commission (PUC)."
+      }
+    ]
+  },
+  {
+    "slug": "itemized-hospital-bill-request",
+    "seoTitle": "Itemized Hospital Bill & 501(r) Charity Care Request | ItsMyBill",
+    "metaDescription": "Request an itemized UB-04/CPT hospital bill and IRC § 501(r) Financial Assistance Policy application to pause collections and catch upcoding errors.",
+    "h1": "Itemized Hospital Bill & IRC § 501(r) Charity Care Request Letter",
+    "statuteCode": "26 U.S.C. § 501(r) (Nonprofit Hospital FAP) & HIPAA 45 C.F.R. § 164.524",
+    "billType": "Medical & Hospital",
+    "defaultProvider": "Regional Medical Center Financial Services",
+    "defaultAmount": "4,180.00",
+    "defaultCodes": "Itemized UB-04 / CPT / HCPCS / Revenue Codes",
+    "defaultReason": "Formal request for an itemized UB-04/CPT billing ledger, coding audit review, and IRC § 501(r) Financial Assistance Policy application.",
+    "deadlineHighlight": "120-Day & 240-Day IRC § 501(r) Shield — Nonprofit hospitals must wait 120 days from first post-discharge bill before collections and accept charity care applications for 240 days.",
+    "directAnswer": "Summary hospital bills hide duplicate charges, unbundled supplies, and upcoded ER facility levels. Under federal HIPAA patient-access rules (45 C.F.R. § 164.524) and Internal Revenue Code § 501(r) for nonprofit hospitals, you have the right to demand a complete itemized statement with CPT/Revenue codes and apply for sliding-scale Financial Assistance (charity care) for up to 240 days after your first statement.",
+    "plainEnglishRights": [
+      "Roughly 60% of U.S. community hospitals are 501(c)(3) tax-exempt nonprofits legally required under 26 U.S.C. § 501(r) to maintain a written Financial Assistance Policy (FAP).",
+      "Under § 501(r), nonprofit hospitals must wait at least 120 days after sending the first post-discharge billing statement before initiating 'Extraordinary Collection Actions' (credit reporting, wage garnishment, or lawsuits).",
+      "You have a full 240-day application period from the first post-discharge bill to submit a Financial Assistance application—even if the bill was already placed with a debt collector.",
+      "Once a complete FAP application is submitted, the hospital must immediately suspend collection actions while determining your discount eligibility."
+    ],
+    "sampleLetter": "Date: [Date]\n\nTO:\nPatient Financial Services & Financial Counseling\n[Hospital Name]\n[Hospital Billing Address]\n\nFROM:\n[Your Full Name]\nPatient Account #: [Account Number]\nDate of Service: [Date of Service]\n\nRE: Formal Request for Itemized UB-04/CPT Statement, Coding Audit & IRC § 501(r) Financial Assistance Application ($[Amount])\n\nDear Patient Financial Services,\n\nRegarding Patient Account #[Account Number] with a stated balance of $[Amount], I am formally requesting an itemized billing breakdown and financial assistance review prior to remitting payment.\n\nI. ITEMIZED STATEMENT & CODING VERIFICATION\nPursuant to patient billing transparency and HIPAA right-of-access standards (45 C.F.R. § 164.524), please furnish a complete itemized statement showing:\n1. Every billed line item with its 5-digit CPT or HCPCS code and 4-digit UB-04 Revenue Code.\n2. Individual unit quantities and per-unit charges for all medications, lab tests, and facility fees.\n3. Verification that all billed charges conform to CMS National Correct Coding Initiative (NCCI) bundling edits.\n\nII. IRC § 501(r) FINANCIAL ASSISTANCE POLICY (FAP) REQUEST\nIf your facility operates as a tax-exempt hospital under Internal Revenue Code § 501(r), please send a plain-language summary and application for your Financial Assistance Policy and confirm the Amounts Generally Billed (AGB) limit for eligible patients. Please place a billing hold on this account and refrain from any Extraordinary Collection Actions pending receipt of the itemized bill and financial assistance determination.\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]",
+    "certifiedMailChecklist": [
+      "Look up the hospital's nonprofit status (501(c)(3)) and download its Financial Assistance Policy PDF from its website (usually linked in the footer under 'Financial Assistance').",
+      "Send this letter via USPS Certified Mail within 30 days of receiving a summary hospital bill.",
+      "Cross-check every CPT code on the returned itemized ledger against your insurer's EOB and Medicare reimbursement benchmarks.",
+      "If eligible under the hospital's Federal Poverty Level (FPL) sliding scale (often 200%–400% FPL), submit your FAP application with pay stubs/tax returns promptly."
+    ],
+    "govSourceName": "IRS Section 501(r) Charitable Hospital Requirements",
+    "govSourceUrl": "https://www.irs.gov/charities-non-profits/charitable-organizations/requirements-for-501c3-hospitals-under-the-affordable-care-act-section-501r",
+    "faqs": [
+      {
+        "question": "Can I qualify for hospital charity care even if I have health insurance?",
+        "answer": "Yes. Many nonprofit hospital Financial Assistance Policies cover high deductibles, copays, and coinsurance balances for insured households whose income falls within 200% to 400% of the Federal Poverty Level."
+      },
+      {
+        "question": "What is the difference between a summary hospital bill and an itemized bill?",
+        "answer": "A summary bill lumps thousands of dollars into vague labels like 'Emergency Services' or 'Pharmacy.' An itemized UB-04/CPT statement lists every individual 5-digit CPT/HCPCS code and 4-digit Revenue Code so you can spot duplicates and upcoding."
+      },
+      {
+        "question": "How long does a nonprofit hospital have to wait before sending a bill to collections?",
+        "answer": "Under IRS regulations implementing 26 U.S.C. § 501(r), a tax-exempt hospital must make reasonable efforts to notify patients of financial assistance and wait at least 120 days from the first post-discharge billing statement before taking Extraordinary Collection Actions."
+      },
+      {
+        "question": "Can I negotiate a prompt-pay cash discount if I do not qualify for charity care?",
+        "answer": "Yes. After auditing and removing erroneous charges on the itemized bill, requesting a lump-sum prompt-pay settlement (typically 25%–50% off the remaining balance) or a 0%-interest payment plan is widely accepted."
+      }
+    ]
+  },
+  {
+    "slug": "security-deposit-itemization-demand",
+    "seoTitle": "Security Deposit Return & Itemization Demand Letter | ItsMyBill",
+    "metaDescription": "Draft a formal tenant security deposit return & itemized receipts demand letter citing your state's statutory return deadline and bad-faith penalties.",
+    "h1": "Tenant Security Deposit Return & Itemization Demand Letter",
+    "statuteCode": "State Residential Landlord-Tenant Security Deposit Statutes (All 50 States + DC)",
+    "billType": "General Consumer Bill",
+    "defaultProvider": "Property Management / Landlord LLC",
+    "defaultAmount": "1,800.00",
+    "defaultCodes": "Lease Termination / Move-Out Inspection / Statutory Deadline",
+    "defaultReason": "Formal written demand for immediate return of residential security deposit and itemized deduction receipts following expiration of the statutory return deadline.",
+    "deadlineHighlight": "14 to 60 Days Depending on State Law — Missing the statutory return window forfeits deduction rights and triggers 2× to 3× bad-faith damages in most states.",
+    "directAnswer": "Every U.S. state and Washington, D.C. enforces a strict deadline (ranging from 14 days in New York, Arizona, Hawaii, and Vermont to 60 days in Alabama, Arkansas, and West Virginia) for landlords to return your security deposit or mail an itemized statement of lawful deductions beyond normal wear and tear. Sending a Certified Mail demand letter citing your exact state statute frequently resolves withheld deposits without small claims court.",
+    "plainEnglishRights": [
+      "Landlords cannot deduct for 'ordinary wear and tear'—such as minor nail holes, faded paint, light carpet traffic wear, or routine turn-over cleaning if the unit was left broom-clean.",
+      "Most states require landlords to provide itemized repair descriptions—and in states like California, actual contractor invoices/receipts for deductions exceeding $125.",
+      "Providing your written forwarding address upon move-out is essential; several states (including Texas and Ohio) tie the landlord's statutory clock to receipt of your forwarding address.",
+      "Select your specific state below to generate a pre-cited demand letter with your state's exact statutory code, return deadline, deposit cap, and penalty multiplier."
+    ],
+    "sampleLetter": "Date: [Date]\n\nTO:\n[Landlord or Property Management Company]\n[Landlord Mailing Address]\n\nFROM:\n[Your Full Name]\nForwarding Address: [Your New Mailing Address]\nFormer Rental Unit: [Former Rental Address & Unit #]\n\nRE: Formal Demand for Return of Security Deposit ($[Amount]) & Itemized Accounting Pursuant to State Landlord-Tenant Law\n\nDear [Landlord / Property Manager],\n\nI vacated the rental property located at [Former Rental Address] on [Move-Out Date], returned all keys, left the premises clean and undamaged beyond ordinary wear and tear, and provided my written forwarding address.\n\nAs of today's date, more than the statutory return period has elapsed without receipt of my $[Amount] security deposit or a lawful itemized accounting with supporting receipts.\n\nI. FORMAL DEMAND FOR FULL REFUND\n1. Remit my full security deposit refund of $[Amount] to my forwarding address listed above within ten (10) business days of receipt of this letter.\n2. If you contend any portion is lawfully deductible, furnish itemized invoices, dated receipts, and photographic evidence demonstrating damage beyond normal wear and tear.\n\nFailure to comply with applicable state security deposit statutes may expose you to statutory bad-faith penalties of double or treble damages plus court costs and attorney fees in Small Claims Court.\n\nSincerely,\n\n[Your Signature]\n[Your Printed Name]",
+    "certifiedMailChecklist": [
+      "Verify you sent your landlord your new forwarding address in writing (email + letter).",
+      "Gather your timestamped move-in and move-out photos/walkthrough video and original signed lease showing the deposit amount.",
+      "Send this demand letter via USPS Certified Mail with Return Receipt Requested (and send a courtesy copy via email).",
+      "If the landlord ignores the 10-day cure period, file in local Small Claims Court using your Certified Mail green card and state statute citation."
+    ],
+    "govSourceName": "HUD State Tenant Rights Directory",
+    "govSourceUrl": "https://www.hud.gov/topics/rental_assistance/tenantrights",
+    "faqs": [
+      {
+        "question": "Can a landlord deduct routine carpet cleaning or repainting from my security deposit?",
+        "answer": "Generally no. Under landlord-tenant law in almost every U.S. state, ordinary wear and tear—including normal carpet wear, faded paint, and minor scuffs—cannot be deducted from a tenant's security deposit unless there is documented excessive damage or a lawful specific lease clause."
+      },
+      {
+        "question": "What happens if my landlord misses the state security deposit return deadline?",
+        "answer": "In most states, missing the statutory return deadline forfeits the landlord's right to withhold any portion of the deposit and allows the tenant to recover double (2×) or treble (3×) damages plus court costs in Small Claims Court."
+      },
+      {
+        "question": "Do I need a lawyer to recover a withheld security deposit?",
+        "answer": "No. Security deposit disputes typically fall well within Small Claims Court limits ($2,500 to $15,000+ depending on the state), where tenants represent themselves using move-out photos, the signed lease, and a Certified Mail demand letter."
+      },
+      {
+        "question": "Why does my forwarding address matter for security deposit deadlines?",
+        "answer": "In several states (such as Texas, Ohio, and Pennsylvania), the landlord's statutory return countdown legally begins only after the tenant provides a written forwarding address."
+      }
+    ]
+  }
+]

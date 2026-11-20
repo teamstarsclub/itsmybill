@@ -1,32 +1,54 @@
 User-agent: *
 Allow: /
+Disallow: /*?*
 
-# Explicit allowance for Search Engines and AI Grounding Bots
+# Explicit allowance for Search Engines and AI Grounding / Search Crawlers
 User-agent: Googlebot
 Allow: /
+Disallow: /*?*
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /*?*
 
 User-agent: Bingbot
 Allow: /
+Disallow: /*?*
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /*?*
 
 User-agent: GPTBot
 Allow: /
+Disallow: /*?*
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /*?*
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /*?*
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /*?*
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /*?*
 
 User-agent: GrokBot
 Allow: /
+Disallow: /*?*
 
 User-agent: Applebot
 Allow: /
+Disallow: /*?*
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /*?*
 
 Sitemap: https://www.itsmybill.com/sitemap.xml

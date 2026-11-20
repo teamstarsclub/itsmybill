@@ -1,0 +1,4 @@
+# Single-hop 301 canonicalization for Netlify / Cloudflare Pages
+http://itsmybill.com/* https://www.itsmybill.com/:splat 301!
+https://itsmybill.com/* https://www.itsmybill.com/:splat 301!
+http://www.itsmybill.com/* https://www.itsmybill.com/:splat 301!

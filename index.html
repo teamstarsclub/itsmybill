@@ -10,14 +10,13 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-S8JK577107');
     </script>
     <script>
       // Single Page App redirect decoder for GitHub Pages (restores clean path from 404.html redirect)
       (function(l) {
         if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
+          var decoded = l.search.slice(1).split('&').map(function(s) {
             return s.replace(/~and~/g, '&');
           }).join('?');
           window.history.replaceState(null, null,
@@ -26,35 +25,38 @@
         }
       }(window.location));
     </script>
-    <title>Free Bill Splitter &amp; Bill Fee Checker | ItsMyBill</title>
-    <meta name="description" content="Split shared bills fairly, review potential fees, draft dispute letters, and compare utility costs by state with free tools from ItsMyBill." />
-    <meta name="keywords" content="bill splitter, roommate bill calculator, fair income split, medical bill dispute letter, no surprises act dispute, lower cable bill script, utility rate calculator, junk fee auditor, dinner split calculator, splitwise alternative" />
-    <meta name="author" content="ItsMyBill" />
+
+    <title>ItsMyBill — Free Bill Fee Auditor, State Utility Benchmarks &amp; Dispute Letters</title>
+    <meta name="description" content="Audit hidden telecom and hospital fees, benchmark 50-state EIA utility rates, split bills by income, and draft statutory dispute letters 100% locally." />
+    <meta name="keywords" content="bill fee auditor, hidden cable fees, 50 state utility benchmarks, EIA electricity rates, no surprises act dispute letter, FDCPA debt validation, FCBA billing error, income based bill splitter, tenant security deposit demand letter" />
+    <meta name="author" content="ItsMyBill Editorial Research Team" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://www.itsmybill.com/" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="alternate" type="application/rss+xml" title="ItsMyBill Bills &amp; Finance Guides RSS" href="/rss.xml" />
     <link rel="alternate" type="text/markdown" title="LLM Knowledge File" href="/llms.txt" />
+    <link rel="alternate" type="text/markdown" title="Full LLM Knowledge Base" href="/llms-full.txt" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.itsmybill.com/" />
-    <meta property="og:title" content="Free Bill Splitter &amp; Bill Fee Checker | ItsMyBill" />
-    <meta property="og:description" content="Split shared bills fairly, review potential fees, draft dispute letters, and compare utility costs by state with free tools from ItsMyBill." />
+    <meta property="og:title" content="ItsMyBill — Free Bill Fee Auditor, State Utility Benchmarks &amp; Dispute Letters" />
+    <meta property="og:description" content="Audit hidden telecom and hospital fees, benchmark 50-state EIA utility rates, split bills by income, and draft statutory dispute letters 100% locally." />
     <meta property="og:site_name" content="ItsMyBill" />
     <meta property="og:image" content="https://www.itsmybill.com/og-card.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Free Bill Splitter &amp; Bill Fee Checker | ItsMyBill" />
+    <meta property="og:image:alt" content="ItsMyBill Consumer Bill Defense &amp; Utility Benchmarks Hub" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.itsmybill.com/" />
-    <meta name="twitter:title" content="Free Bill Splitter &amp; Bill Fee Checker | ItsMyBill" />
-    <meta name="twitter:description" content="Split shared bills fairly, review potential fees, draft dispute letters, and compare utility costs by state with free tools from ItsMyBill." />
+    <meta name="twitter:title" content="ItsMyBill — Free Bill Fee Auditor, State Utility Benchmarks &amp; Dispute Letters" />
+    <meta name="twitter:description" content="Audit hidden telecom and hospital fees, benchmark 50-state EIA utility rates, split bills by income, and draft statutory dispute letters 100% locally." />
     <meta name="twitter:image" content="https://www.itsmybill.com/og-card.png" />
 
-    <!-- Favicon & Touch Icons (Google Search Console & Browser Standards) -->
+    <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
@@ -62,52 +64,62 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#020617" />
 
-    <!-- Schema.org Knowledge Graph (Google Rich Snippets & AI LLM Grounding) -->
-    <script type="application/ld+json">
+    <!-- Stacked Schema.org @graph JSON-LD -->
+    <script id="itsmybill-schema-graph" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.itsmybill.com/#organization",
+          "name": "ItsMyBill Consumer Utilities",
+          "alternateName": "ItsMyBill",
+          "url": "https://www.itsmybill.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.itsmybill.com/favicon-48x48.png"
+          },
+          "email": "contact.team.starsclub@gmail.com",
+          "description": "Independent, privacy-first U.S. consumer utility platform for hidden-fee auditing, 50-state EIA utility benchmarks, statutory dispute letter drafting, and fair expense splitting."
+        },
         {
           "@type": "WebSite",
           "@id": "https://www.itsmybill.com/#website",
           "url": "https://www.itsmybill.com/",
           "name": "ItsMyBill",
-          "description": "Free consumer bill utility, fair expense splitter, and legal dispute letter drafting platform.",
+          "inLanguage": "en-US",
           "publisher": {
             "@id": "https://www.itsmybill.com/#organization"
           }
         },
         {
-          "@type": "Organization",
-          "@id": "https://www.itsmybill.com/#organization",
-          "name": "ItsMyBill",
-          "url": "https://www.itsmybill.com/",
-          "logo": "https://www.itsmybill.com/favicon-48x48.png",
-          "description": "Consumer utility platform providing free tools for fair expense sharing, bill fee reviews, and statutory dispute letter drafting."
-        },
-        {
           "@type": "WebApplication",
           "@id": "https://www.itsmybill.com/#webapp",
-          "name": "ItsMyBill Utility Suite",
+          "name": "ItsMyBill Consumer Bill Defense Suite",
           "url": "https://www.itsmybill.com/",
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "All",
-          "browserRequirements": "Requires JavaScript. Requires HTML5.",
-          "description": "Free web-based bill utility calculator, fair roommate/dinner splitter, fee review tool, dispute letter drafting assistant, and 50-state utility rate benchmarks.",
+          "isAccessibleForFree": true,
+          "description": "100% client-side consumer utility hub for fee auditing, statutory dispute letter drafting, 50-state utility benchmarks, and fair expense splitting.",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
           },
-          "featureList": [
-            "Equal Restaurant & Tab Splitter with 1-Click Shareable Breakdown",
-            "Income-Fair Proportional Roommate Expense Splitter",
-            "Itemized Dish and Receipt Tax & Tip Allocator",
-            "Line-Item Fee Checker & Review Tool",
-            "Federal No Surprises Act (42 U.S.C. 300gg-111) Dispute Drafting Tool",
-            "Fair Credit Billing Act (15 U.S.C. 1666) Dispute Notice Generator",
-            "50-State Electricity, Gas, Water & Broadband Benchmark Index",
-            "Realized Savings Tracker"
+          "publisher": {
+            "@id": "https://www.itsmybill.com/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.itsmybill.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.itsmybill.com/"
+            }
           ]
         },
         {
@@ -116,91 +128,35 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How does the ItsMyBill income-fair proportional split work?",
+              "name": "Does ItsMyBill upload my uploaded bills or personal financial inputs to a server?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Instead of dividing shared expenses 50/50 when roommates or partners earn unequal incomes (e.g., $110,000 vs. $45,000), ItsMyBill calculates each person's exact percentage of household income and allocates rent, electricity, and internet accordingly using the formula: Individual Share = Total Shared Expenses × (Individual Income ÷ Total Household Income). This equitable distribution eliminates financial stress and household tension."
+                "text": "No. Every calculator, line-item fee auditor, dispute letter generator, and savings tracker on ItsMyBill runs 100% locally inside your web browser. Zero bill text, account numbers, salaries, or names are ever sent to or stored on our servers."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I dispute surprise emergency hospital bills under the federal No Surprises Act?",
+              "name": "Which federal and state consumer statutes do your dispute templates cover?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Under federal law (42 U.S.C. § 300gg-111, effective January 1, 2022), patients are legally protected from surprise balance billing for out-of-network emergency services, air ambulance transport, and certain non-emergency services provided by out-of-network clinicians at in-network hospitals. ItsMyBill automatically generates statutory dispute notices invoking this federal protection and requesting itemized ledger audits."
+                "text": "Our free drafting templates cover the federal No Surprises Act (42 U.S.C. § 300gg-111), nonprofit hospital charity care under IRC § 501(r), Fair Credit Billing Act (15 U.S.C. § 1666), Fair Debt Collection Practices Act (15 U.S.C. § 1692g), FCC Truth-in-Billing (47 C.F.R. § 64.2401), state Public Utility Commission tariff reviews, and all 50 states + D.C. residential security deposit return statutes."
               }
             },
             {
               "@type": "Question",
-              "name": "How does the Line-Item Fee Checker evaluate unexpected charges?",
+              "name": "Where do the 50-state utility rate benchmarks come from?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our fee checker cross-references submitted line items against regulatory disclosure guidelines, federal rules, and industry averages. It identifies charges warranting review (such as Broadcast TV Surcharges, Regulatory Cost Recovery Fees, and unbundled facility fees), suggests documentation to request, and provides discussion points for customer service calls."
+                "text": "Electricity rates (¢/kWh) are sourced from U.S. Energy Information Administration (EIA) Form EIA-861M (Electric Power Monthly, Table 5.6.A). Natural gas reflects EIA/AGA residential heating averages, broadband reflects FCC Urban Rate Survey 100–300 Mbps benchmarks, and water reflects AWWA/EPA single-family utility medians."
               }
             },
             {
               "@type": "Question",
-              "name": "How do cable, broadband, and wireless companies apply ancillary surcharges?",
+              "name": "How is ItsMyBill free without requiring bank logins or account sign-ups?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Providers frequently advertise attractive teaser promotional tariffs (e.g., $49.99/month) while listing non-governmental fees like Broadcast TV Surcharges ($20–$28/mo), Regional Sports Fees ($12–$16/mo), and modem rental fees ($15/mo) in statement fine print. When promotional terms expire, rates often increase. Our fee checker identifies these ancillary line items so you can negotiate them down or eliminate equipment rental fees."
+                "text": "ItsMyBill is an independent, founder-funded consumer utility platform designed for zero-friction self-advocacy. We never ask for bank passwords, Plaid links, Social Security numbers, or credit cards."
               }
-            },
-            {
-              "@type": "Question",
-              "name": "What federal consumer protection laws govern billing disputes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Consumers are protected under multiple federal statutes depending on the bill type: (1) The Fair Credit Billing Act (15 U.S.C. § 1666) for revolving credit card errors within 60 days; (2) The Fair Debt Collection Practices Act (15 U.S.C. § 1692g) for third-party collection validation within 30 days; (3) FCC Truth-in-Billing regulations (47 C.F.R. § 64.2401) for telecommunications transparency; and (4) The No Surprises Act (42 U.S.C. § 300gg-111) for healthcare balance billing."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What should I do if a provider or collection agency refuses to honor a dispute?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Under 15 U.S.C. § 1692g and CFPB Regulation F (12 C.F.R. Part 1006), sending a formal written dispute triggers mandatory statutory verification. Once received via certified mail, creditors or debt collectors must verify the account before proceeding with collection actions or reporting unverified adverse trade lines to credit bureaus. You can also file a formal complaint with the Consumer Financial Protection Bureau (CFPB) or your state Attorney General."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is ItsMyBill completely free and is my financial data private?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ItsMyBill is 100% free with no account creation, passwords, credit cards, or bank credentials required. Basic calculations (equal splits, income equity math, itemized tab splits, and savings tracking) run client-side in your browser for privacy. Document and fee audits are processed securely via encrypted AI endpoints without storing personal banking data."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "HowTo",
-          "name": "How to Split Bills Fairly Based on Roommate Incomes",
-          "description": "Step-by-step guide to calculating proportional income-fair household expenses using ItsMyBill.",
-          "image": "https://www.itsmybill.com/og-card.png",
-          "step": [
-            {
-              "@type": "HowToStep",
-              "name": "Determine Total Shared Monthly Expenses",
-              "text": "Sum up household rent, electricity, internet, gas, water, and shared staples.",
-              "image": "https://www.itsmybill.com/og-card.png"
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Enter Each Roommate's Take-Home Pay",
-              "text": "Input the monthly take-home salary of each person in the ItsMyBill Income Splitter.",
-              "image": "https://www.itsmybill.com/og-card.png"
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Calculate Proportional Burden",
-              "text": "The tool divides each individual's income by total household earnings and applies that exact percentage to the shared bills.",
-              "image": "https://www.itsmybill.com/og-card.png"
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Copy or Share Direct Link",
-              "text": "Copy the formatted text breakdown to send to your group chat or generate a shareable URL.",
-              "image": "https://www.itsmybill.com/og-card.png"
             }
           ]
         }
@@ -210,37 +166,49 @@
   </head>
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
     <div id="root">
-      <!-- Semantic crawlable fallback for Googlebot and search crawlers -->
-      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f8fafc; line-height: 1.6;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f8fafc; line-height: 1.65;">
         <header style="margin-bottom: 32px;">
-          <h1 style="font-size: 32px; font-weight: 800; color: #10b981; margin-bottom: 12px;">Free Tools to Split Bills Fairly and Understand Your Bills</h1>
-          <p style="font-size: 18px; color: #94a3b8;">Split shared bills fairly, review potential fees, draft dispute letters, and compare utility costs by state with free tools from ItsMyBill.</p>
+          <h1 style="font-size: 34px; font-weight: 800; color: #10b981; margin-bottom: 12px;">Audit Hidden Fees, Benchmark State Utility Rates &amp; Defend Your Consumer Rights</h1>
+          <p data-speakable="true" style="font-size: 17px; color: #cbd5e1;">ItsMyBill is a free, privacy-first U.S. consumer bill defense hub. Audit telecom and hospital statements for avoidable surcharges, compare monthly utilities against official EIA Table 5.6.A benchmarks (U.S. average 16.8¢/kWh), split shared household expenses proportionally by income, and generate print-ready statutory dispute letters—entirely inside your browser with zero server uploads.</p>
         </header>
-        <main style="display: grid; gap: 24px;">
+        <main style="display: grid; gap: 20px;">
           <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
-            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">Fair Expense &amp; Tip Splitter</h2>
-            <p style="color: #cbd5e1;">Calculate equal, proportional, and itemized bill splits for roommates, friends, and dinners. Accommodates unequal take-home salaries and dish-by-dish tax and tip distribution without requiring account sign-ups.</p>
+            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 10px;">Five Free Client-Side Consumer Utilities</h2>
+            <ul style="list-style: none; padding: 0; display: grid; gap: 8px;">
+              <li><a href="/bill-auditor/" style="color: #34d399; text-decoration: underline;">Line-Item Bill Fee Auditor (100% Client-Side)</a></li>
+              <li><a href="/dispute-letter-generator/" style="color: #34d399; text-decoration: underline;">Statutory Consumer Bill Dispute Letter Generator</a></li>
+              <li><a href="/utility-benchmarks/" style="color: #34d399; text-decoration: underline;">50-State Utility Cost Benchmarks (EIA, FCC &amp; AWWA)</a></li>
+              <li><a href="/income-based-bill-splitter/" style="color: #34d399; text-decoration: underline;">Income-Based Proportional Bill Splitter for Couples &amp; Roommates</a></li>
+              <li><a href="/bill-splitter/" style="color: #34d399; text-decoration: underline;">Restaurant &amp; Group Bill Splitter</a> · <a href="/itemized-receipt-splitter/" style="color: #34d399; text-decoration: underline;">Itemized Receipt Tax &amp; Tip Splitter</a></li>
+              <li><a href="/savings-tracker/" style="color: #34d399; text-decoration: underline;">Realized Bill Savings Tracker</a> · <a href="/reports/2026-us-utility-and-junk-fee-report/" style="color: #fbbf24; text-decoration: underline;">2026 U.S. Utility &amp; Junk-Fee Report</a></li>
+            </ul>
           </section>
           <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
-            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">Line-Item Fee Checker &amp; Review Tool</h2>
-            <p style="color: #cbd5e1;">Review telecom, internet, cable, and medical statements for ancillary surcharges, unbundled facility charges, and expired promotional rates.</p>
+            <h2 style="font-size: 20px; font-weight: 700; color: #f8fafc; margin-bottom: 10px;">Top Carrier, Utility &amp; Hospital Fee Auditors</h2>
+            <ul style="list-style: none; padding: 0; display: grid; gap: 6px;">
+              <li><a href="/bill-auditor/xfinity-hidden-fees/" style="color: #34d399;">Xfinity Hidden Fees Auditor</a></li>
+              <li><a href="/bill-auditor/verizon-surcharges/" style="color: #34d399;">Verizon Wireless Surcharges Auditor</a></li>
+              <li><a href="/bill-auditor/spectrum-bill-increase/" style="color: #34d399;">Spectrum Bill Increase Auditor</a></li>
+              <li><a href="/bill-auditor/att-wireless-fees/" style="color: #34d399;">AT&amp;T Wireless Fees Auditor</a></li>
+              <li><a href="/bill-auditor/hospital-facility-fee-code-0450/" style="color: #34d399;">Hospital Facility Fee (Revenue Code 0450) Auditor</a></li>
+              <li><a href="/bill-auditor/er-surprise-medical-bill/" style="color: #34d399;">ER Surprise Medical Bill Auditor (No Surprises Act)</a></li>
+            </ul>
           </section>
           <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
-            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">Consumer Dispute Letter Drafting Tool</h2>
-            <p style="color: #cbd5e1;">Draft formal written dispute notices tailored to relevant federal consumer protection statutes, including the No Surprises Act (42 U.S.C. 300gg-111) and the Fair Credit Billing Act (15 U.S.C. 1666).</p>
-          </section>
-          <section style="background-color: #0f172a; padding: 24px; border-radius: 12px; border: 1px solid #1e293b;">
-            <h2 style="font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 8px;">50-State Utility Benchmarks</h2>
-            <p style="color: #cbd5e1;">Compare household electricity and natural gas expenses against official benchmarks from the U.S. Energy Information Administration (EIA), with broadband benchmarks from the Federal Communications Commission (FCC) and municipal water survey estimates.</p>
+            <h2 style="font-size: 20px; font-weight: 700; color: #f8fafc; margin-bottom: 10px;">Statutory Dispute Letter Templates &amp; Editorial Hubs</h2>
+            <ul style="list-style: none; padding: 0; display: grid; gap: 6px;">
+              <li><a href="/dispute-letter/no-surprises-act-er-bill/" style="color: #34d399;">No Surprises Act ER Dispute Letter (42 U.S.C. § 300gg-111)</a></li>
+              <li><a href="/dispute-letter/fdcpa-debt-validation/" style="color: #34d399;">FDCPA Debt Validation Demand Letter (15 U.S.C. § 1692g)</a></li>
+              <li><a href="/dispute-letter/fcba-credit-card-error/" style="color: #34d399;">FCBA Credit Card Billing Error Notice (15 U.S.C. § 1666)</a></li>
+              <li><a href="/dispute-letter/fcc-truth-in-billing-telecom/" style="color: #34d399;">FCC Truth-in-Billing Telecom Dispute Letter</a></li>
+              <li><a href="/dispute-letter/itemized-hospital-bill-request/" style="color: #34d399;">Itemized Hospital Bill &amp; IRC § 501(r) Charity Care Request</a></li>
+              <li><a href="/dispute-letter/security-deposit-itemization-demand/" style="color: #34d399;">50-State Tenant Security Deposit Return Demand Letters</a></li>
+              <li><a href="/guides/" style="color: #34d399;">Consumer Topic Hubs</a> · <a href="/blog/" style="color: #34d399;">Bills &amp; Personal Finance Blog</a> · <a href="/methodology/" style="color: #34d399;">Data Methodology</a></li>
+            </ul>
           </section>
         </main>
       </div>
     </div>
-    <noscript>
-      <div style="background-color: #0f172a; padding: 14px 20px; border-top: 1px solid #1e293b; text-align: center; color: #94a3b8; font-size: 13px;">
-        <strong>JavaScript Notice:</strong> Interactive calculations require JavaScript to run in real-time. For visitors without JavaScript, tool descriptions and mathematical formulas are provided above.
-      </div>
-    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
